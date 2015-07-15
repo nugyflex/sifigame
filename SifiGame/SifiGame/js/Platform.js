@@ -1,0 +1,161 @@
+﻿function platform(index, x, y, width, height, type, ax, ay, bx, by) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.type = type;
+    this.xvel = 3;
+    this.yvel = 3;
+    this.ax1 = ax;
+    this.ay1 = ay;
+    this.bx1 = bx;
+    this.by1 = by;
+    this.colour = "rgb(65,65,75)";
+    this.health = 150;
+    this.index = index;
+    this.breakable = false;
+    this.removable = false;
+    //a function called in the main loop, it draws the platform
+    this.draw = function () {
+        /*if (this.width < playercollection.array[0].width) {
+            this.width = playercollection.array[0].width + 2;
+        }
+        if (this.height < playercollection.array[0].height) {
+            this.height = playercollection.array[0].height + 2;
+        }*/
+        ctx.fillStyle = this.colour;
+
+        //ctx.fillRect(this.x, this.y, this.width, this.height);
+        switch (this.type)
+        {
+                
+        case PLATFORMTYPE_GREYBOX:
+            ctx.fillStyle = this.colour;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            break;
+
+        case PLATFORMTYPE_PILLAR1:
+            this.width = 40;
+            this.height = 20;
+            ctx.drawImage(wall1, this.x, this.y - (100 - (this.height)) + 20);
+            break;
+
+        case PLATFORMTYPE_SMALL_BOX:
+            this.width = 40;
+            this.height = 15;
+            ctx.drawImage(box1, this.x, this.y - 15);
+            break;
+            
+        case PLATFORMTYPE_HALFARCH_LEFT:
+            this.width = 17;
+            this.height = 10;
+            ctx.drawImage(ruins1, this.x - 1, this.y - 65);
+            break;
+
+        case PLATFORMTYPE_HALFARCH_RIGHT:
+            this.width = 17;
+            this.height = 10;
+            ctx.drawImage(ruins2, this.x - 42, this.y - 65);
+            break;
+
+        case PLATFORMTYPE_HOLEWALL:
+            this.width = 100;
+            this.height = 5;
+            ctx.drawImage(holewall1, this.x, this.y - 50);
+            break;
+    
+        case PLATFORMTYPE_PILLAR1_MOVING:
+            ctx.fillStyle = this.colour;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            this.width = 40;
+            this.height = 20;
+            ctx.drawImage(wall1, this.x, this.y - (100 - (this.height)) + 20);
+
+            break;
+
+			case 11:
+			this.height = 36;
+			this.width = 20;
+			this.breakable = true;
+			ctx.drawImage(barricade1, this.x, this.y - 14);
+			if (this.health<130)
+			{
+            ctx.drawImage(barricade4, 0, 0, 20, 64, this.x, this.y-14, 20, 64);
+			if (this.health<90)
+			{
+			     ctx.drawImage(barricade4, 0, 64, 20, 64, this.x, this.y-14, 20, 64);
+				 if (this.health<40)
+			{
+				 ctx.drawImage(barricade4, 0, 128, 20, 64, this.x, this.y-14, 20, 64);	
+			}
+			}
+			}
+			else{
+			ctx.drawImage(barricade1, this.x, this.y - 14);			
+			}
+			break;
+			case 12:
+			this.height = 9;
+			this.width = 51;
+			this.breakable = true;
+
+			if (this.health < 130) {
+			    ctx.drawImage(barricade3, 0, 0, 51, 31, this.x, this.y - 9, 51, 31);
+			    if
+			(this.health < 90) {
+			        ctx.drawImage(barricade3, 0, 31, 51, 31, this.x, this.y - 9, 51, 31);
+			        if (this.health < 40)
+			        {
+			            ctx.drawImage(barricade3, 0, 62, 51, 31, this.x, this.y - 9, 51, 31);
+			        }
+			    }
+			}
+			else {
+			    ctx.drawImage(barricade2, this.x, this.y - 9);
+			}
+			break;
+            case 13:
+                this.removable = true;
+                this.price = 100;
+                ctx.fillStyle = this.colour;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+                break;
+
+        
+    }
+
+    }
+    this.execute = function()
+    {
+        if (this.health < 1) {
+            platformcollection.delete(this.index);
+        }
+
+        if (this.type == PLATFORMTYPE_PILLAR1_MOVING)
+        {
+
+        if (this.x > this.bx1 && this.xvel > 0)
+        {
+            this.xvel = this.xvel * -1;
+        }
+        if (this.y > this.by1 && this.yvel > 0) {
+            this.yvel = this.yvel * -1;
+        }
+        if (this.x < this.ax1 && this.xvel < 0) {
+            this.xvel = this.xvel * -1;
+        }
+        if (this.y < this.ay1 && this.yvel < 0) {
+            this.yvel = this.yvel * -1;
+        }
+        if (this.y > this.by1-2&& this.y < this.by1+2 && this.y > this.ay1 - 2 && this.y < this.ay1+2)
+        {
+            this.yvel = 0;
+        }
+        if (this.x > this.bx1 - 2 && this.x < this.bx1 + 2 && this.x > this.ax1 - 2 && this.x < this.ax1 + 2) {
+            this.xvel = 0;
+        }
+        this.x = this.x + this.xvel;
+        this.y = this.y + this.yvel;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bin\Debug\ReverseMap\resources.pri
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bin\Debug\AppxManifest.xml
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bin\Debug\SifiGame.build.appxrecipe
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\priconfig.xml
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\priconfig.xml.intermediate
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\layout.resfiles
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\layout.resfiles.intermediate
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\resources.resfiles
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\resources.resfiles.intermediate
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\pri.resfiles
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\pri.resfiles.intermediate
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\qualifiers.txt
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\qualifiers.txt.intermediate
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\jackr_000\documents\visual studio 2013\Projects\SifiGame\SifiGame\bld\Debug\ProjectArchitectures.txt
+C:\SifiGame\SifiGame\bin\Debug\ReverseMap\resources.pri
+C:\SifiGame\SifiGame\bin\Debug\AppxManifest.xml
+C:\SifiGame\SifiGame\bin\Debug\SifiGame.build.appxrecipe
+C:\SifiGame\SifiGame\bld\Debug\priconfig.xml
+C:\SifiGame\SifiGame\bld\Debug\priconfig.xml.intermediate
+C:\SifiGame\SifiGame\bld\Debug\layout.resfiles
+C:\SifiGame\SifiGame\bld\Debug\layout.resfiles.intermediate
+C:\SifiGame\SifiGame\bld\Debug\resources.resfiles
+C:\SifiGame\SifiGame\bld\Debug\resources.resfiles.intermediate
+C:\SifiGame\SifiGame\bld\Debug\pri.resfiles
+C:\SifiGame\SifiGame\bld\Debug\pri.resfiles.intermediate
+C:\SifiGame\SifiGame\bld\Debug\qualifiers.txt
+C:\SifiGame\SifiGame\bld\Debug\qualifiers.txt.intermediate
+C:\SifiGame\SifiGame\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\SifiGame\SifiGame\bld\Debug\ProjectArchitectures.txt
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bin\Debug\ReverseMap\resources.pri
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bin\Debug\AppxManifest.xml
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bin\Debug\SifiGame.build.appxrecipe
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\priconfig.xml
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\priconfig.xml.intermediate
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\layout.resfiles
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\layout.resfiles.intermediate
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\resources.resfiles
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\resources.resfiles.intermediate
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\pri.resfiles
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\pri.resfiles.intermediate
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\qualifiers.txt
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\qualifiers.txt.intermediate
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\ProjectArchitectures.txt

@@ -1,0 +1,282 @@
+﻿//setting up the canvas
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+c.tabIndex = 1;
+c.focus();
+//loading in all the images
+window.addEventListener("keydown", onKeyDown, true);
+window.addEventListener("keyup", onKeyUp, true);
+window.addEventListener("mousedown", mouseDown, true);
+window.addEventListener("mouseup", mouseUp, true);
+
+window.onmousemove = function (e) {
+    var bbox = c.getBoundingClientRect();
+
+    mouse.X = e.clientX - bbox.left * (c.width / bbox.width) + game2.canvastranslatex-10;
+    mouse.Y = e.clientY - bbox.top * (c.height / bbox.height) + game2.canvastranslatey-10;
+}
+
+
+c.width = window.innerWidth-20;
+c.height = window.innerHeight-24.5;
+var cwidth = c.width;
+var cheight = c.height;
+
+
+
+
+
+
+
+
+function thing(index, type, y)
+{
+    this.index = index;
+    this.type = type;
+    this.y = y;
+    this.drawn = false;
+    
+}
+
+var projectilecounter = 0;
+
+var floorcounter = 0;
+
+var platformcounter = 0;
+var keypressed =
+{
+    w: 0,
+    s: 0,
+    a: 0,
+    d: 0,
+    space: 0,
+    z: 0,
+    shootcooldown: 0,
+    x: 0,
+    e: 0,
+    f: 0,
+	mouse: 0
+};
+
+var platformside =
+{
+    top: 1,
+    bottom: 2,
+    left: 3,
+    right: 4,
+    topleft: 5,
+    topright: 6,
+    bottomleft: 7,
+    bottomright: 8,
+};
+
+var mouse =
+    {
+        X: 0,
+        Y: 0
+    }
+
+var projectilecollection = new projectiles();
+var collisiondetection1 = new collisiondetection();
+var platformcollection = new platforms();
+var thingstodraw1 = new thingstodraw();
+var playercollection = new players();
+var explosioncollection = new explosions();
+var floorcollection = new floors();
+var floating_numbercollection = new floating_numbers();
+
+window.onmousemove
+
+
+
+var timer = 50;
+    window.onload = function () {
+
+        ctx.drawImage(startscreen, game2.canvastranslatex + cwidth / 2 - 400, game2.canvastranslatey + cheight / 2 - 300);
+
+
+    };
+
+    var game2 = new game;
+    game2.startgame("map1");
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+function gameLoop() {
+    game2.pause();
+    if (game2.running) {
+        timer = timer - 1;
+        if (timer == -1) {
+            //timer = 50;
+        }
+        if (keypressed.a == 0 && keypressed.d == 0) {
+
+            playercollection.array[0].xvel = 0;
+        }
+
+        ctx.fillStyle = "rgb(30,30,50)";
+        ctx.fillRect(-8000, -8000, 16000, 16000);
+        //to draw a background
+        //ctx.drawImage(background1, game2.canvastranslatex, game2.canvastranslatey);
+
+        if (playercollection.array[0].dead == 1) {
+            playercollection.array[0].draw();
+            playercollection.array[0].y = playercollection.array[0].y + 20;
+        }
+		for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
+            if (playercollection.array[playercounter].dead==0) {
+				if (playercollection.array[playercounter].falling == 1)
+				{
+					playercollection.array[playercounter].y = playercollection.array[playercounter].y + 20;
+					playercollection.array[playercounter].draw();
+					if (playercollection.array[playercounter].y > 9000) {
+					    playercollection.delete(playercounter);
+					}
+
+				}
+
+				
+			}
+			
+		}
+				for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
+
+					if (platformcollection.array[platformcounter].y > 9000) {
+					    platformcollection.delete(platformcounter);
+					}
+
+			
+		}
+        var thing1 = 0
+        for (floorcounter = 0; floorcounter < floorcollection.count() ; floorcounter++) {
+
+            if (collisiondetection1.testcollision(playercollection.array[0], floorcollection.array[floorcounter]) == 0) {
+                thing1 = thing1 + 1;
+            }
+
+        }
+
+        if (thing1 == floorcollection.count()) {
+            playercollection.array[0].falling = 1;
+            playercollection.array[0].xvel = 0;
+            playercollection.array[0].yvel = 0;
+        }
+		
+		
+		
+		for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
+            for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
+					
+					if (platformcollection.array[platformcounter].type == 11 && playercollection.array[playercounter].type == "enemy")
+					{
+						if (collisiondetection1.testcollision(playercollection.array[playercounter],platformcollection.array[platformcounter]))
+						{
+						playercollection.array[playercounter].attack(platformcollection.array[platformcounter]);
+						console.log("ayylmao");
+						 if (platformcollection.array[platformcounter].health < 1) {
+							platformcollection.array[platformcounter].y = 10000;
+                        }
+						}
+					}
+					if (platformcollection.array[platformcounter].type == 12 && playercollection.array[playercounter].type == "enemy")
+					{
+						if (collisiondetection1.testcollision(playercollection.array[playercounter],platformcollection.array[platformcounter]))
+						{
+						playercollection.array[playercounter].attack(platformcollection.array[platformcounter]);
+						console.log("ayylmao");
+						 if (platformcollection.array[platformcounter].health < 1) {
+							platformcollection.array[platformcounter].y = 10000;
+                        }
+						}
+					}
+					
+
+            }
+            platformcollection.array[platformcounter].execute();
+        }		
+		
+		
+		
+		
+        playercollection.array[0].colwithplatform = 0;
+        for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
+            for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
+
+                    collisiondetection1.stopplayer(playercollection.array[playercounter], platformcollection.array[platformcounter]);
+                    collisiondetection1.stopplayer(playercollection.array[playercounter], platformcollection.array[platformcounter]);
+            }
+        }
+
+
+
+        for (floorcounter = 0; floorcounter < floorcollection.count() ; floorcounter++) {
+            for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
+                if (playercollection.array[playercounter].type == "enemy") {
+                    var thing3 = 0;
+                    for (floorcounter1 = 0; floorcounter1 < floorcollection.count() ; floorcounter1++) {
+                        if (collisiondetection1.checkifinside(playercollection.array[playercounter],floorcollection.array[floorcounter1]))
+                            thing3 = thing3 + 1;
+                    }
+
+                    if (thing3 == 0) {
+                        collisiondetection1.stopplayerrev(playercollection.array[playercounter], floorcollection.array[floorcounter]);
+                    }
+
+                }
+
+
+
+            }
+        }
+
+
+
+
+        player_loop();
+
+        game2.runround();
+        thingstodraw1.executefloors();
+        thingstodraw1.execute();
+
+        game2.drawhud();
+
+        playercollection.array[1].calcNewPosition(playercollection.array[0]);
+
+        if (playercollection.array[0].moved == 0) {
+            ctx.drawImage(controls, 0, 0);
+        }
+        for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
+
+    
+        }
+        playercollection.array[0].healthf();
+
+        ctx.translate(game2.canvastranslatex, game2.canvastranslatey);
+        game2.canvastranslatex = game2.canvastranslatex + playercollection.array[0].xvel;
+        game2.canvastranslatey = game2.canvastranslatey + playercollection.array[0].yvel;
+        ctx.translate(game2.canvastranslatex * -1, game2.canvastranslatey * -1);
+        
+        for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
+            if (playercollection.array[playercounter].type == "enemy") {
+                playercollection.array[playercounter].calcNewPosition();
+                playercollection.array[playercounter].ai(playercollection.array[0]);
+            }
+            if (playercollection.array[playercounter].type == "player") {
+                playercollection.array[playercounter].calcNewPosition();
+                playercollection.array[playercounter].controls();
+            }
+        }
+        if (playercollection.array[0].colwithplatform == 1) {
+            console.log("=1")
+        }
+
+
+
+        projectile_collision();
+        
+
+
+
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
