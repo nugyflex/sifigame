@@ -55,7 +55,8 @@ var keypressed =
     x: 0,
     e: 0,
     f: 0,
-	mouse: 0
+    mouse: 0,
+    k: 0
 };
 
 var platformside =

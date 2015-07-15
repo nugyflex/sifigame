@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-07-15T07:02:06.675</Modified>
+      <Modified>2015-07-15T07:30:20.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\background1.png">
       <PackagePath>images\background1.png</PackagePath>
@@ -411,7 +411,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-07-15T06:12:58.302</Modified>
+      <Modified>2015-07-15T07:30:36.230</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\draw.js">
       <PackagePath>js\draw.js</PackagePath>
@@ -431,7 +431,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\floating_number.js">
       <PackagePath>js\floating_number.js</PackagePath>
-      <Modified>2015-07-15T06:13:13.844</Modified>
+      <Modified>2015-07-15T08:38:42.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\Floor.js">
       <PackagePath>js\Floor.js</PackagePath>
@@ -439,15 +439,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\game.js">
       <PackagePath>js\game.js</PackagePath>
-      <Modified>2015-07-15T06:09:49.806</Modified>
+      <Modified>2015-07-15T08:24:39.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\key_events.js">
       <PackagePath>js\key_events.js</PackagePath>
-      <Modified>2015-06-18T08:55:06.000</Modified>
+      <Modified>2015-07-15T07:30:14.029</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\object_arrays.js">
       <PackagePath>js\object_arrays.js</PackagePath>
-      <Modified>2015-07-15T05:43:58.900</Modified>
+      <Modified>2015-07-15T08:25:05.841</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\Platform.js">
       <PackagePath>js\Platform.js</PackagePath>
@@ -463,11 +463,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\projectile.js">
       <PackagePath>js\projectile.js</PackagePath>
-      <Modified>2015-06-23T08:35:46.731</Modified>
+      <Modified>2015-07-15T08:28:47.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\projectile_collision.js">
       <PackagePath>js\projectile_collision.js</PackagePath>
-      <Modified>2015-07-15T04:46:32.263</Modified>
+      <Modified>2015-07-15T08:23:43.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\resources.js">
       <PackagePath>js\resources.js</PackagePath>

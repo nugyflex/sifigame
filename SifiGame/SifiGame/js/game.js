@@ -10,7 +10,8 @@
     this.fixedplayercap = 60;
     this.roundbreakmax = 530;
     this.roundbreak = 530;
-	this.lastamount = 0;
+    this.lastamount = 0;
+    this.debugmode = 0;
 	
 	this.startgame = function(map)
 	{
@@ -249,6 +250,13 @@
     }
     this.drawhud = function()
     {
+        if (keypressed.k == 1) {
+            this.debugmode = 1;
+        }
+        else
+        {
+            this.debugmode = 0;
+        }
         this.drawcrosshair();
         ctx.fillStyle = "rgb(200,75,75)";
         ctx.font = "20px SpacedOut";
@@ -304,14 +312,14 @@
     {
 		playercollection.array[playerindex].money = playercollection.array[playerindex].money - amount;
 		this.lastamount = amount;
-		floating_numbercollection.add(this.canvastranslatex + 20, this.canvastranslatey + 160, (Math.random() * 4) + 1, (Math.random() * 4) + 1, "-" + amount)
+		floating_numbercollection.add(this.canvastranslatex + 20, this.canvastranslatey + 160, (Math.random() * 4) + 1, (Math.random() * 4) + 1, "-" + amount, 20, "rgb(200,75,75)")
     }
 
 	    this.addmoney = function(playerindex, amount)
     {
 		playercollection.array[playerindex].money = playercollection.array[playerindex].money + amount;
 		this.lastamount = amount*-1;
-		floating_numbercollection.add(this.canvastranslatex + 20, this.canvastranslatey + 160, (Math.random() * 4) + 1, (Math.random() * 4) + 1, "+" + amount)
+		floating_numbercollection.add(this.canvastranslatex + 20, this.canvastranslatey + 160, (Math.random() * 4) + 1, (Math.random() * 4) + 1, "+" + amount, 20, "rgb(200,75,75)")
     }
 	
 }

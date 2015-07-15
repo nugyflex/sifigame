@@ -55,6 +55,19 @@
                         {
                             playercollection.array[playercounter].health = playercollection.array[playercounter].health - playercollection.array[projectilecollection.array[projectilecounter].pindex].damage * projectilecollection.array[projectilecounter].damagemultiplier;
                             game2.addmoney(playercollection.array[projectilecollection.array[projectilecounter].pindex].index, 1);
+                            if ((Math.random() * 100) + 1 > 50) {
+                                var velmultiplyertestx = -1;
+                            }
+                            else {
+                                var velmultiplyertestx = 1;
+                            }
+                            if ((Math.random() * 100) + 1 > 50) {
+                                var velmultiplyertesty = -1;
+                            }
+                            else {
+                                var velmultiplyertesty = 1;
+                            }
+                            floating_numbercollection.add(playercollection.array[playercounter].x, playercollection.array[playercounter].y, ((Math.random() * 2) + 0.1) * velmultiplyertestx, ((Math.random() * 2) + 0.1) * velmultiplyertesty, playercollection.array[projectilecollection.array[projectilecounter].pindex].damage * projectilecollection.array[projectilecounter].damagemultiplier, 15, "rgb(200,75,75)")
                         }
 
 

@@ -142,9 +142,9 @@ function floating_numbers() {
         return this.array.length;
     }
     this.array = [];
-    this.add = function (x, y, xvel, yvel, string) {
+    this.add = function (x, y, xvel, yvel, string, size, colour) {
         var i = this.count();
-            this.array[i] = new floating_number(x, y, xvel, yvel, string, i)
+            this.array[i] = new floating_number(x, y, xvel, yvel, string, i, size, colour)
     }
     this.delete = function (index) {
         var initialcount = this.array.length;

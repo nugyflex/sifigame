@@ -1,4 +1,4 @@
-﻿function floating_number(x,y,xvel,yvel,string, index)
+﻿function floating_number(x,y,xvel,yvel,string, index, size, colour)
 {
     this.x = x;
     this.y = y;
@@ -7,11 +7,33 @@
     this.string = string;
     this.alphacounter = 1;
     this.index = index;
+    this.size = size
+    this.colour = colour;
+    if (this.colour == "orange random")
+    {
+        var colpick = Math.floor((Math.random() * 4) + 1);
+        console.log((Math.random() * 4) + 1);
+        switch (colpick) {
+            case 1:
+                this.colour = "rgb(200, 75, 75)";
+                break;
+            case 2:
+                this.colour = "orange";
+                break;
+            case 3:
+                this.colour = "yellow";
+                break;
+            case 4:
+                this.colour = "white";
+                break;
+        }
+
+    }
     this.draw = function()
     {
         if (this.alphacounter > 0) {
-            ctx.fillStyle = "rgb(200,75,75)";
-            ctx.font = "20px SpacedOut";
+            ctx.fillStyle = this.colour;
+            ctx.font = this.size + "px SpacedOut";
             ctx.globalAlpha = this.alphacounter;
             ctx.fillText(this.string, this.x, this.y);
             ctx.globalAlpha = 1;

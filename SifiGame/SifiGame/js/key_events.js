@@ -68,7 +68,13 @@ function onKeyDown(event) {
         case 71:
             keypressed.g = 1;
             break;
+
+        case 75:
+            keypressed.k = 1;
+            break;
     }
+
+
 }
 
 function onKeyUp(event) {
@@ -118,6 +124,9 @@ function onKeyUp(event) {
 
         case 71:
             keypressed.g = 0;
+            break;
+        case 75:
+            keypressed.k = 0;
             break;
     }
 }
