@@ -45,48 +45,20 @@ weapon1 = new weapon(0,0,0,0);*/
 function gun(parent) {
 
     this.latch = 0;
-    this.rof = 3;//(rounds a second)
+    this.latched = 1;
+    this.rof = 0;//(rounds a second)
     this.shootcooldown = 33.3 / this.rof;
     this.projectile = "greenlaser";
     this.shootcooldowntimer = -1;
-    this.shoot = function ()
-    {
+    this.shoot = function () {
         if (this.latch == 0) {
             if (this.shootcooldowntimer < 0) {
                 shoot(parent, mouse.X, mouse.Y, parent.index, this.projectile);
                 this.shootcooldowntimer = this.shootcooldown;
             }
         }
-
-
-    }
-    this.timer = function()
-    {
-        this.shootcooldowntimer = this.shootcooldowntimer - 1;
-    }
-}
-
-function gun3(parent) {
-
-    this.latch = 1;
-    this.latched = 1;
-    this.rof = 10;//(rounds a second)
-    this.shootcooldown = 33.3 / this.rof;
-    this.projectile = "redlaser";
-    this.shootcooldowntimer = -1;
-    this.shoot = function () {
-        if (this.latch == 0)
-            {
-            if (this.shootcooldowntimer < 0)
-            {
-                shoot(parent, mouse.X, mouse.Y, parent.index, this.projectile);
-                this.shootcooldowntimer = this.shootcooldown;
-            }
-        }
-        else
-        {
-            if (this.latched == 0)
-            {
+        else {
+            if (this.latched == 0) {
                 shoot(parent, mouse.X, mouse.Y, parent.index, this.projectile);
             }
             this.latched = 1;
@@ -99,3 +71,25 @@ function gun3(parent) {
     }
 }
 
+
+function guntype1(parent) {
+
+    gun.call(this, parent);
+    this.rof = 3;//(rounds a second)
+    this.shootcooldown = 33.3 / this.rof;
+    this.projectile = "greenlaser";
+}
+
+function guntype2(parent) {
+
+    gun.call(this, parent);
+    this.latch = 1;
+    this.shootcooldown = 33.3 / this.rof;
+    this.projectile = "redlaser";
+
+}
+
+
+
+guntype1.prototype = Object.create(gun.prototype);
+guntype2.prototype = Object.create(gun.prototype);

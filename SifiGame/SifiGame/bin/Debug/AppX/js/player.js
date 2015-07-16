@@ -90,6 +90,7 @@
                 gun1.shoot();
             }
             gun1.timer();
+            gun2.timer();
             this.shootcooldown = this.shootcooldown - 1;
             if (keypressed.e == 1 && this.dead == 0 && this.falling == 0) {
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
