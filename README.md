@@ -2,7 +2,7 @@
 
 ##Debug Mode
 
-We have recently added a ~~debug mode~~ which allows a player to see statistics about the game.
+We have recently added a __debug mode__ which allows a player to see statistics about the game.
 
 ```javascript
  if (this.debugmode == 1)
@@ -18,6 +18,7 @@ We have recently added a ~~debug mode~~ which allows a player to see statistics 
         ctx.fillText("explosions: " + explosioncollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 50);
         ctx.fillText("total objects: " + (floating_numbercollection.count() + playercollection.count() + projectilecollection.count() + platformcollection.count() + floorcollection.count() + explosioncollection.count()), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 30);
     }
+ ```
 
 ## Instructions
 
