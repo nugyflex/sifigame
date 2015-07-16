@@ -3,6 +3,7 @@
 ##Debug Mode
 
 We have recently added a __debug mode__ which allows a player to see statistics about the game.
+These include the amount of players/enemies, the number of platforms, the number of projectiles, the number of floating numbers, the number of floors, the number of explosions, the total amount of objects and the player's __X__ and __Y__ coordinates.
 
 ```javascript
  if (this.debugmode == 1)
