@@ -92,7 +92,8 @@ window.onmousemove
 
 var timer = 50;
     window.onload = function () {
-
+        ctx.fillStyle = "white";
+        ctx.fillRect(-8000, -8000, 16000, 16000);
         ctx.drawImage(startscreen, game2.canvastranslatex + cwidth / 2 - 400, game2.canvastranslatey + cheight / 2 - 300);
 
 
