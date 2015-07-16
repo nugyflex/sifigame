@@ -287,7 +287,9 @@
         ctx.fillText("explosions: " + explosioncollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 50);
         ctx.fillText("total objects: " + (floating_numbercollection.count() + playercollection.count() + projectilecollection.count() + platformcollection.count() + floorcollection.count() + explosioncollection.count()), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 30);
     }
-		ctx.fillText("$" + playercollection.array[0].money, this.canvastranslatex + 20, this.canvastranslatey + 140);
+        ctx.fillText("$" + playercollection.array[0].money, this.canvastranslatex + 20, this.canvastranslatey + 140);
+
+        ctx.drawImage(gun1pic, this.canvastranslatex+cwidth/2, this.canvastranslatey+cheight/2);
 
 
 

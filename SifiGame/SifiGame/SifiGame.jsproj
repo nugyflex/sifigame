@@ -121,6 +121,7 @@
     <Content Include="images\player1walking2.png" />
     <Content Include="images\player1\drawing_gun_left.png" />
     <Content Include="images\player1\drawing_gun_right.png" />
+    <Content Include="images\player1\gun1.png" />
     <Content Include="images\player1\shooting_left.png" />
     <Content Include="images\player1\shooting_right.png" />
     <Content Include="images\player1\standing_down.png" />

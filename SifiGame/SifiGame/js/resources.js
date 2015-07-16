@@ -102,3 +102,5 @@ var gun2 = new Image();
 gun2.src = 'Images/NewFolder/gun2.png'
 var explosion1 = new Image();
 explosion1.src = 'Images/NewFolder/explosion_sheet1.png'
+var gun1pic = new Image();
+gun1pic.src = 'Images/player1/gun1.png'

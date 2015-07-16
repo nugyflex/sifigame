@@ -201,6 +201,9 @@
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\drawing_gun_right.png">
       <PackagePath>images\player1\drawing_gun_right.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\gun1.png">
+      <PackagePath>images\player1\gun1.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\shooting_left.png">
       <PackagePath>images\player1\shooting_left.png</PackagePath>
     </AppxPackagedFile>
