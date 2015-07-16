@@ -1,8 +1,8 @@
-## Sifi Game
+### Sifi Game
 
-## Instructions
+# Instructions
 
-#Movement
+##Movement
 | Key | Description          |
 | ------------- | ----------- |
 | 'w' | Go Forward |
@@ -10,26 +10,22 @@
 | 's' | Go Backward |
 | 'd' | Go Right |
 | 'a' | Go Left |
-| ------------- | ----------- |
 
-#Barriers
+##Barriers
 | Key | Description          |
 | ------------- | ----------- |
 | 'x' | Place a Vertical Barrier |
 | 'z' | Place a Horizontal Barrier |
-| ------------- | ----------- |
 
-#Weaponry
+##Weaponry
 | Key | Description          |
 | ------------- | ----------- |
 | Left/Right Click | Fire Red Laser |
 | Spacebar | Fire Green Laser |
-| ------------- | ----------- |
 
-#Miscellaneous
+##Miscellaneous
 | Key | Description          |
 | ------------- | ----------- |
 | 'k' | Enter Debug Mode |
 | 'e' | Disable Enemy AI |
 | 'f' | Begin New Round |
-| ------------- | ----------- |
