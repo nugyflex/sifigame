@@ -26,27 +26,9 @@
 	this.placecooldown = 0;
 	this.damage = 4;
 	this.index = index;
-	this.shootlatch = 0;
-
-	this.shootcooldown = 0;
 	this.rotation = 0;
-	this.money = 5;
-	this.shootcooldownmax = function(type)
-	{
-	    switch(type)
-	    {
-	        case greenlaser:
-	            return 1;
-	            break;
-	        case redlaser:
-	            return 2;
-	            break;
+	this.money = 500;
 
-	        case bomb:
-	            return 20;
-	            break;
-	    }
-	}
     //functions called in the main loop are below
     this.controls = function () {
         if (this.dead == 0&&this.falling == 0) {
@@ -97,18 +79,22 @@
             {
                 this.shootlatch = 0;
             }
-            if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0 && this.shootlatch == 0) {
-                shoot(this, mouse.X, mouse.Y, this.index, greenlaser);
-                this.shootlatch = 1;
+            if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0) {
+                gun1.shoot();
+            }
+            else
+            {
+                gun1.latched = 0;
             }
             if (keypressed.space == 1 && this.dead == 0 && this.falling == 0) {
-                shoot(this, mouse.X, mouse.Y, this.index, bomb);
+                shoot(this, mouse.X, mouse.Y, this.index, "bomb");
             }
-
+            gun1.timer();
             this.shootcooldown = this.shootcooldown - 1;
             if (keypressed.e == 1 && this.dead == 0 && this.falling == 0) {
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
                     if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money > platformcollection.array[platformcounter].price) {
+                        game2.submoney(this.index, platformcollection.array[platformcounter].price)
                         platformcollection.delete(platformcounter);
                     }
                 }

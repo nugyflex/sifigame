@@ -6,6 +6,7 @@
     this.theta = 0;
     this.visible = 1;
     this.pindex = pindex;
+    this.armourpiercing = 0;
     this.canexplode = false;
 
     x11 = 0;
@@ -59,8 +60,9 @@ function redlaser(pindex, type)
     this.width = 10;
     this.height = 10;
     this.vel = 12;
-    this.damagemultiplier = 0.5;
+    this.damagemultiplier = 5;
     this.image = bulletsheet1;
+    this.armourpiercing = 1;
     this.draw = function () {
         if (this.visible == 1) {
 

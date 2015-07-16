@@ -76,13 +76,13 @@ function projectiles() {
         var i = this.count();
         switch(type)
         {
-            case greenlaser:
+            case "greenlaser":
                 this.array[i] = new greenlaser(pindex, type)
                 break;
-            case redlaser:
+            case "redlaser":
                 this.array[i] = new redlaser(pindex, type)
                 break;
-            case bomb:
+            case "bomb":
                 this.array[i] = new bomb(pindex, type)
                 break
 

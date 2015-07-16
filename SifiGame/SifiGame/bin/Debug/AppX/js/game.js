@@ -4,7 +4,7 @@
     this.paused = false;
     this.canvastranslatex = 0;
     this.canvastranslatey = 0;
-    this.round = 10;
+    this.round = 0;
     this.numberofenemies = 0;
     this.playercap = 60;
     this.fixedplayercap = 60;
@@ -79,6 +79,7 @@
 
         floorcollection.add(-100, -100, 1000, 1000);
         floorcollection.add(300, -900, 300, 900);
+
         floorcollection.add(590, -600, 700, 50);
         floorcollection.add(590, -400, 700, 50);
         floorcollection.add(300, 800, 300, 700);
@@ -116,10 +117,12 @@
         floorcollection.add(1000, 1390, 400, 320);
         floorcollection.add(990, 1700, 410, 100);
 
-        platformcollection.add(100, 100, 100, 100, 13);
+        platformcollection.add(100, 100, 100, 100, PLATFORMTYPE_DOOR_750);
+        platformcollection.add(300, -300, 300, 30, PLATFORMTYPE_DOOR_750);
 
         playercollection.add(cwidth / 2, cheight / 2, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);
+        gun1 = new gun2(playercollection.array[0])
     }
 
     this.getplayercap = function(round)

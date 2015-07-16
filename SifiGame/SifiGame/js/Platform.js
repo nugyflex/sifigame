@@ -114,9 +114,9 @@
 			    ctx.drawImage(barricade2, this.x, this.y - 9);
 			}
 			break;
-            case 13:
+            case PLATFORMTYPE_DOOR_750:
                 this.removable = true;
-                this.price = 100;
+                this.price = 750;
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
                 break;
