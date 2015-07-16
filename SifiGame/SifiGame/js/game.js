@@ -124,6 +124,8 @@
         playercollection.add(cwidth / 2, cheight / 2, drone);
         gun1 = new guntype1(playercollection.array[0])
         gun2 = new guntype2(playercollection.array[0])
+        playercollection.array[0].weapons[0] = gun1;
+        playercollection.array[0].weapons[1] = gun2;
     }
 
     this.getplayercap = function(round)

@@ -308,6 +308,16 @@
             return 0;
         }
     }
+    this.testfeetcollision = function (player, object2) {
+        this.player = player;
+        this.object2 = object2;
+        if (player.x + player.width > object2.x && player.x < object2.x + object2.width && player.y+(player.height-10) + 10 > object2.y && player.y+(player.height-10) < object2.y + object2.height) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
 
     //called in the game loop, it stops the player from walking and falling through platforms
     this.stopplayer = function (player, platform) {

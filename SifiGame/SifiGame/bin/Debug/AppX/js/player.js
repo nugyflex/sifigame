@@ -28,6 +28,9 @@
 	this.index = index;
 	this.rotation = 0;
 	this.money = 500;
+	this.weapons = [];
+	this.weaponinuse = 0;
+	this.weaponswitchlatch = 1;
 
     //functions called in the main loop are below
     this.controls = function () {
@@ -61,6 +64,22 @@
             if (keypressed.w == 0 && keypressed.s == 0) {
                 this.yvel = 0;
             }
+            if (keypressed.k == 1) {
+                if (this.weaponswitchlatch==0)
+                {
+                    this.weaponinuse++;
+                    if (this.weaponinuse > this.weapons.length-1)
+                    {
+                        this.weaponinuse = 0;
+                    }
+                }
+                this.weaponswitchlatch = 1;
+            
+            }
+            else
+            {
+                this.weaponswitchlatch = 0;
+            }
             if (keypressed.z == 1 && this.placecooldown < 0 && this.money > 19.9) {
 
 				this.placecooldown = 10;
@@ -80,15 +99,16 @@
                 this.shootlatch = 0;
             }
             if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0) {
+                this.weapons[this.weaponinuse].shoot();
+            }
+            else {
+                this.weapons[this.weaponinuse].latched = 0;
+            }
+
+            if (keypressed.space == 1 && this.dead == 0 && this.falling == 0) {
                 gun2.shoot();
             }
-            else
-            {
-                gun2.latched = 0;
-            }
-            if (keypressed.space == 1 && this.dead == 0 && this.falling == 0) {
-                gun1.shoot();
-            }
+
             gun1.timer();
             gun2.timer();
             this.shootcooldown = this.shootcooldown - 1;

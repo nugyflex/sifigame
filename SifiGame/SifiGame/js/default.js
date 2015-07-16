@@ -152,7 +152,7 @@ function gameLoop() {
         var thing1 = 0
         for (floorcounter = 0; floorcounter < floorcollection.count() ; floorcounter++) {
 
-            if (collisiondetection1.testcollision(playercollection.array[0], floorcollection.array[floorcounter]) == 0) {
+            if (collisiondetection1.testfeetcollision(playercollection.array[0], floorcollection.array[floorcounter]) == 0) {
                 thing1 = thing1 + 1;
             }
 
