@@ -1,25 +1,12 @@
 # Sifi Game
 
+##The Game
+We have designed the game as a round-based shooter. You are a hooded individual whose mission is to kill enemies. Your enemies are orange squares (sprites are coming) which deal damage to you over time. You can place barriers on your mouse position, but this will only stop them for so long...
+
 ##Debug Mode
 
 We have recently added a __debug mode__ which allows a player to see statistics about the game.
 These include the amount of players/enemies, the number of platforms, the number of projectiles, the number of floating numbers, the number of floors, the number of explosions, the total amount of objects and the player's __X__ and __Y__ coordinates.
-
-```javascript
- if (this.debugmode == 1)
-            {
-        ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight-30);
-        ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
-
-        ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 150);
-        ctx.fillText("platforms: " + platformcollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 130);
-        ctx.fillText("projectiles: " + projectilecollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 110);
-        ctx.fillText("floating_numbers: " + floating_numbercollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 90);
-        ctx.fillText("floors: " + floorcollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 70);
-        ctx.fillText("explosions: " + explosioncollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 50);
-        ctx.fillText("total objects: " + (floating_numbercollection.count() + playercollection.count() + projectilecollection.count() + platformcollection.count() + floorcollection.count() + explosioncollection.count()), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 30);
-    }
- ```
 
 ## Instructions
 
