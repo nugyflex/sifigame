@@ -62,7 +62,7 @@ function redlaser(pindex, type)
     this.vel = 12;
     this.damagemultiplier = 5;
     this.image = bulletsheet1;
-    this.armourpiercing = 1;
+    this.armourpiercing = 0;
     this.draw = function () {
         if (this.visible == 1) {
 
@@ -92,8 +92,9 @@ function greenlaser(pindex, type) {
     this.width = 10;
     this.height = 10;
     this.vel = 12;
-    this.damagemultiplier = 1;
-    this.image = bulletsheet2;
+    this.damagemultiplier = 2;
+    this.image = bulletsheet2
+    this.armourpiercing = 1;
     this.draw = function () {
         if (this.visible == 1) {
 

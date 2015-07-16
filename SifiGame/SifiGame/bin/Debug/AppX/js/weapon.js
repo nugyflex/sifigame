@@ -45,9 +45,9 @@ weapon1 = new weapon(0,0,0,0);*/
 function gun(parent) {
 
     this.latch = 0;
-    this.rof = 5;//(rounds a second)
+    this.rof = 3;//(rounds a second)
     this.shootcooldown = 33.3 / this.rof;
-    this.projectile = "redlaser";
+    this.projectile = "greenlaser";
     this.shootcooldowntimer = -1;
     this.shoot = function ()
     {
@@ -66,7 +66,7 @@ function gun(parent) {
     }
 }
 
-function gun2(parent) {
+function gun3(parent) {
 
     this.latch = 1;
     this.latched = 1;

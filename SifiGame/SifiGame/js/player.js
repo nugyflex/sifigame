@@ -80,14 +80,14 @@
                 this.shootlatch = 0;
             }
             if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0) {
-                gun1.shoot();
+                gun2.shoot();
             }
             else
             {
-                gun1.latched = 0;
+                gun2.latched = 0;
             }
             if (keypressed.space == 1 && this.dead == 0 && this.falling == 0) {
-                shoot(this, mouse.X, mouse.Y, this.index, "bomb");
+                gun1.shoot();
             }
             gun1.timer();
             this.shootcooldown = this.shootcooldown - 1;
