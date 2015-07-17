@@ -172,7 +172,10 @@ function gameLoop() {
 
         for (floating_numbercounter = 0; floating_numbercounter < floating_numbercollection.count(); floating_numbercounter++) {
 
-
+            if (floating_numbercollection.array[floating_numbercounter].alphacounter < 0)
+            {
+                floating_numbercollection.delete(floating_numbercounter);
+            }
 
         }
 

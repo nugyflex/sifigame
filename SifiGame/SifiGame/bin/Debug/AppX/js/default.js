@@ -170,6 +170,15 @@ function gameLoop() {
 
         }
 
+        for (floating_numbercounter = 0; floating_numbercounter < floating_numbercollection.count(); floating_numbercounter++) {
+
+            if (floating_numbercollection.array[floating_numbercounter].alphacounter < 10)
+            {
+                floating_numbercollection.delete(floating_numbercounter);
+            }
+
+        }
+
         if (thing1 == floorcollection.count()) {
             playercollection.array[0].falling = 1;
             playercollection.array[0].xvel = 0;
