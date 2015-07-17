@@ -298,7 +298,7 @@ function game() {
         }
         else
         {
-        ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo, this.canvastranslatex+cwidth-80, this.canvastranslatey+cheight-100);
+            ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo + " / " + weaponcollection.array[playercollection.array[0].weaponinuse].ammores, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 120);
         }
 
 

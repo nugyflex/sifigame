@@ -1,4 +1,4 @@
-﻿function player(x, y, index/*so i can set where the player starts when i instantiate it*/) {
+function player(x, y, index/*so i can set where the player starts when i instantiate it*/) {
     this.x = x;
     this.y = y;
     this.oldx = x;
@@ -31,6 +31,7 @@
 	this.weapons = [];
 	this.weaponinuse = 0;
 	this.weaponswitchlatch = 1;
+	this.weaponreloadlatch = 1;
 
     //functions called in the main loop are below
     this.controls = function () {
@@ -64,7 +65,18 @@
             if (keypressed.w == 0 && keypressed.s == 0) {
                 this.yvel = 0;
             }
-            if (keypressed.k == 1) {
+            if (keypressed.r == 1) {
+
+                if (this.weaponreloadlatch == 0) {
+                    weaponcollection.array[this.weaponinuse].reload();
+                }
+                this.weaponreloadlatch = 1;
+            }
+            else
+            {
+                this.weaponreloadlatch = 0;
+            }
+            if (keypressed.q == 1) {
                 if (this.weaponswitchlatch==0)
                 {
                     this.weaponinuse++;
@@ -109,12 +121,12 @@
                 gun2.shoot();
             }
 
-            gun1.timer();
-            gun2.timer();
+            weaponcollection.array[0].timer();
+            weaponcollection.array[1].timer();
             this.shootcooldown = this.shootcooldown - 1;
             if (keypressed.e == 1 && this.dead == 0 && this.falling == 0) {
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
-                    if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money > platformcollection.array[platformcounter].price) {
+                    if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money >= platformcollection.array[platformcounter].price) {
                         game2.submoney(this.index, platformcollection.array[platformcounter].price)
                         platformcollection.delete(platformcounter);
                     }

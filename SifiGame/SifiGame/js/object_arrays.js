@@ -171,11 +171,11 @@ function weapons() {
         var i = this.count();
 		if (type=="guntype1")
 		{
-            this.array[i] = new guntype1(player)
+		    this.array[i] = new guntype1(player);
 		}
 				if (type=="guntype2")
 		{
-            this.array[i] = new guntype2(player)
+				    this.array[i] = new guntype2(player);
 		}
     }
     this.delete = function (index) {

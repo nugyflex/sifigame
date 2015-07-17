@@ -1,4 +1,4 @@
-﻿//setting up the canvas
+//setting up the canvas
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.tabIndex = 1;
@@ -56,7 +56,9 @@ var keypressed =
     e: 0,
     f: 0,
     mouse: 0,
-    k: 0
+    k: 0,
+    q: 0,
+    r: 0
 };
 
 var platformside =
@@ -85,6 +87,7 @@ var playercollection = new players();
 var explosioncollection = new explosions();
 var floorcollection = new floors();
 var floating_numbercollection = new floating_numbers();
+var weaponcollection = new weapons();
 
 window.onmousemove
 
@@ -155,6 +158,15 @@ function gameLoop() {
             if (collisiondetection1.testfeetcollision(playercollection.array[0], floorcollection.array[floorcounter]) == 0) {
                 thing1 = thing1 + 1;
             }
+
+        }
+
+        for (explosioncounter = 0; explosioncounter < explosioncollection.count(); explosioncounter++) {
+
+            if (explosioncollection.array[explosioncounter].frame > 3) {
+                explosioncollection.delete(explosioncounter);
+            } 
+
 
         }
 

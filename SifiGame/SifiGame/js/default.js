@@ -57,7 +57,8 @@ var keypressed =
     f: 0,
     mouse: 0,
     k: 0,
-    q: 0
+    q: 0,
+    r: 0
 };
 
 var platformside =
@@ -157,6 +158,21 @@ function gameLoop() {
             if (collisiondetection1.testfeetcollision(playercollection.array[0], floorcollection.array[floorcounter]) == 0) {
                 thing1 = thing1 + 1;
             }
+
+        }
+
+        for (explosioncounter = 0; explosioncounter < explosioncollection.count(); explosioncounter++) {
+
+            if (explosioncollection.array[explosioncounter].frame > 3) {
+                explosioncollection.delete(explosioncounter);
+            } 
+
+
+        }
+
+        for (floating_numbercounter = 0; floating_numbercounter < floating_numbercollection.count(); floating_numbercounter++) {
+
+
 
         }
 

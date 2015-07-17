@@ -1,4 +1,4 @@
-﻿var playerpicright = new Image();
+var playerpicright = new Image();
 playerpicright.src = 'images/player2withgun.png'
 var playerpicleft = new Image();
 playerpicleft.src = 'images/player2withgun2.png'
@@ -103,4 +103,8 @@ gun2.src = 'Images/NewFolder/gun2.png'
 var explosion1 = new Image();
 explosion1.src = 'Images/NewFolder/explosion_sheet1.png'
 var gun1pic = new Image();
-gun1pic.src = 'Images/player1/gun1.png'
+gun1pic.src = 'Images/player1/gun1x2.png'
+var gun2pic = new Image();
+gun2pic.src = 'Images/player1/gun2x2.png'
+var infinity = new Image();
+infinity.src = 'Images/player1/infinity.png'

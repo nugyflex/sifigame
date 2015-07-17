@@ -161,3 +161,35 @@ function floating_numbers() {
         }
     }
 }
+
+function weapons() {
+    this.count = function () {
+        return this.array.length;
+    }
+    this.array = [];
+    this.add = function (type, player) {
+        var i = this.count();
+		if (type=="guntype1")
+		{
+		    this.array[i] = new guntype1(player);
+		}
+				if (type=="guntype2")
+		{
+				    this.array[i] = new guntype2(player);
+		}
+    }
+    this.delete = function (index) {
+        var initialcount = this.array.length;
+        for (weapon = index; weaponcounter < initialcount; weaponcounter++) {
+
+            if (weaponcounter < initialcount - 1) {
+                this.array[weaponcounter] = this.array[weaponcounter + 1];
+                this.array[weaponcounter].index = this.array[weaponcounter].index - 1;
+            }
+            if (weaponcounter == initialcount - 1) {
+                this.array.length = this.array.length - 1;
+            }
+
+        }
+    }
+}

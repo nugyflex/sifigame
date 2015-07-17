@@ -31,6 +31,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
 	this.weapons = [];
 	this.weaponinuse = 0;
 	this.weaponswitchlatch = 1;
+	this.weaponreloadlatch = 1;
 
     //functions called in the main loop are below
     this.controls = function () {
@@ -63,6 +64,17 @@ function player(x, y, index/*so i can set where the player starts when i instant
             }
             if (keypressed.w == 0 && keypressed.s == 0) {
                 this.yvel = 0;
+            }
+            if (keypressed.r == 1) {
+
+                if (this.weaponreloadlatch == 0) {
+                    weaponcollection.array[this.weaponinuse].reload();
+                }
+                this.weaponreloadlatch = 1;
+            }
+            else
+            {
+                this.weaponreloadlatch = 0;
             }
             if (keypressed.q == 1) {
                 if (this.weaponswitchlatch==0)

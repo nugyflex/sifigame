@@ -46,6 +46,10 @@ function onKeyDown(event) {
         case 81:
             keypressed.q = 1;
             break;
+
+        case 82:
+            keypressed.r = 1;
+            break;
             
         case 27:
             if (game2.running == false && game2.pausecounter > 20) {
@@ -135,6 +139,10 @@ function onKeyUp(event) {
             
         case 81:
             keypressed.q = 0;
+            break;
+
+        case 82:
+            keypressed.r = 0;
             break;
     }
 }

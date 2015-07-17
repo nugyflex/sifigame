@@ -53,6 +53,7 @@ function gun(parent) {
     this.shootcooldown = 33.3 / this.rof;
     this.projectile = "greenlaser";
     this.shootcooldowntimer = -1;
+    this.image = gun2pic;
     this.shoot = function () {
         if (this.latch == 0) {
             if (this.shootcooldowntimer < 0&&this.ammo>0) {
@@ -80,13 +81,20 @@ function gun(parent) {
     this.reload = function()
     {
      
-        if (this.ammo<this.ammomax - this.ammo)
+        if (this.ammo<this.ammomax)
         {
-            if (this.ammores>
-            this.ammo = this.ammomax;
-            this.ammores = this.ammores-(this.ammomax - this.ammo);
+            if (this.ammores > this.ammomax - this.ammo) {
+                this.ammores = this.ammores - (this.ammomax - this.ammo);
+                this.ammo = this.ammomax;
+
+            }
+            else {
+                this.ammo = this.ammo + this.ammores;
+                this.ammores = 0;
+            }
             
         }
+
         
     }
     
@@ -115,7 +123,7 @@ function guntype2(parent) {
     this.ammo = "inf";
     this.latch = 1;
     this.shootcooldown = 33.3 / this.rof;
-    this.projectile = "redlaser";
+    this.projectile = "bomb";
 
 }
 

@@ -1,4 +1,4 @@
-﻿function game() {
+function game() {
     this.running = false;
     this.pausecounter = 0;
     this.paused = false;
@@ -122,10 +122,10 @@
 
         playercollection.add(cwidth / 2, cheight / 2, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);
-        gun1 = new guntype1(playercollection.array[0])
-        gun2 = new guntype2(playercollection.array[0])
-        playercollection.array[0].weapons[0] = gun1;
-        playercollection.array[0].weapons[1] = gun2;
+        weaponcollection.add("guntype1",playercollection.array[0])
+        weaponcollection.add("guntype2",playercollection.array[0])
+        playercollection.array[0].weapons[0] = weaponcollection.array[0];
+        playercollection.array[0].weapons[1] = weaponcollection.array[1];
     }
 
     this.getplayercap = function(round)
@@ -276,8 +276,10 @@
         }
         if (this.debugmode == 1)
             {
-        ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight-30);
-        ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
+                
+        ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
+        ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
+
 
         ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 150);
         ctx.fillText("platforms: " + platformcollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 130);
@@ -289,9 +291,15 @@
     }
         ctx.fillText("$" + playercollection.array[0].money, this.canvastranslatex + 20, this.canvastranslatey + 140);
 
-        ctx.drawImage(gun1pic, this.canvastranslatex+cwidth/2, this.canvastranslatey+cheight/2);
-
-
+        ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex+cwidth-120, this.canvastranslatey+cheight-100);
+        if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf")
+        {
+            ctx.drawImage(infinity, this.canvastranslatex+cwidth-80, this.canvastranslatey+cheight-110);
+        }
+        else
+        {
+            ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo + " / " + weaponcollection.array[playercollection.array[0].weaponinuse].ammores, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 120);
+        }
 
 
 		
