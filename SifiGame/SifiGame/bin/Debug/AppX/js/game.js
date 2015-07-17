@@ -13,6 +13,7 @@ function game() {
     this.lastamount = 0;
     this.debugmode = 0;
     this.damagealpha = 0;
+    this.TNOE = 0;
 	
 	this.startgame = function(map)
 	{
@@ -220,8 +221,9 @@ function game() {
             this.roundbreak = this.roundbreakmax;
         }
         this.numberofenemies = 0;
-        if (this.getnumberofenemies() < this.playercap && this.getnumberofenemies() < this.fixedplayercap*2) {
+        if (this.TNOE < this.getplayercap(this.round) && this.getnumberofenemies() < this.fixedplayercap) {
             var spawnpoint = Math.floor((Math.random() * 4) + 1);
+            this.TNOE++;
             switch (spawnpoint) {
 
                 case 1:
@@ -233,10 +235,11 @@ function game() {
                     playercollection.add(500, 0, enemy, 3);
                     break;
                 case 4:
-                playercollection.add(1000, 600, enemy, 3);
+                    playercollection.add(1000, 600, enemy, 3);
                     break;
 
             }
+            //playercollection.add(440, 830, enemy, 3.5);
 
 
         }

@@ -94,7 +94,7 @@
         if (this.dead == 0) {
             ctx.fillStyle = "orange";
             //ctx.fillRect(this.x, this.y, 10, 10);
-            ctx.drawImage(zombie1,this.x,this.y-22)
+            ctx.drawImage(zombie1, this.x, this.y - 22);
         }
         this.frame = this.frame + 1;
         if (this.frame == 4)
@@ -124,7 +124,7 @@
 
                     }
                 }
-                ctx.fillRect(this.x+5-(this.health/2), this.y - 40, this.health, 3);
+                ctx.fillRect(this.x+5-(this.health/2), this.y - 30, this.health, 3);
             }
         }
 
