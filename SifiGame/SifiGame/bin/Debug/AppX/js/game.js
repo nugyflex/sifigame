@@ -4,7 +4,7 @@ function game() {
     this.paused = false;
     this.canvastranslatex = 0;
     this.canvastranslatey = 0;
-    this.round = 0;
+    this.round = 6;
     this.numberofenemies = 0;
     this.playercap = 60;
     this.fixedplayercap = 60;

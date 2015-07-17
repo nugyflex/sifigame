@@ -26,8 +26,9 @@
 		{
 		player.health = player.health - this.damage;
 		this.attackcooldown1 = this.attackcooldown;
-		game2.damagealpha = 0.8;
-
+		if (player.type == "player") {
+		    game2.damagealpha = 0.8;
+		}
 		}
 	}
     this.ai = function (player) {
@@ -88,7 +89,8 @@
         //call this in the loop to draw the enemy
         if (this.dead == 0) {
             ctx.fillStyle = "orange";
-            ctx.fillRect(this.x, this.y, 10, 10);
+            //ctx.fillRect(this.x, this.y, 10, 10);
+            ctx.drawImage(zombie1,this.x,this.y-22)
         }
         this.frame = this.frame + 1;
         if (this.frame == 4)
@@ -118,7 +120,7 @@
 
                     }
                 }
-                ctx.fillRect(this.x - 5, this.y - 5, this.health, 3);
+                ctx.fillRect(this.x+5-(this.health/2), this.y - 40, this.health, 3);
             }
         }
 
