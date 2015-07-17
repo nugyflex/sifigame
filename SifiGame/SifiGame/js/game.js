@@ -277,8 +277,8 @@ function game() {
         if (this.debugmode == 1)
             {
                 
-        ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
-        ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight-30);
+        ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
+        ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
 
 
         ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 150);
@@ -292,8 +292,14 @@ function game() {
         ctx.fillText("$" + playercollection.array[0].money, this.canvastranslatex + 20, this.canvastranslatey + 140);
 
         ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex+cwidth-120, this.canvastranslatey+cheight-100);
-
-
+        if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf")
+        {
+            ctx.drawImage(infinity, this.canvastranslatex+cwidth-80, this.canvastranslatey+cheight-110);
+        }
+        else
+        {
+        ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo, this.canvastranslatex+cwidth-80, this.canvastranslatey+cheight-100);
+        }
 
 
 		

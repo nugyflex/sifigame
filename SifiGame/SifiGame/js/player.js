@@ -114,7 +114,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             this.shootcooldown = this.shootcooldown - 1;
             if (keypressed.e == 1 && this.dead == 0 && this.falling == 0) {
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
-                    if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money > platformcollection.array[platformcounter].price) {
+                    if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money >= platformcollection.array[platformcounter].price) {
                         game2.submoney(this.index, platformcollection.array[platformcounter].price)
                         platformcollection.delete(platformcounter);
                     }

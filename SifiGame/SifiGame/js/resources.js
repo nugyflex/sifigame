@@ -106,3 +106,5 @@ var gun1pic = new Image();
 gun1pic.src = 'Images/player1/gun1x2.png'
 var gun2pic = new Image();
 gun2pic.src = 'Images/player1/gun2x2.png'
+var infinity = new Image();
+infinity.src = 'Images/player1/infinity.png'

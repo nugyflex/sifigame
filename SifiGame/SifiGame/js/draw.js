@@ -1,4 +1,4 @@
-﻿function thingstodraw() {
+function thingstodraw() {
     this.count = function () {
         return this.drawarray.length;
     }

@@ -42,26 +42,26 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by) {
 
         case PLATFORMTYPE_SMALL_BOX:
             this.width = 40;
-            this.height = 15;
-            ctx.drawImage(box1, this.x, this.y - 15);
+            this.height = 26;
+            ctx.drawImage(box1, this.x, this.y - (49 - this.height));
             break;
             
         case PLATFORMTYPE_HALFARCH_LEFT:
             this.width = 17;
-            this.height = 10;
-            ctx.drawImage(ruins1, this.x - 1, this.y - 65);
+            this.height = 30;
+            ctx.drawImage(ruins1, this.x - 1, this.y - (90 - this.height));
             break;
 
         case PLATFORMTYPE_HALFARCH_RIGHT:
             this.width = 17;
-            this.height = 10;
-            ctx.drawImage(ruins2, this.x - 42, this.y - 65);
+            this.height = 30;
+            ctx.drawImage(ruins2, this.x - 42, this.y - (90 - this.height));
             break;
 
         case PLATFORMTYPE_HOLEWALL:
             this.width = 100;
-            this.height = 5;
-            ctx.drawImage(holewall1, this.x, this.y - 50);
+            this.height = 13;
+            ctx.drawImage(holewall1, this.x, this.y - (70-this.height));
             break;
     
         case PLATFORMTYPE_PILLAR1_MOVING:
