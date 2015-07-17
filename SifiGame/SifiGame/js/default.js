@@ -1,4 +1,4 @@
-﻿//setting up the canvas
+//setting up the canvas
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.tabIndex = 1;
@@ -56,7 +56,8 @@ var keypressed =
     e: 0,
     f: 0,
     mouse: 0,
-    k: 0
+    k: 0,
+    q: 0
 };
 
 var platformside =
@@ -85,6 +86,7 @@ var playercollection = new players();
 var explosioncollection = new explosions();
 var floorcollection = new floors();
 var floating_numbercollection = new floating_numbers();
+var weaponcollection = new weapons();
 
 window.onmousemove
 

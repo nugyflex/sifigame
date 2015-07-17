@@ -1,4 +1,4 @@
-﻿/*function weapon(x, y, vel, index) {
+/*function weapon(x, y, vel, index) {
     this.x = x;
     this.y = y;
     this.xoffset = 14;
@@ -75,7 +75,8 @@ function gun(parent) {
 function guntype1(parent) {
 
     gun.call(this, parent);
-    this.rof = 3;//(rounds a second)
+	this.image = gun2pic;
+    this.rof = 6;//(rounds a second)
     this.shootcooldown = 33.3 / this.rof;
     this.projectile = "greenlaser";
 }
@@ -83,6 +84,7 @@ function guntype1(parent) {
 function guntype2(parent) {
 
     gun.call(this, parent);
+	this.image = gun1pic;
     this.latch = 1;
     this.shootcooldown = 33.3 / this.rof;
     this.projectile = "redlaser";

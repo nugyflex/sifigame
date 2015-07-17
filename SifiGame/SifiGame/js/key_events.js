@@ -1,4 +1,4 @@
-﻿
+
 function mouseDown(event) {
 keypressed.mouse = 1;	
 }
@@ -43,6 +43,10 @@ function onKeyDown(event) {
             keypressed.z = 1;
             break;
 
+        case 81:
+            keypressed.q = 1;
+            break;
+            
         case 27:
             if (game2.running == false && game2.pausecounter > 20) {
                 game2.running = true;
@@ -127,6 +131,10 @@ function onKeyUp(event) {
             break;
         case 75:
             keypressed.k = 0;
+            break;
+            
+        case 81:
+            keypressed.q = 0;
             break;
     }
 }
