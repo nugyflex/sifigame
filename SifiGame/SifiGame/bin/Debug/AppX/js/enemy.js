@@ -22,12 +22,12 @@
     //functions called in the main loop are below
 	this.attack = function(player)
 	{
-		console.log("lemao");
 		if (this.attackcooldown1 < 0)
 		{
 		player.health = player.health - this.damage;
 		this.attackcooldown1 = this.attackcooldown;
-		console.log("djonsfosuodfb");
+		game2.damagealpha = 0.8;
+
 		}
 	}
     this.ai = function (player) {

@@ -12,6 +12,7 @@ function game() {
     this.roundbreak = 530;
     this.lastamount = 0;
     this.debugmode = 0;
+    this.damagealpha = 0;
 	
 	this.startgame = function(map)
 	{
@@ -294,13 +295,19 @@ function game() {
         ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex+cwidth-120, this.canvastranslatey+cheight-100);
         if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf")
         {
-            ctx.drawImage(infinity, this.canvastranslatex+cwidth-80, this.canvastranslatey+cheight-110);
+            ctx.drawImage(infinity, this.canvastranslatex+cwidth-100, this.canvastranslatey+cheight-130);
         }
         else
         {
             ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo + " / " + weaponcollection.array[playercollection.array[0].weaponinuse].ammores, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 120);
         }
-
+        if (this.damagealpha > 0) {
+            ctx.globalAlpha = this.damagealpha;
+            ctx.fillStyle = "rgb(210,75,75)"
+            ctx.fillRect(this.canvastranslatex, this.canvastranslatey, cwidth, cheight);
+            this.damagealpha = this.damagealpha - 0.1;
+            ctx.globalAlpha = 1;
+        }
 
 		
 			//console.log(this.alphacounter);
