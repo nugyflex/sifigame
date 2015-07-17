@@ -7,7 +7,11 @@
     this.theta = 0;
     this.vel = vel;
     this.height = 10;
-    this.width = 10;
+    this.width = 12;
+    this.hitheight = 32;
+    this.hitwidth = 12;
+    this.hitoffsetx = 0;
+    this.hitoffsety = -22;
     this.type = "enemy";
     this.falling = 0;
     this.frame = 0;

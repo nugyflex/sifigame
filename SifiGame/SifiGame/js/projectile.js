@@ -8,6 +8,10 @@
     this.pindex = pindex;
     this.armourpiercing = 0;
     this.canexplode = false;
+    this.hitoffsetx = 0;
+    this.hitoffsety = 0;
+    this.hitheight = 10;
+    this.hitwidth = 10;
 
     x11 = 0;
     y11 = 0;
