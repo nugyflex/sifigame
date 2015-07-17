@@ -1,4 +1,4 @@
-﻿function platform(index, x, y, width, height, type, ax, ay, bx, by) {
+function platform(index, x, y, width, height, type, ax, ay, bx, by) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -36,8 +36,8 @@
 
         case PLATFORMTYPE_PILLAR1:
             this.width = 40;
-            this.height = 20;
-            ctx.drawImage(wall1, this.x, this.y - (100 - (this.height)) + 20);
+            this.height = 26;
+            ctx.drawImage(wall1, this.x, this.y - (100 - this.height));
             break;
 
         case PLATFORMTYPE_SMALL_BOX:

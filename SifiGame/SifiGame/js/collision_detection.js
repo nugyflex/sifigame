@@ -1,4 +1,5 @@
-﻿function collisiondetection() {
+function collisiondetection() {
+    
     this.switch1 = 0;
 
 
@@ -38,7 +39,7 @@
 
     this.test5 = function (player, platform) {
         var result = false;
-        if (player.y > platform.y) {
+        if (player.y + (player.height-10)> platform.y) {
             result = true;
         }
         return result;
@@ -46,7 +47,7 @@
 
     this.test6 = function (player, platform) {
         var result = false;
-        if (player.y + player.height > platform.y) {
+        if (player.y + (player.height-10)+ 10 > platform.y) {
             result = true;
         }
         return result;
@@ -61,7 +62,7 @@
     }
     this.test8 = function (player, platform) {
         var result = false;
-        if (player.y > platform.y + platform.height) {
+        if (player.y + (player.height-10) > platform.y + platform.height) {
             result = true;
         }
         return result;
@@ -343,7 +344,7 @@
             if (player.yvel < 0) {
                 player.yvel = 0;
             }
-            player.y = platform.y + platform.height - 1;
+            player.y = platform.y + platform.height - 1-(player.height-10);
         }
         if (collisiondetection1.collision(player, platform) == platformside.top) {
             //console.log("Collision")
