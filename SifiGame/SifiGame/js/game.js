@@ -294,7 +294,7 @@ function game() {
         ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex+cwidth-120, this.canvastranslatey+cheight-100);
         if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf")
         {
-            ctx.drawImage(infinity, this.canvastranslatex+cwidth-80, this.canvastranslatey+cheight-110);
+            ctx.drawImage(infinity, this.canvastranslatex+cwidth-100, this.canvastranslatey+cheight-130);
         }
         else
         {

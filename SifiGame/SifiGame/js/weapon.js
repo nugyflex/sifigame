@@ -123,7 +123,7 @@ function guntype2(parent) {
     this.ammo = "inf";
     this.latch = 1;
     this.shootcooldown = 33.3 / this.rof;
-    this.projectile = "bomb";
+    this.projectile = "redlaser";
 
 }
 

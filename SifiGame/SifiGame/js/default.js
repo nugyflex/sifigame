@@ -105,7 +105,7 @@ var timer = 50;
     var game2 = new game;
     game2.startgame("map1");
 
-
+    var rotatething = 0;
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 function gameLoop() {
     game2.pause();
@@ -296,7 +296,18 @@ function gameLoop() {
 
 
         projectile_collision();
-        
+        ctx.save();
+        ctx.translate(500, 500);
+        ctx.rotate(rotatething);
+
+        ctx.fillStyle = "rgb(70,70,255)";
+        ctx.fillRect(0, 0, 100, 40);
+
+
+        ctx.restore();
+        ctx.fillStyle = "rgb(200,100,50)";
+        ctx.fillRect(500, 500, 1, 1);
+        rotatething = rotatething + 0.01;
 
 
 
