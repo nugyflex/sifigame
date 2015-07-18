@@ -16,6 +16,10 @@ function onKeyDown(event) {
         case 68:
             keypressed.d = 1;
             break;
+            
+        case 16:
+            keypressed.shift = 1;
+            break;
 
 
         case 65:
@@ -92,6 +96,10 @@ function onKeyUp(event) {
     switch (k) {
         case 68:
             keypressed.d = 0;
+            break;
+            
+         case 16:
+            keypressed.shift = 0;
             break;
 
 
