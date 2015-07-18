@@ -121,6 +121,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by) {
                 this.height = 60;
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
+                this.type = "door";
                 break;
 
             case PLATFORMTYPE_DOORWAY:
