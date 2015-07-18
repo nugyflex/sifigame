@@ -4,13 +4,19 @@ function platforms() {
         return this.array.length;
     }
     this.array = [];
-    this.add = function (x, y, width, height, type, ax, ay, bx, by) {
+    this.add = function (x, y, width, height, type, ax, ay, bx, by, image) {
         var i = this.count();
 
-        this.array[i] = new platform(i, x, y, width, height, type, ax, ay, bx, by)
+
         if (type == PLATFORMTYPE_DOOR_750) {
-            this.array[i + 1] = new platform(i + 1, x + 85, y+56, 15, 13, PLATFORMTYPE_GREYBOX)
-            this.array[i + 2] = new platform(i + 1, x, y+56, 15, 13, PLATFORMTYPE_DOORWAY)
+            this.array[i] = new platform(i, x + 15, y, width, height, type, ax, ay, bx, by, image)
+            this.array[i + 1] = new platform(i + 1, x + 85, y+13, 15, 13, PLATFORMTYPE_GREYBOX)
+            this.array[i + 2] = new platform(i + 1, x, y + 13, 15, 13, PLATFORMTYPE_DOORWAY)
+            //this.array[i + 3] = new platform(i + 1, x, y + 13, 15, 13, PLATFORMTYPE_IMAGE, 0,0,0,0,doorway1)
+        }
+        else
+        {
+            this.array[i] = new platform(i, x, y, width, height, type, ax, ay, bx, by, image)
         }
     }
     this.delete = function (index) {

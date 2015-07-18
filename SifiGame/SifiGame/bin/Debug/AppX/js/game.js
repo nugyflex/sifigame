@@ -119,7 +119,7 @@ function game() {
         floorcollection.add(1000, 1390, 400, 320);
         floorcollection.add(990, 1700, 410, 100);
 
-        platformcollection.add(100, 100, 100, 100, PLATFORMTYPE_DOOR_750);
+        platformcollection.add(100, 200, 100, 100, PLATFORMTYPE_DOOR_750);
         platformcollection.add(300, -300, 300, 30, PLATFORMTYPE_DOOR_750);
 
         playercollection.add(cwidth / 2, cheight / 2, player);
@@ -275,34 +275,38 @@ function game() {
             ctx.fillText("Time to next round:  " + Math.floor(this.roundbreak/33.33333), this.canvastranslatex + cwidth - 300, this.canvastranslatey + 110);
             ctx.fillText("Press F to start round", this.canvastranslatex + cwidth - 300, this.canvastranslatey + 150);
         }
+        if (this.roundbreak < 2) {
+            playercollection.array[0].money += 100;
+        }
         if (this.getnumberofenemies() > 0) {
             ctx.fillText("Number of enemies remaining:  " + this.getnumberofenemies()/2, this.canvastranslatex + cwidth - 400, this.canvastranslatey + 80);
         }
         if (this.debugmode == 1)
-            {
+        {
                 
-        ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
-        ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
+            ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
+            ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
 
 
-        ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 150);
-        ctx.fillText("platforms: " + platformcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 130);
-        ctx.fillText("projectiles: " + projectilecollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 110);
-        ctx.fillText("floating_numbers: " + floating_numbercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 90);
-        ctx.fillText("floors: " + floorcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 70);
-        ctx.fillText("explosions: " + explosioncollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 50);
-        ctx.fillText("total objects: " + (floating_numbercollection.count() + playercollection.count() + projectilecollection.count() + platformcollection.count() + floorcollection.count() + explosioncollection.count()), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 30);
-    }
+            ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 150);
+            ctx.fillText("platforms: " + platformcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 130);
+            ctx.fillText("projectiles: " + projectilecollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 110);
+            ctx.fillText("floating_numbers: " + floating_numbercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 90);
+            ctx.fillText("floors: " + floorcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 70);
+            ctx.fillText("explosions: " + explosioncollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 50);
+            ctx.fillText("total objects: " + (floating_numbercollection.count() + playercollection.count() + projectilecollection.count() + platformcollection.count() + floorcollection.count() + explosioncollection.count()), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 30);
+        }
         ctx.fillText("$" + playercollection.array[0].money, this.canvastranslatex + 20, this.canvastranslatey + 140);
 
-        ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex+cwidth-120, this.canvastranslatey+cheight-100);
-        if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf")
-        {
-            ctx.drawImage(infinity, this.canvastranslatex+cwidth-100, this.canvastranslatey+cheight-130);
-        }
-        else
-        {
-            ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo + " / " + weaponcollection.array[playercollection.array[0].weaponinuse].ammores, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 120);
+        if (playercollection.array[0].dead == 0) {
+            ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex + cwidth - 120, this.canvastranslatey + cheight - 100);
+
+            if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf") {
+                ctx.drawImage(infinity, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 130);
+            }
+            else {
+                ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo + " / " + weaponcollection.array[playercollection.array[0].weaponinuse].ammores, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 120);
+            }
         }
         if (this.damagealpha > 0) {
             ctx.globalAlpha = this.damagealpha;

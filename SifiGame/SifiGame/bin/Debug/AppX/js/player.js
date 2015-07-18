@@ -40,20 +40,32 @@ function player(x, y, index/*so i can set where the player starts when i instant
                 this.yvel = -4;
                 this.moved = 1;
             }
+            if (keypressed.w == 1 && keypressed.shift == 1) {
+                this.yvel = -6;
+                this.moved = 1;
+            }
             if (keypressed.s == 1) {
                 this.yvel = 4;
+                this.moved = 1;
+            }
+            if (keypressed.s == 1 && keypressed.shift == 1) {
+                this.yvel = 6;
                 this.moved = 1;
             }
             if (keypressed.a == 1) {
                 this.xvel = -4;
                 this.moved = 1;
             }
-            if (keypressed.d == 1) {
-                this.xvel = 4;
+            if (keypressed.a == 1 && keypressed.shift == 1) {
+                this.xvel = -6;
                 this.moved = 1;
             }
             if (keypressed.d == 1) {
                 this.xvel = 4;
+                this.moved = 1;
+            }
+            if (keypressed.d == 1 && keypressed.shift == 1) {
+                this.xvel = 6;
                 this.moved = 1;
             }
             if (keypressed.a == 1 && keypressed.d == 1) {

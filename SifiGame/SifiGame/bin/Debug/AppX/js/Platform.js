@@ -1,4 +1,4 @@
-function platform(index, x, y, width, height, type, ax, ay, bx, by) {
+function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -15,6 +15,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by) {
     this.index = index;
     this.breakable = false;
     this.removable = false;
+    this.image = image;
     //a function called in the main loop, it draws the platform
     this.draw = function () {
         /*if (this.width < playercollection.array[0].width) {
@@ -117,18 +118,27 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by) {
             case PLATFORMTYPE_DOOR_750:
                 this.removable = true;
                 this.price = 750;
-                this.width = 100;
-                this.height = 60;
+                this.width = 70;
+                this.height = 13;
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
+                ctx.drawImage(door1, this.x, this.y - 57)
                 break;
 
             case PLATFORMTYPE_DOORWAY:
                 this.width = 15;
                 this.height = 13;
-
-                ctx.drawImage(doorway1, this.x, this.y - (70 - this.height))
+                ctx.drawImage(doorway1, this.x, this.y - 57)
                 break;
+
+
+            case PLATFORMTYPE_IMAGE:
+                this.width = 0;
+                this.height = 0
+
+                //ctx.drawImage(this.image, this.x, this.y-57)
+                break;
+
 
         
     }

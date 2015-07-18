@@ -112,3 +112,5 @@ var zombie1 = new Image();
 zombie1.src = 'Images/player1/zombie1.png'
 var doorway1 = new Image();
 doorway1.src = 'Images/NewFolder/doorway1.png'
+var door1 = new Image();
+door1.src = 'Images/NewFolder/door1.png'

@@ -120,6 +120,9 @@
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\box2_front.png">
       <PackagePath>images\NewFolder\box2_front.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\door1.png">
+      <PackagePath>images\NewFolder\door1.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\doorway1.png">
       <PackagePath>images\NewFolder\doorway1.png</PackagePath>
     </AppxPackagedFile>
