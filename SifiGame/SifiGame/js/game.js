@@ -274,6 +274,7 @@ function game() {
         if (this.roundbreak < 529) {
             ctx.fillText("Time to next round:  " + Math.floor(this.roundbreak/33.33333), this.canvastranslatex + cwidth - 300, this.canvastranslatey + 110);
             ctx.fillText("Press F to start round", this.canvastranslatex + cwidth - 300, this.canvastranslatey + 150);
+            playercollection.array[0].money += 100;
         }
         if (this.getnumberofenemies() > 0) {
             ctx.fillText("Number of enemies remaining:  " + this.getnumberofenemies()/2, this.canvastranslatex + cwidth - 400, this.canvastranslatey + 80);
