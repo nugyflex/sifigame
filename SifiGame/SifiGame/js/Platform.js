@@ -118,7 +118,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by) {
                 this.removable = true;
                 this.price = 750;
                 this.width = 100;
-                this.height = 60;
+                this.height = 13;
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
                 break;
