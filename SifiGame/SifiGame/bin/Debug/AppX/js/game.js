@@ -4,7 +4,7 @@ function game() {
     this.paused = false;
     this.canvastranslatex = 0;
     this.canvastranslatey = 0;
-    this.round = 6;
+    this.round = 0;
     this.numberofenemies = 0;
     this.playercap = 60;
     this.fixedplayercap = 60;
@@ -221,7 +221,7 @@ function game() {
             this.roundbreak = this.roundbreakmax;
         }
         this.numberofenemies = 0;
-        if (this.TNOE < this.getplayercap(this.round) && this.getnumberofenemies() < this.fixedplayercap) {
+        if (this.TNOE < this.getplayercap(this.round) && this.getnumberofenemies() < this.fixedplayercap-1) {
             var spawnpoint = Math.floor((Math.random() * 4) + 1);
             this.TNOE++;
             switch (spawnpoint) {

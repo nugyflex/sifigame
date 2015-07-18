@@ -7,13 +7,13 @@ function thingstodraw() {
     }
     this.drawarray = [];
     this.drawarrayfloor = [];
-    this.add = function (index, type, y) {
+    this.add = function (index, type, y, height) {
         var i = this.count();
-        this.drawarray[i] = new thing(index, type, y);
+        this.drawarray[i] = new thing(index, type, y, height);
     }
-    this.addfloor = function (index, type, y) {
+    this.addfloor = function (index, type, y, height) {
         var j = this.countfloors();
-        this.drawarrayfloor[j] = new thing(index, type, y);
+        this.drawarrayfloor[j] = new thing(index, type, y, height);
     }
 
     this.draw = function () {
@@ -25,8 +25,8 @@ function thingstodraw() {
             currentmini = -1
 
             for (drawcounter = 0; drawcounter < this.count() ; drawcounter++) {
-                if (this.drawarray[drawcounter].y < currentmin && this.drawarray[drawcounter].drawn == false) {
-                    currentmin = this.drawarray[drawcounter].y;
+                if (this.drawarray[drawcounter].y + this.drawarray[drawcounter].height < currentmin && this.drawarray[drawcounter].drawn == false) {
+                    currentmin = this.drawarray[drawcounter].y+this.drawarray[drawcounter].height;
                     currentmini = drawcounter;
 
                 }
@@ -70,8 +70,8 @@ function thingstodraw() {
             currentmini = -1
 
             for (drawcounter = 0; drawcounter < this.countfloors() ; drawcounter++) {
-                if (this.drawarrayfloor[drawcounter].y < currentmin && this.drawarrayfloor[drawcounter].drawn == false) {
-                    currentmin = this.drawarrayfloor[drawcounter].y;
+                if (this.drawarrayfloor[drawcounter].y + this.drawarrayfloor[drawcounter].height < currentmin && this.drawarrayfloor[drawcounter].drawn == false) {
+                    currentmin = this.drawarrayfloor[drawcounter].y + this.drawarrayfloor[drawcounter].height;
                     currentmini = drawcounter;
 
                 }
@@ -98,25 +98,25 @@ function thingstodraw() {
     }
     this.load = function () {
         for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
-            this.add(platformcounter, "platform", platformcollection.array[platformcounter].y);
+            this.add(platformcounter, "platform", platformcollection.array[platformcounter].y, platformcollection.array[platformcounter].height);
         }
         for (projectilecounter = 0; projectilecounter < projectilecollection.count() ; projectilecounter++) {
-            this.add(projectilecounter, "projectile", projectilecollection.array[projectilecounter].y);
+            this.add(projectilecounter, "projectile", projectilecollection.array[projectilecounter].y, projectilecollection.array[projectilecounter].height);
         }
         for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
             if (playercollection.array[playercounter].dead == 0) {
-                this.add(playercounter, "player", playercollection.array[playercounter].y);
+                this.add(playercounter, "player", playercollection.array[playercounter].y, playercollection.array[playercounter].height);
             }
         }
         for (explosioncounter = 0; explosioncounter < explosioncollection.count() ; explosioncounter++) {
-            this.add(explosioncounter, "explosion", explosioncollection.array[explosioncounter].y);
+            this.add(explosioncounter, "explosion", explosioncollection.array[explosioncounter].y, explosioncollection.array[explosioncounter].height);
         }
 
     }
     this.loadfloors = function()
     {
         for (floorcounter = 0; floorcounter < floorcollection.count() ; floorcounter++) {
-            this.addfloor(floorcounter, "floor", floorcollection.array[floorcounter].y);
+            this.addfloor(floorcounter, "floor", floorcollection.array[floorcounter].y, floorcollection.array[floorcounter].height);
         }
     }
     this.execute = function () {

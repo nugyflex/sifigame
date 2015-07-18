@@ -130,7 +130,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             }
 
             if (keypressed.space == 1 && this.dead == 0 && this.falling == 0) {
-                gun2.shoot();
+                //gun2.shoot();
             }
 
             weaponcollection.array[0].timer();

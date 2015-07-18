@@ -110,3 +110,5 @@ var infinity = new Image();
 infinity.src = 'Images/player1/infinity.png'
 var zombie1 = new Image();
 zombie1.src = 'Images/player1/zombie1.png'
+var doorway1 = new Image();
+doorway1.src = 'Images/NewFolder/doorway1.png'

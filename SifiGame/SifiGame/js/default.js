@@ -29,12 +29,13 @@ var cheight = c.height;
 
 
 
-function thing(index, type, y)
+function thing(index, type, y, height)
 {
     this.index = index;
     this.type = type;
     this.y = y;
     this.drawn = false;
+    this.height = height;
     
 }
 

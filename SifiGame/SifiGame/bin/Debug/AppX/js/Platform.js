@@ -117,8 +117,17 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by) {
             case PLATFORMTYPE_DOOR_750:
                 this.removable = true;
                 this.price = 750;
+                this.width = 100;
+                this.height = 60;
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
+                break;
+
+            case PLATFORMTYPE_DOORWAY:
+                this.width = 15;
+                this.height = 13;
+
+                ctx.drawImage(doorway1, this.x, this.y - (70 - this.height))
                 break;
 
         
