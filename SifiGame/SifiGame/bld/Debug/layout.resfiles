@@ -58,6 +58,7 @@ images\platformtop.png
 images\platformtop1.png
 images\platformtop2.png
 images\player1.png
+images\player1\ammo1.png
 images\player1\drawing_gun_left.png
 images\player1\drawing_gun_right.png
 images\player1\gun1.png
@@ -101,6 +102,7 @@ images\splashscreen.scale-100.png
 images\startscreen.png
 images\storelogo.scale-100.png
 images\vine.png
+js\ammocontainer.js
 js\collision_detection.js
 js\constants.js
 js\default.js

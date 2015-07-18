@@ -89,6 +89,7 @@ var explosioncollection = new explosions();
 var floorcollection = new floors();
 var floating_numbercollection = new floating_numbers();
 var weaponcollection = new weapons();
+var miscobjectcollection = new miscobjects();
 
 window.onmousemove
 
@@ -273,8 +274,9 @@ function gameLoop() {
 
     
         }
-        playercollection.array[0].healthf();
-
+        if (playercollection.array[0].type == "player") {
+            playercollection.array[0].healthf();
+        }
         ctx.translate(game2.canvastranslatex, game2.canvastranslatey);
         game2.canvastranslatex = game2.canvastranslatex + playercollection.array[0].xvel;
         game2.canvastranslatey = game2.canvastranslatey + playercollection.array[0].yvel;

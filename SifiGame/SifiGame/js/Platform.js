@@ -49,13 +49,13 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
             
         case PLATFORMTYPE_HALFARCH_LEFT:
             this.width = 17;
-            this.height = 30;
+            this.height = 12;
             ctx.drawImage(ruins1, this.x - 1, this.y - (90 - this.height));
             break;
 
         case PLATFORMTYPE_HALFARCH_RIGHT:
             this.width = 17;
-            this.height = 30;
+            this.height = 12;
             ctx.drawImage(ruins2, this.x - 42, this.y - (90 - this.height));
             break;
 
@@ -75,7 +75,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
             break;
 
 			case 11:
-			this.height = 36;
+			this.height = 50;
 			this.width = 20;
 			this.breakable = true;
 			ctx.drawImage(barricade1, this.x, this.y - 14);
@@ -96,18 +96,18 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
 			}
 			break;
 			case 12:
-			this.height = 9;
+			this.height = 18;
 			this.width = 51;
 			this.breakable = true;
 
 			if (this.health < 130) {
-			    ctx.drawImage(barricade3, 0, 0, 51, 31, this.x, this.y - 9, 51, 31);
+			    ctx.drawImage(barricade3, 0, 0, 51, 31, this.x, this.y - 13, 51, 31);
 			    if
 			(this.health < 90) {
-			        ctx.drawImage(barricade3, 0, 31, 51, 31, this.x, this.y - 9, 51, 31);
+			        ctx.drawImage(barricade3, 0, 31, 51, 31, this.x, this.y - 13, 51, 31);
 			        if (this.health < 40)
 			        {
-			            ctx.drawImage(barricade3, 0, 62, 51, 31, this.x, this.y - 9, 51, 31);
+			            ctx.drawImage(barricade3, 0, 62, 51, 31, this.x, this.y - 13, 51, 31);
 			        }
 			    }
 			}
@@ -118,11 +118,11 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
             case PLATFORMTYPE_DOOR_750:
                 this.removable = true;
                 this.price = 750;
-                this.width = 70;
+                this.width = 100;
                 this.height = 13;
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
-                ctx.drawImage(door1, this.x, this.y - 57)
+                ctx.drawImage(door1, this.x + 15, this.y - 57)
                 break;
 
             case PLATFORMTYPE_DOORWAY:

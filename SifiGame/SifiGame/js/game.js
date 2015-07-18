@@ -128,6 +128,7 @@ function game() {
         weaponcollection.add("guntype2",playercollection.array[0])
         playercollection.array[0].weapons[0] = weaponcollection.array[0];
         playercollection.array[0].weapons[1] = weaponcollection.array[1];
+        miscobjectcollection.add("ammocontainer", 600, 600);
     }
 
     this.getplayercap = function(round)
@@ -298,7 +299,7 @@ function game() {
         }
         ctx.fillText("$" + playercollection.array[0].money, this.canvastranslatex + 20, this.canvastranslatey + 140);
 
-        if (playercollection.array[0].dead == 0) {
+        if (playercollection.array[0].dead == 0 && playercollection.array[0].type == "player") {
             ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex + cwidth - 120, this.canvastranslatey + cheight - 100);
 
             if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf") {

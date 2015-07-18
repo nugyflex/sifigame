@@ -47,6 +47,10 @@ function thingstodraw() {
                         explosioncollection.array[this.drawarray[currentmini].index].draw();
                         break;
 
+                    case "miscobject":
+                        miscobjectcollection.array[this.drawarray[currentmini].index].draw();
+                        break;
+
                     case "player":
 					if (playercollection.array[this.drawarray[currentmini].index].falling == 0)
 					{
@@ -110,6 +114,9 @@ function thingstodraw() {
         }
         for (explosioncounter = 0; explosioncounter < explosioncollection.count() ; explosioncounter++) {
             this.add(explosioncounter, "explosion", explosioncollection.array[explosioncounter].y, explosioncollection.array[explosioncounter].height);
+        }
+        for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
+            this.add(miscobjectcounter, "miscobject", miscobjectcollection.array[miscobjectcounter].y, miscobjectcollection.array[miscobjectcounter].height);
         }
 
     }
