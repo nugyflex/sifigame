@@ -7,7 +7,7 @@ function game() {
     this.round = 0;
     this.numberofenemies = 0;
     this.playercap = 60;
-    this.fixedplayercap = 60;
+    this.fixedplayercap = 30;
     this.roundbreakmax = 530;
     this.roundbreak = 530;
     this.lastamount = 0;
@@ -108,7 +108,7 @@ function game() {
         platformcollection.add(1429, 1050, 40, 20, PLATFORMTYPE_PILLAR1);
 
         floorcollection.add(1200, 1090, 200, 310);
-        floorcollection.add(1000, 1390, 400, 320);
+        floorcollection.add(1000, 1390, 400, 400);
         floorcollection.add(990, 1700, 410, 100);
 
         platformcollection.add(100, 200, 100, 100, PLATFORMTYPE_DOOR_750);
@@ -220,15 +220,15 @@ function game() {
             switch (spawnpoint) {
 
                 case 1:
-                    playercollection.add(440, 830, enemy, 2);
+                    playercollection.add(440, 830, enemy, 2.2);
                     break;
                 case 2:
-                    playercollection.add(960, 1750, enemy, 2);
+                    playercollection.add(960, 1750, enemy, 2.2);
                 case 3:
-                    playercollection.add(500, 0, enemy, 2);
+                    playercollection.add(500, 0, enemy, 2.2);
                     break;
                 case 4:
-                    playercollection.add(1000, 600, enemy, 1);
+                    playercollection.add(1000, 600, enemy, 2.2);
                     break;
 
             }
@@ -339,7 +339,7 @@ function game() {
 						    floating_numbercollection.array[floating_numbercounter].draw();
 						}
 
-						if (this.paused) {
+						if (this.running == 0) {
 						    ctx.globalAlpha = 0.2;
 						    ctx.fillStyle = "rgb(0,0,0)";
 						    ctx.fillRect(this.canvastranslatex, this.canvastranslatey, 5000, 5000);
@@ -347,6 +347,10 @@ function game() {
 						    ctx.fillStyle = "rgb(200,75,75)";
 						    ctx.font = "160px SpacedOut";
 						    ctx.fillText("Paused", this.canvastranslatex + cwidth / 2 - 270, this.canvastranslatey + cheight / 2 + 40);
+						}
+
+						if (playercollection.array[0].type == "player") {
+						    playercollection.array[0].healthf();
 						}
 
 

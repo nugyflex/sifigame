@@ -51,7 +51,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             }
             else
             {
-                this.vel = 2;
+                this.vel = 1.9;
             }
             if (keypressed.w == 1) {
                 this.yvel = -1*this.vel;
@@ -247,7 +247,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
     }
     this.healthf = function () {
         if (this.health > 0) {
-            ctx.fillStyle = "rgb(160,70,70)";
+            ctx.fillStyle = "rgb(200,75,75)";
             ctx.fillRect(game2.canvastranslatex + 20, game2.canvastranslatey + 20, 20, this.health);
         }
         if (this.health < 0) {

@@ -114,15 +114,17 @@ var timer = 50;
     function draw() {
         setTimeout(function () {
             requestAnimationFrame(draw);
-            camera1.center();
-            ctx.fillStyle = "rgb(30,30,50)";
-            ctx.fillRect(-8000, -8000, 16000, 16000);
 
-            //to draw a background
-            thingstodraw1.executefloors();
-            thingstodraw1.execute();
-            game2.drawhud();
-            ctx.translate(game2.canvastranslatex, game2.canvastranslatey);
+                camera1.center();
+                ctx.fillStyle = "rgb(30,30,50)";
+                ctx.fillRect(-8000, -8000, 16000, 16000);
+
+                //to draw a background
+                thingstodraw1.executefloors();
+                thingstodraw1.execute();
+                game2.drawhud();
+                ctx.translate(game2.canvastranslatex, game2.canvastranslatey);
+            
         }, 1000 / fps);
     }
     draw();
@@ -291,9 +293,7 @@ function gameLoop() {
 
     
         }
-        if (playercollection.array[0].type == "player") {
-            playercollection.array[0].healthf();
-        }
+
 
         
         for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
