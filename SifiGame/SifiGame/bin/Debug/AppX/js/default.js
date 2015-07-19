@@ -197,7 +197,6 @@ function gameLoop() {
 						if (collisiondetection1.testcollision(playercollection.array[playercounter],platformcollection.array[platformcounter]))
 						{
 						playercollection.array[playercounter].attack(platformcollection.array[platformcounter]);
-						//console.log("ayylmao");
 						 if (platformcollection.array[platformcounter].health < 1) {
 							platformcollection.array[platformcounter].y = 10000;
                         }
@@ -208,7 +207,6 @@ function gameLoop() {
 						if (collisiondetection1.testcollision(playercollection.array[playercounter],platformcollection.array[platformcounter]))
 						{
 						playercollection.array[playercounter].attack(platformcollection.array[platformcounter]);
-						//console.log("ayylmao");
 						 if (platformcollection.array[platformcounter].health < 1) {
 							platformcollection.array[platformcounter].y = 10000;
                         }

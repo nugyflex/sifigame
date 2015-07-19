@@ -120,6 +120,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
                 this.price = 750;
                 this.width = 100;
                 this.height = 13;
+                this.message = "'E' to open this door"
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
                 ctx.drawImage(door1, this.x + 15, this.y - 57)
@@ -135,8 +136,6 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
             case PLATFORMTYPE_IMAGE:
                 this.width = 0;
                 this.height = 0
-
-                //ctx.drawImage(this.image, this.x, this.y-57)
                 break;
 
 

@@ -287,7 +287,7 @@ function game() {
         
         for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
             if (collisiondetection1.testcollision(playercollection.array[0], platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && playercollection.array[0].money >= platformcollection.array[platformcounter].price) {
-                ctx.fillText("'E' to purchase this " + platformcollection.array[platformcounter].type, this.canvastranslatex + cwidth / 2 - ctx.measureText("'E' to purchase this door").width/2, this.canvastranslatey + 50);
+                ctx.fillText(platformcollection.array[platformcounter].messagetext, this.canvastranslatex + cwidth / 2 - ctx.measureText(platformcollection.array[platformcounter].messagetext).width / 2, this.canvastranslatey + 50);
                 ctx.fillText("$" + platformcollection.array[platformcounter].price, this.canvastranslatex + cwidth / 2 - ctx.measureText("$" + platformcollection.array[platformcounter].price).width / 2, this.canvastranslatey + 70);
             }
             if (collisiondetection1.testcollision(playercollection.array[0], platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && playercollection.array[0].money < platformcollection.array[platformcounter].price) {
