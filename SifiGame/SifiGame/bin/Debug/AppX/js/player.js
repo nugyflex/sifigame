@@ -5,6 +5,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
     this.oldy = y;
     this.xvel = 0;
     this.yvel = 0;
+    this.vel = 4;
     this.frame1 = 0;
     this.frame2 = 0;
     this.colour = "rgb(200,50,50)";
@@ -32,40 +33,40 @@ function player(x, y, index/*so i can set where the player starts when i instant
 	this.weaponinuse = 0;
 	this.weaponswitchlatch = 1;
 	this.weaponreloadlatch = 1;
+	this.sprinting = 0;
 
     //functions called in the main loop are below
     this.controls = function () {
-        if (this.dead == 0&&this.falling == 0) {
-            if (keypressed.w == 1) {
-                this.yvel = -4;
-                this.moved = 1;
+        if (this.dead == 0 && this.falling == 0) {
+            if (keypressed.shift == 1) {
+                this.sprinting = 1;
             }
-            if (keypressed.w == 1 && keypressed.shift == 1) {
-                this.yvel = -6;
+            else
+            {
+                this.sprinting = 0;
+            }
+            if (this.sprinting == 1)
+            {
+                this.vel = 5;
+            }
+            else
+            {
+                this.vel = 3;
+            }
+            if (keypressed.w == 1) {
+                this.yvel = -1*this.vel;
                 this.moved = 1;
             }
             if (keypressed.s == 1) {
-                this.yvel = 4;
-                this.moved = 1;
-            }
-            if (keypressed.s == 1 && keypressed.shift == 1) {
-                this.yvel = 6;
+                this.yvel = this.vel;
                 this.moved = 1;
             }
             if (keypressed.a == 1) {
-                this.xvel = -4;
-                this.moved = 1;
-            }
-            if (keypressed.a == 1 && keypressed.shift == 1) {
-                this.xvel = -6;
+                this.xvel = -1*this.vel;
                 this.moved = 1;
             }
             if (keypressed.d == 1) {
-                this.xvel = 4;
-                this.moved = 1;
-            }
-            if (keypressed.d == 1 && keypressed.shift == 1) {
-                this.xvel = 6;
+                this.xvel = this.vel;
                 this.moved = 1;
             }
             if (keypressed.a == 1 && keypressed.d == 1) {
@@ -88,7 +89,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             {
                 this.weaponreloadlatch = 0;
             }
-            if (keypressed.q == 1) {
+            if (keypressed.q == 1 && this.sprinting == 0) {
                 if (this.weaponswitchlatch==0)
                 {
                     this.weaponinuse++;
@@ -122,7 +123,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             {
                 this.shootlatch = 0;
             }
-            if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0) {
+            if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0 && this.sprinting == 0) {
                 this.weapons[this.weaponinuse].shoot();
             }
             else {
