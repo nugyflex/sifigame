@@ -1,4 +1,4 @@
-﻿/*function weapon(x, y, vel, index) {
+/*function weapon(x, y, vel, index) {
     this.x = x;
     this.y = y;
     this.xoffset = 14;
@@ -43,29 +43,61 @@
 weapon1 = new weapon(0,0,0,0);*/
 
 function gun(parent) {
-
+    
+    this.ammo = 10;
+    this. ammomax = 10;
     this.latch = 0;
     this.latched = 1;
-    this.rof = 0;//(rounds a second)
-    this.shootcooldown = 33.3 / this.rof;
+    this.ammores = 1000;
+    this.rof = 6;//(rounds a second)
+    this.shootcooldown = 60/this.rof;
     this.projectile = "greenlaser";
     this.shootcooldowntimer = -1;
+    this.image = gun2pic;
     this.shoot = function () {
         if (this.latch == 0) {
-            if (this.shootcooldowntimer < 0) {
+            if (this.shootcooldowntimer < 0&&this.ammo>0) {
                 shoot(parent, mouse.X, mouse.Y, parent.index, this.projectile);
+                                if (this.ammo !== "inf")
+                {
+                this.ammo = this.ammo - 1;
+                }
                 this.shootcooldowntimer = this.shootcooldown;
             }
         }
         else {
             if (this.latched == 0) {
                 shoot(parent, mouse.X, mouse.Y, parent.index, this.projectile);
+                if (this.ammo !== "inf")
+                {
+                this.ammo = this.ammo - 1;
+                }
             }
             this.latched = 1;
         }
 
 
     }
+    this.reload = function()
+    {
+     
+        if (this.ammo<this.ammomax)
+        {
+            if (this.ammores > this.ammomax - this.ammo) {
+                this.ammores = this.ammores - (this.ammomax - this.ammo);
+                this.ammo = this.ammomax;
+
+            }
+            else {
+                this.ammo = this.ammo + this.ammores;
+                this.ammores = 0;
+            }
+            
+        }
+
+        
+    }
+    
     this.timer = function () {
         this.shootcooldowntimer = this.shootcooldowntimer - 1;
     }
@@ -75,16 +107,20 @@ function gun(parent) {
 function guntype1(parent) {
 
     gun.call(this, parent);
-    this.rof = 3;//(rounds a second)
-    this.shootcooldown = 33.3 / this.rof;
+    this.ammo = 20;
+    this.ammores = 100;
+    this.ammomax = 20;
+	this.image = gun2pic;
+    this.rof = 6;//(rounds a second)
     this.projectile = "greenlaser";
 }
 
 function guntype2(parent) {
 
     gun.call(this, parent);
+	this.image = gun1pic;
+    this.ammo = "inf";
     this.latch = 1;
-    this.shootcooldown = 33.3 / this.rof;
     this.projectile = "redlaser";
 
 }

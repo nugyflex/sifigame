@@ -309,6 +309,16 @@ function collisiondetection() {
             return 0;
         }
     }
+    this.testcollisionenemy = function (object1, object2) {
+        this.object1 = object1;
+        this.object2 = object2;
+        if (object1.x + object1.hitoffsetx + object1.hitwidth > object2.x + object2.hitoffsetx && object1.x + object1.hitoffsetx < object2.x + object2.hitoffsetx + object2.hitwidth && object1.y + object1.hitoffsety + object1.hitheight > object2.y + object2.hitoffsety && object1.y < object2.y + object2.hitoffsety + object2.hitheight) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
     this.testfeetcollision = function (player, object2) {
         this.player = player;
         this.object2 = object2;

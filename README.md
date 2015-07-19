@@ -18,22 +18,24 @@ These include the amount of players/enemies, the number of platforms, the number
 | 's' | Go Backward |
 | 'd' | Go Right |
 | 'a' | Go Left |
+| Shift | Sprint |
 
 ###Barriers
 | Key | Description          |
 | ------------- | ----------- |
 | 'x' | Place a Vertical Barrier |
 | 'z' | Place a Horizontal Barrier |
+| 'e' | Purchase Door |
 
 ##Weaponry
 | Key | Description          |
 | ------------- | ----------- |
-| Left/Right Click | Fire Red Laser |
-| Spacebar | Fire Green Laser |
+| Left Click | Fire Laser |
+| 'r' | Reload Weapon |
+| 'q' | Swap Between Weapons |
 
 ###Miscellaneous
 | Key | Description          |
 | ------------- | ----------- |
 | 'k' | Enter Debug Mode |
-| 'e' | Disable Enemy AI |
 | 'f' | Begin New Round |

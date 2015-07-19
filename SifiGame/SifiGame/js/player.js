@@ -5,6 +5,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
     this.oldy = y;
     this.xvel = 0;
     this.yvel = 0;
+    this.vel = 4;
     this.frame1 = 0;
     this.frame2 = 0;
     this.colour = "rgb(200,50,50)";
@@ -31,28 +32,41 @@ function player(x, y, index/*so i can set where the player starts when i instant
 	this.weapons = [];
 	this.weaponinuse = 0;
 	this.weaponswitchlatch = 1;
+	this.weaponreloadlatch = 1;
+	this.sprinting = 0;
 
     //functions called in the main loop are below
     this.controls = function () {
-        if (this.dead == 0&&this.falling == 0) {
+        if (this.dead == 0 && this.falling == 0) {
+            if (keypressed.shift == 1) {
+                this.sprinting = 1;
+            }
+            else
+            {
+                this.sprinting = 0;
+            }
+            if (this.sprinting == 1)
+            {
+                this.vel = 3;
+            }
+            else
+            {
+                this.vel = 1.9;
+            }
             if (keypressed.w == 1) {
-                this.yvel = -4;
+                this.yvel = -1*this.vel;
                 this.moved = 1;
             }
             if (keypressed.s == 1) {
-                this.yvel = 4;
+                this.yvel = this.vel;
                 this.moved = 1;
             }
             if (keypressed.a == 1) {
-                this.xvel = -4;
+                this.xvel = -1*this.vel;
                 this.moved = 1;
             }
             if (keypressed.d == 1) {
-                this.xvel = 4;
-                this.moved = 1;
-            }
-            if (keypressed.d == 1) {
-                this.xvel = 4;
+                this.xvel = this.vel;
                 this.moved = 1;
             }
             if (keypressed.a == 1 && keypressed.d == 1) {
@@ -64,7 +78,18 @@ function player(x, y, index/*so i can set where the player starts when i instant
             if (keypressed.w == 0 && keypressed.s == 0) {
                 this.yvel = 0;
             }
-            if (keypressed.q == 1) {
+            if (keypressed.r == 1 && this.sprinting == 0) {
+
+                if (this.weaponreloadlatch == 0) {
+                    weaponcollection.array[this.weaponinuse].reload();
+                }
+                this.weaponreloadlatch = 1;
+            }
+            else
+            {
+                this.weaponreloadlatch = 0;
+            }
+            if (keypressed.q == 1 && this.sprinting == 0) {
                 if (this.weaponswitchlatch==0)
                 {
                     this.weaponinuse++;
@@ -98,7 +123,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             {
                 this.shootlatch = 0;
             }
-            if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0) {
+            if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0 && this.sprinting == 0) {
                 this.weapons[this.weaponinuse].shoot();
             }
             else {
@@ -106,7 +131,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             }
 
             if (keypressed.space == 1 && this.dead == 0 && this.falling == 0) {
-                gun2.shoot();
+                //gun2.shoot();
             }
 
             weaponcollection.array[0].timer();
@@ -114,7 +139,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             this.shootcooldown = this.shootcooldown - 1;
             if (keypressed.e == 1 && this.dead == 0 && this.falling == 0) {
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
-                    if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money > platformcollection.array[platformcounter].price) {
+                    if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money >= platformcollection.array[platformcounter].price) {
                         game2.submoney(this.index, platformcollection.array[platformcounter].price)
                         platformcollection.delete(platformcounter);
                     }
@@ -222,7 +247,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
     }
     this.healthf = function () {
         if (this.health > 0) {
-            ctx.fillStyle = "rgb(160,70,70)";
+            ctx.fillStyle = "rgb(200,75,75)";
             ctx.fillRect(game2.canvastranslatex + 20, game2.canvastranslatey + 20, 20, this.health);
         }
         if (this.health < 0) {

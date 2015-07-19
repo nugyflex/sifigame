@@ -4,9 +4,20 @@ function platforms() {
         return this.array.length;
     }
     this.array = [];
-    this.add = function (x, y, width, height, type, ax, ay, bx, by) {
+    this.add = function (x, y, width, height, type, ax, ay, bx, by, image) {
         var i = this.count();
-        this.array[i] = new platform(i, x, y, width, height, type, ax, ay, bx, by)
+
+
+        if (type == PLATFORMTYPE_DOOR_750) {
+            this.array[i] = new platform(i, x, y, width, height, type, ax, ay, bx, by, image)
+            this.array[i + 1] = new platform(i + 1, x + 85, y+13, 15, 13, PLATFORMTYPE_GREYBOX)
+            this.array[i + 2] = new platform(i + 1, x, y + 13, 15, 13, PLATFORMTYPE_DOORWAY)
+            //this.array[i + 3] = new platform(i + 1, x, y + 13, 15, 13, PLATFORMTYPE_IMAGE, 0,0,0,0,doorway1)
+        }
+        else
+        {
+            this.array[i] = new platform(i, x, y, width, height, type, ax, ay, bx, by, image)
+        }
     }
     this.delete = function (index) {
         var initialcount = this.array.length;
@@ -171,11 +182,11 @@ function weapons() {
         var i = this.count();
 		if (type=="guntype1")
 		{
-            this.array[i] = new guntype1(player)
+		    this.array[i] = new guntype1(player);
 		}
 				if (type=="guntype2")
 		{
-            this.array[i] = new guntype2(player)
+				    this.array[i] = new guntype2(player);
 		}
     }
     this.delete = function (index) {
@@ -187,6 +198,34 @@ function weapons() {
                 this.array[weaponcounter].index = this.array[weaponcounter].index - 1;
             }
             if (weaponcounter == initialcount - 1) {
+                this.array.length = this.array.length - 1;
+            }
+
+        }
+    }
+}
+
+function miscobjects() {
+    this.count = function () {
+        return this.array.length;
+    }
+    this.array = [];
+    this.add = function (type, x, y) {
+        var i = this.count();
+        if (type == "ammocontainer") {
+            this.array[i] = new ammocontainer(type,x,y);
+        }
+
+    }
+    this.delete = function (index) {
+        var initialcount = this.array.length;
+        for (miscobjectcounter = index; miscobjectcounter < initialcount; miscobjectcounter++) {
+
+            if (miscobjectcounter < initialcount - 1) {
+                this.array[miscobjectcounter] = this.array[miscobjectcounter + 1];
+                this.array[miscobjectcounter].index = this.array[miscobjectcounter].index - 1;
+            }
+            if (miscobjectcounter == initialcount - 1) {
                 this.array.length = this.array.length - 1;
             }
 

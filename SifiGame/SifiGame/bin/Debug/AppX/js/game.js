@@ -1,4 +1,4 @@
-﻿function game() {
+function game() {
     this.running = false;
     this.pausecounter = 0;
     this.paused = false;
@@ -7,11 +7,13 @@
     this.round = 0;
     this.numberofenemies = 0;
     this.playercap = 60;
-    this.fixedplayercap = 60;
+    this.fixedplayercap = 30;
     this.roundbreakmax = 530;
     this.roundbreak = 530;
     this.lastamount = 0;
     this.debugmode = 0;
+    this.damagealpha = 0;
+    this.TNOE = 0;
 	
 	this.startgame = function(map)
 	{
@@ -23,21 +25,13 @@
 	    }*/
 	    this.loadmap1();
 	    this.startround();
-	    setInterval(gameLoop, 30);
+	    setInterval(gameLoop, 1000 / 60);
 
 	}
 
     this.pause = function () {
         this.pausecounter = this.pausecounter + 1;
-        if (this.paused && this.pausecounter < 6) {
-            ctx.globalAlpha = 0.05;
-			ctx.fillStyle = "rgb(0,0,0)";
-            ctx.fillRect(this.canvastranslatex, this.canvastranslatey,5000,5000);
-            ctx.globalAlpha = 1;
-            ctx.fillStyle = "rgb(200,75,75)";
-            ctx.font = "160px SpacedOut";
-            ctx.fillText("Paused", this.canvastranslatex + cwidth/2-270, this.canvastranslatey + cheight/2+40);
-        }
+
     }
 
     this.loadmap1 = function()
@@ -114,18 +108,19 @@
         platformcollection.add(1429, 1050, 40, 20, PLATFORMTYPE_PILLAR1);
 
         floorcollection.add(1200, 1090, 200, 310);
-        floorcollection.add(1000, 1390, 400, 320);
+        floorcollection.add(1000, 1390, 400, 400);
         floorcollection.add(990, 1700, 410, 100);
 
-        platformcollection.add(100, 100, 100, 100, PLATFORMTYPE_DOOR_750);
+        platformcollection.add(100, 200, 100, 100, PLATFORMTYPE_DOOR_750);
         platformcollection.add(300, -300, 300, 30, PLATFORMTYPE_DOOR_750);
 
         playercollection.add(cwidth / 2, cheight / 2, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);
-        gun1 = new guntype1(playercollection.array[0])
-        gun2 = new guntype2(playercollection.array[0])
-        playercollection.array[0].weapons[0] = gun1;
-        playercollection.array[0].weapons[1] = gun2;
+        weaponcollection.add("guntype1",playercollection.array[0])
+        weaponcollection.add("guntype2",playercollection.array[0])
+        playercollection.array[0].weapons[0] = weaponcollection.array[0];
+        playercollection.array[0].weapons[1] = weaponcollection.array[1];
+        miscobjectcollection.add("ammocontainer", 600, 600);
     }
 
     this.getplayercap = function(round)
@@ -219,23 +214,25 @@
             this.roundbreak = this.roundbreakmax;
         }
         this.numberofenemies = 0;
-        if (this.getnumberofenemies() < this.playercap && this.getnumberofenemies() < this.fixedplayercap*2) {
+        if (this.TNOE < this.getplayercap(this.round) && this.getnumberofenemies() < this.fixedplayercap-1) {
             var spawnpoint = Math.floor((Math.random() * 4) + 1);
+            this.TNOE++;
             switch (spawnpoint) {
 
                 case 1:
-                    playercollection.add(440, 830, enemy, 3.5);
+                    playercollection.add(440, 830, enemy, 2.2);
                     break;
                 case 2:
-                    playercollection.add(960, 1750, enemy, 3);
+                    playercollection.add(960, 1750, enemy, 2.2);
                 case 3:
-                    playercollection.add(500, 0, enemy, 3);
+                    playercollection.add(500, 0, enemy, 2.2);
                     break;
                 case 4:
-                playercollection.add(1000, 600, enemy, 3);
+                    playercollection.add(1000, 600, enemy, 2.2);
                     break;
 
             }
+            //playercollection.add(440, 830, enemy, 3.5);
 
 
         }
@@ -271,28 +268,61 @@
             ctx.fillText("Time to next round:  " + Math.floor(this.roundbreak/33.33333), this.canvastranslatex + cwidth - 300, this.canvastranslatey + 110);
             ctx.fillText("Press F to start round", this.canvastranslatex + cwidth - 300, this.canvastranslatey + 150);
         }
+        if (this.roundbreak < 2) {
+            this.addmoney(0,100);
+        }
         if (this.getnumberofenemies() > 0) {
             ctx.fillText("Number of enemies remaining:  " + this.getnumberofenemies()/2, this.canvastranslatex + cwidth - 400, this.canvastranslatey + 80);
         }
+        
+        // Adds UI for buying doors/other misc.
+        
+        for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
+            if (collisiondetection1.testcollision(playercollection.array[0], platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable) {
+                ctx.fillText(platformcollection.array[platformcounter].messagetext, this.canvastranslatex + cwidth / 2 - ctx.measureText(platformcollection.array[platformcounter].messagetext).width / 2, this.canvastranslatey + 50);
+                if (platformcollection.array[platformcounter].price > 0) {
+                    ctx.fillText("$" + platformcollection.array[platformcounter].price, this.canvastranslatex + cwidth / 2 - ctx.measureText("$" + platformcollection.array[platformcounter].price).width / 2, this.canvastranslatey + 70);
+                }
+            }
+            if (collisiondetection1.testcollision(playercollection.array[0], platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && playercollection.array[0].money < platformcollection.array[platformcounter].price) {
+                ctx.fillText("Insufficient Funds", this.canvastranslatex + cwidth / 2 - ctx.measureText("Insufficient Funds").width/2, this.canvastranslatey + 90);
+            }
+        }
+        
         if (this.debugmode == 1)
-            {
-        ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight-30);
-        ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
+        {
+                
+            ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
+            ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
 
-        ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 150);
-        ctx.fillText("platforms: " + platformcollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 130);
-        ctx.fillText("projectiles: " + projectilecollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 110);
-        ctx.fillText("floating_numbers: " + floating_numbercollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 90);
-        ctx.fillText("floors: " + floorcollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 70);
-        ctx.fillText("explosions: " + explosioncollection.count(), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 50);
-        ctx.fillText("total objects: " + (floating_numbercollection.count() + playercollection.count() + projectilecollection.count() + platformcollection.count() + floorcollection.count() + explosioncollection.count()), this.canvastranslatex + cwidth - 300, this.canvastranslatey + cheight - 30);
-    }
+
+            ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 150);
+            ctx.fillText("platforms: " + platformcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 130);
+            ctx.fillText("projectiles: " + projectilecollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 110);
+            ctx.fillText("floating_numbers: " + floating_numbercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 90);
+            ctx.fillText("floors: " + floorcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 70);
+            ctx.fillText("explosions: " + explosioncollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 50);
+            ctx.fillText("total objects: " + (floating_numbercollection.count() + playercollection.count() + projectilecollection.count() + platformcollection.count() + floorcollection.count() + explosioncollection.count()), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 30);
+        }
         ctx.fillText("$" + playercollection.array[0].money, this.canvastranslatex + 20, this.canvastranslatey + 140);
 
-        ctx.drawImage(gun1pic, this.canvastranslatex+cwidth/2, this.canvastranslatey+cheight/2);
+        if (playercollection.array[0].dead == 0 && playercollection.array[0].type == "player") {
+            ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex + cwidth - 120, this.canvastranslatey + cheight - 100);
 
-
-
+            if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf") {
+                ctx.drawImage(infinity, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 130);
+            }
+            else {
+                ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo + " / " + weaponcollection.array[playercollection.array[0].weaponinuse].ammores, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 120);
+            }
+        }
+        if (this.damagealpha > 0) {
+            ctx.globalAlpha = this.damagealpha;
+            ctx.fillStyle = "rgb(210,75,75)"
+            ctx.fillRect(this.canvastranslatex, this.canvastranslatey, cwidth, cheight);
+            this.damagealpha = this.damagealpha - 0.1;
+            ctx.globalAlpha = 1;
+        }
 
 		
 			//console.log(this.alphacounter);
@@ -307,6 +337,20 @@
 
 						for (floating_numbercounter = 0; floating_numbercounter < floating_numbercollection.count() ; floating_numbercounter++) {
 						    floating_numbercollection.array[floating_numbercounter].draw();
+						}
+
+						if (this.running == 0) {
+						    ctx.globalAlpha = 0.2;
+						    ctx.fillStyle = "rgb(0,0,0)";
+						    ctx.fillRect(this.canvastranslatex, this.canvastranslatey, 5000, 5000);
+						    ctx.globalAlpha = 1;
+						    ctx.fillStyle = "rgb(200,75,75)";
+						    ctx.font = "160px SpacedOut";
+						    ctx.fillText("Paused", this.canvastranslatex + cwidth / 2 - 270, this.canvastranslatey + cheight / 2 + 40);
+						}
+
+						if (playercollection.array[0].type == "player") {
+						    playercollection.array[0].healthf();
 						}
 
 

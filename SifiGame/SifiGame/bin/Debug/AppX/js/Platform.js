@@ -1,11 +1,11 @@
-﻿function platform(index, x, y, width, height, type, ax, ay, bx, by) {
+function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
     this.type = type;
-    this.xvel = 3;
-    this.yvel = 3;
+    this.xvel = 1.8;
+    this.yvel = 1.8;
     this.ax1 = ax;
     this.ay1 = ay;
     this.bx1 = bx;
@@ -15,6 +15,7 @@
     this.index = index;
     this.breakable = false;
     this.removable = false;
+    this.image = image;
     //a function called in the main loop, it draws the platform
     this.draw = function () {
         /*if (this.width < playercollection.array[0].width) {
@@ -36,45 +37,43 @@
 
         case PLATFORMTYPE_PILLAR1:
             this.width = 40;
-            this.height = 20;
-            ctx.drawImage(wall1, this.x, this.y - (100 - (this.height)) + 20);
+            this.height = 26;
+            ctx.drawImage(wall1, this.x, this.y - (100 - this.height));
             break;
 
         case PLATFORMTYPE_SMALL_BOX:
             this.width = 40;
-            this.height = 15;
-            ctx.drawImage(box1, this.x, this.y - 15);
+            this.height = 26;
+            ctx.drawImage(box1, this.x, this.y - (49 - this.height));
             break;
             
         case PLATFORMTYPE_HALFARCH_LEFT:
             this.width = 17;
-            this.height = 10;
-            ctx.drawImage(ruins1, this.x - 1, this.y - 65);
+            this.height = 12;
+            ctx.drawImage(ruins1, this.x - 1, this.y - (90 - this.height));
             break;
 
         case PLATFORMTYPE_HALFARCH_RIGHT:
             this.width = 17;
-            this.height = 10;
-            ctx.drawImage(ruins2, this.x - 42, this.y - 65);
+            this.height = 12;
+            ctx.drawImage(ruins2, this.x - 42, this.y - (90 - this.height));
             break;
 
         case PLATFORMTYPE_HOLEWALL:
             this.width = 100;
-            this.height = 5;
-            ctx.drawImage(holewall1, this.x, this.y - 50);
+            this.height = 13;
+            ctx.drawImage(holewall1, this.x, this.y - (70-this.height));
             break;
     
         case PLATFORMTYPE_PILLAR1_MOVING:
-            ctx.fillStyle = this.colour;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
             this.width = 40;
-            this.height = 20;
-            ctx.drawImage(wall1, this.x, this.y - (100 - (this.height)) + 20);
+            this.height = 26;
+            ctx.drawImage(wall1, this.x, this.y - (100 - this.height));
 
             break;
 
 			case 11:
-			this.height = 36;
+			this.height = 50;
 			this.width = 20;
 			this.breakable = true;
 			ctx.drawImage(barricade1, this.x, this.y - 14);
@@ -95,18 +94,18 @@
 			}
 			break;
 			case 12:
-			this.height = 9;
+			this.height = 18;
 			this.width = 51;
 			this.breakable = true;
 
 			if (this.health < 130) {
-			    ctx.drawImage(barricade3, 0, 0, 51, 31, this.x, this.y - 9, 51, 31);
+			    ctx.drawImage(barricade3, 0, 0, 51, 31, this.x, this.y - 13, 51, 31);
 			    if
 			(this.health < 90) {
-			        ctx.drawImage(barricade3, 0, 31, 51, 31, this.x, this.y - 9, 51, 31);
+			        ctx.drawImage(barricade3, 0, 31, 51, 31, this.x, this.y - 13, 51, 31);
 			        if (this.health < 40)
 			        {
-			            ctx.drawImage(barricade3, 0, 62, 51, 31, this.x, this.y - 9, 51, 31);
+			            ctx.drawImage(barricade3, 0, 62, 51, 31, this.x, this.y - 13, 51, 31);
 			        }
 			    }
 			}
@@ -117,9 +116,26 @@
             case PLATFORMTYPE_DOOR_750:
                 this.removable = true;
                 this.price = 750;
+                this.width = 100;
+                this.height = 13;
+                this.messagetext = "'E' to open this door";
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
+                ctx.drawImage(door1, this.x + 15, this.y - 57)
                 break;
+
+            case PLATFORMTYPE_DOORWAY:
+                this.width = 15;
+                this.height = 13;
+                ctx.drawImage(doorway1, this.x, this.y - 57)
+                break;
+
+
+            case PLATFORMTYPE_IMAGE:
+                this.width = 0;
+                this.height = 0
+                break;
+
 
         
     }
