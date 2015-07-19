@@ -108,6 +108,20 @@ var timer = 50;
     game2.startgame("map1");
 
     var rotatething = 0;
+    var fps = 60;
+    function draw() {
+        setTimeout(function () {
+            requestAnimationFrame(draw);
+            ctx.fillStyle = "rgb(30,30,50)";
+            ctx.fillRect(-8000, -8000, 16000, 16000);
+            //to draw a background
+            thingstodraw1.executefloors();
+            thingstodraw1.execute();
+        }, 1000 / fps);
+    }
+    draw();
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 function gameLoop() {
     game2.pause();
@@ -121,9 +135,7 @@ function gameLoop() {
             playercollection.array[0].xvel = 0;
         }
 
-        ctx.fillStyle = "rgb(30,30,50)";
-        ctx.fillRect(-8000, -8000, 16000, 16000);
-        //to draw a background
+
         //ctx.drawImage(background1, game2.canvastranslatex, game2.canvastranslatey);
 
         if (playercollection.array[0].dead == 1) {
@@ -258,8 +270,9 @@ function gameLoop() {
         player_loop();
 
         game2.runround();
-        thingstodraw1.executefloors();
-        thingstodraw1.execute();
+
+
+
 
         game2.drawhud();
 

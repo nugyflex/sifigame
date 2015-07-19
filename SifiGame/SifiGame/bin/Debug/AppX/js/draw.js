@@ -19,14 +19,14 @@ function thingstodraw() {
     this.draw = function () {
         var currentmin;
         var currentmini;
-        for (i = 0; i < this.count() ; i++) {
+        for (i = 0; i < thingstodraw1.drawarray.length  ; i++) {
 
             currentmin = 1000000000;
             currentmini = -1
 
-            for (drawcounter = 0; drawcounter < this.count() ; drawcounter++) {
-                if (this.drawarray[drawcounter].y + this.drawarray[drawcounter].height < currentmin && this.drawarray[drawcounter].drawn == false) {
-                    currentmin = this.drawarray[drawcounter].y+this.drawarray[drawcounter].height;
+            for (drawcounter = 0; drawcounter < thingstodraw1.drawarray.length ; drawcounter++) {
+                if (thingstodraw1.drawarray[drawcounter].y + thingstodraw1.drawarray[drawcounter].height < currentmin && thingstodraw1.drawarray[drawcounter].drawn == false) {
+                    currentmin = thingstodraw1.drawarray[drawcounter].y + thingstodraw1.drawarray[drawcounter].height;
                     currentmini = drawcounter;
 
                 }
@@ -36,31 +36,31 @@ function thingstodraw() {
             if (currentmini > -1) {
                 switch (this.drawarray[currentmini].type) {
                     case "platform":
-                        platformcollection.array[this.drawarray[currentmini].index].draw();
+                        platformcollection.array[thingstodraw1.drawarray[currentmini].index].draw();
                         break;
 
                     case "projectile":
-                        projectilecollection.array[this.drawarray[currentmini].index].draw();
+                        projectilecollection.array[thingstodraw1.drawarray[currentmini].index].draw();
                         break;
 
                     case "explosion":
-                        explosioncollection.array[this.drawarray[currentmini].index].draw();
+                        explosioncollection.array[thingstodraw1.drawarray[currentmini].index].draw();
                         break;
 
                     case "miscobject":
-                        miscobjectcollection.array[this.drawarray[currentmini].index].draw();
+                        miscobjectcollection.array[thingstodraw1.drawarray[currentmini].index].draw();
                         break;
 
                     case "player":
-					if (playercollection.array[this.drawarray[currentmini].index].falling == 0)
+                        if (playercollection.array[thingstodraw1.drawarray[currentmini].index].falling == 0)
 					{
-                        playercollection.array[this.drawarray[currentmini].index].draw();
+                            playercollection.array[thingstodraw1.drawarray[currentmini].index].draw();
 					}
 					break;
 
                 }
 
-                this.drawarray[currentmini].drawn = true;
+                thingstodraw1.drawarray[currentmini].drawn = true;
             }
         }
 
@@ -127,9 +127,12 @@ function thingstodraw() {
         }
     }
     this.execute = function () {
+
         this.load();
         this.draw();
+        //this.draw();
         this.finish();
+
     }
     this.executefloors = function () {
         this.loadfloors();
