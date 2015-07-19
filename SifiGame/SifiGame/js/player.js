@@ -78,7 +78,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             if (keypressed.w == 0 && keypressed.s == 0) {
                 this.yvel = 0;
             }
-            if (keypressed.r == 1) {
+            if (keypressed.r == 1 && this.sprinting == 0) {
 
                 if (this.weaponreloadlatch == 0) {
                     weaponcollection.array[this.weaponinuse].reload();

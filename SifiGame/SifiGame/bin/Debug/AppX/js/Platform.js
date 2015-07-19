@@ -118,7 +118,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
                 this.price = 750;
                 this.width = 100;
                 this.height = 13;
-                this.messagetext = "'E' to open this door"
+                this.messagetext = "'E' to open this door";
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(this.x, this.y, this.width, this.height);
                 ctx.drawImage(door1, this.x + 15, this.y - 57)
