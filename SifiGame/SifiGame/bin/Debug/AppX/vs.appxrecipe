@@ -479,7 +479,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\game.js">
       <PackagePath>js\game.js</PackagePath>
-      <Modified>2015-07-19T02:22:18.966</Modified>
+      <Modified>2015-07-19T02:27:12.683</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\key_events.js">
       <PackagePath>js\key_events.js</PackagePath>
@@ -491,7 +491,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\Platform.js">
       <PackagePath>js\Platform.js</PackagePath>
-      <Modified>2015-07-19T02:22:44.946</Modified>
+      <Modified>2015-07-19T02:38:04.825</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\player.js">
       <PackagePath>js\player.js</PackagePath>
