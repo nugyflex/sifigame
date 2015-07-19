@@ -47,11 +47,11 @@ function player(x, y, index/*so i can set where the player starts when i instant
             }
             if (this.sprinting == 1)
             {
-                this.vel = 5;
+                this.vel = 3;
             }
             else
             {
-                this.vel = 3;
+                this.vel = 2;
             }
             if (keypressed.w == 1) {
                 this.yvel = -1*this.vel;

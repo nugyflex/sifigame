@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-19T02:22:48.058</Modified>
+      <Modified>2015-07-19T07:49:33.049</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-07-19T02:01:03.752</Modified>
+      <Modified>2015-07-19T07:48:46.565</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\background1.png">
       <PackagePath>images\background1.png</PackagePath>
@@ -441,6 +441,10 @@
       <PackagePath>js\ammocontainer.js</PackagePath>
       <Modified>2015-07-19T02:01:03.755</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\camera.js">
+      <PackagePath>js\camera.js</PackagePath>
+      <Modified>2015-07-19T11:01:25.048</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\collision_detection.js">
       <PackagePath>js\collision_detection.js</PackagePath>
       <Modified>2015-07-17T08:20:27.176</Modified>
@@ -451,7 +455,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-07-19T07:31:20.344</Modified>
+      <Modified>2015-07-19T08:09:09.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\draw.js">
       <PackagePath>js\draw.js</PackagePath>
@@ -479,7 +483,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\game.js">
       <PackagePath>js\game.js</PackagePath>
-      <Modified>2015-07-19T07:20:04.120</Modified>
+      <Modified>2015-07-19T10:59:24.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\key_events.js">
       <PackagePath>js\key_events.js</PackagePath>
@@ -491,11 +495,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\Platform.js">
       <PackagePath>js\Platform.js</PackagePath>
-      <Modified>2015-07-19T03:57:31.870</Modified>
+      <Modified>2015-07-19T11:00:06.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\player.js">
       <PackagePath>js\player.js</PackagePath>
-      <Modified>2015-07-19T02:54:33.590</Modified>
+      <Modified>2015-07-19T10:58:25.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\player_loop.js">
       <PackagePath>js\player_loop.js</PackagePath>
@@ -503,7 +507,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\projectile.js">
       <PackagePath>js\projectile.js</PackagePath>
-      <Modified>2015-07-17T08:23:15.290</Modified>
+      <Modified>2015-07-19T10:58:50.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\projectile_collision.js">
       <PackagePath>js\projectile_collision.js</PackagePath>
@@ -519,7 +523,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\weapon.js">
       <PackagePath>js\weapon.js</PackagePath>
-      <Modified>2015-07-17T06:52:44.156</Modified>
+      <Modified>2015-07-19T10:57:38.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\css\default.css">
       <PackagePath>css\default.css</PackagePath>
@@ -535,7 +539,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-07-19T02:22:47.480</Modified>
+      <Modified>2015-07-19T07:49:32.848</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

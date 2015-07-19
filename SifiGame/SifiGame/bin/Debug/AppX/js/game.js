@@ -25,21 +25,13 @@ function game() {
 	    }*/
 	    this.loadmap1();
 	    this.startround();
-	    setInterval(gameLoop, 30);
+	    setInterval(gameLoop, 1000 / 60);
 
 	}
 
     this.pause = function () {
         this.pausecounter = this.pausecounter + 1;
-        if (this.paused && this.pausecounter < 6) {
-            ctx.globalAlpha = 0.05;
-			ctx.fillStyle = "rgb(0,0,0)";
-            ctx.fillRect(this.canvastranslatex, this.canvastranslatey,5000,5000);
-            ctx.globalAlpha = 1;
-            ctx.fillStyle = "rgb(200,75,75)";
-            ctx.font = "160px SpacedOut";
-            ctx.fillText("Paused", this.canvastranslatex + cwidth/2-270, this.canvastranslatey + cheight/2+40);
-        }
+
     }
 
     this.loadmap1 = function()
@@ -228,15 +220,15 @@ function game() {
             switch (spawnpoint) {
 
                 case 1:
-                    playercollection.add(440, 830, enemy, 3.5);
+                    playercollection.add(440, 830, enemy, 2);
                     break;
                 case 2:
-                    playercollection.add(960, 1750, enemy, 3);
+                    playercollection.add(960, 1750, enemy, 2);
                 case 3:
-                    playercollection.add(500, 0, enemy, 3);
+                    playercollection.add(500, 0, enemy, 2);
                     break;
                 case 4:
-                    playercollection.add(1000, 600, enemy, 3);
+                    playercollection.add(1000, 600, enemy, 1);
                     break;
 
             }
@@ -345,6 +337,16 @@ function game() {
 
 						for (floating_numbercounter = 0; floating_numbercounter < floating_numbercollection.count() ; floating_numbercounter++) {
 						    floating_numbercollection.array[floating_numbercounter].draw();
+						}
+
+						if (this.paused) {
+						    ctx.globalAlpha = 0.2;
+						    ctx.fillStyle = "rgb(0,0,0)";
+						    ctx.fillRect(this.canvastranslatex, this.canvastranslatey, 5000, 5000);
+						    ctx.globalAlpha = 1;
+						    ctx.fillStyle = "rgb(200,75,75)";
+						    ctx.font = "160px SpacedOut";
+						    ctx.fillText("Paused", this.canvastranslatex + cwidth / 2 - 270, this.canvastranslatey + cheight / 2 + 40);
 						}
 
 

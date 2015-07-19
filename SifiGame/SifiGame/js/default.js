@@ -107,16 +107,22 @@ var timer = 50;
     var game2 = new game;
     game2.startgame("map1");
 
+    camera1 = new camera(playercollection.array[0], game2);
+
     var rotatething = 0;
     var fps = 60;
     function draw() {
         setTimeout(function () {
             requestAnimationFrame(draw);
+            camera1.center();
             ctx.fillStyle = "rgb(30,30,50)";
             ctx.fillRect(-8000, -8000, 16000, 16000);
+
             //to draw a background
             thingstodraw1.executefloors();
             thingstodraw1.execute();
+            game2.drawhud();
+            ctx.translate(game2.canvastranslatex, game2.canvastranslatey);
         }, 1000 / fps);
     }
     draw();
@@ -274,10 +280,10 @@ function gameLoop() {
 
 
 
-        game2.drawhud();
 
-        playercollection.array[1].calcNewPosition(playercollection.array[0]);
-
+        if (playercollection.array[0].type == "player") {
+            playercollection.array[1].calcNewPosition(playercollection.array[0]);
+        }
         if (playercollection.array[0].moved == 0) {
             ctx.drawImage(controls, 0, 0);
         }
@@ -288,10 +294,7 @@ function gameLoop() {
         if (playercollection.array[0].type == "player") {
             playercollection.array[0].healthf();
         }
-        ctx.translate(game2.canvastranslatex, game2.canvastranslatey);
-        game2.canvastranslatex = game2.canvastranslatex + playercollection.array[0].xvel;
-        game2.canvastranslatey = game2.canvastranslatey + playercollection.array[0].yvel;
-        ctx.translate(game2.canvastranslatex * -1, game2.canvastranslatey * -1);
+
         
         for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
             if (playercollection.array[playercounter].type == "enemy") {

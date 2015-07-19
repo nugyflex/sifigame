@@ -4,8 +4,8 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
     this.width = width;
     this.height = height;
     this.type = type;
-    this.xvel = 3;
-    this.yvel = 3;
+    this.xvel = 1.8;
+    this.yvel = 1.8;
     this.ax1 = ax;
     this.ay1 = ay;
     this.bx1 = bx;

@@ -330,6 +330,9 @@
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\ammocontainer.js">
       <PackagePath>js\ammocontainer.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\camera.js">
+      <PackagePath>js\camera.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\collision_detection.js">
       <PackagePath>js\collision_detection.js</PackagePath>
     </AppxPackagedFile>

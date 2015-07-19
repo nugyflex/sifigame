@@ -103,6 +103,7 @@ images\startscreen.png
 images\storelogo.scale-100.png
 images\vine.png
 js\ammocontainer.js
+js\camera.js
 js\collision_detection.js
 js\constants.js
 js\default.js
