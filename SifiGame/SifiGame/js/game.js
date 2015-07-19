@@ -288,7 +288,9 @@ function game() {
         for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
             if (collisiondetection1.testcollision(playercollection.array[0], platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && playercollection.array[0].money >= platformcollection.array[platformcounter].price) {
                 ctx.fillText(platformcollection.array[platformcounter].messagetext, this.canvastranslatex + cwidth / 2 - ctx.measureText(platformcollection.array[platformcounter].messagetext).width / 2, this.canvastranslatey + 50);
-                ctx.fillText("$" + platformcollection.array[platformcounter].price, this.canvastranslatex + cwidth / 2 - ctx.measureText("$" + platformcollection.array[platformcounter].price).width / 2, this.canvastranslatey + 70);
+                if (platformcollection.array[platformcounter].price > 0) {
+                    ctx.fillText("$" + platformcollection.array[platformcounter].price, this.canvastranslatex + cwidth / 2 - ctx.measureText("$" + platformcollection.array[platformcounter].price).width / 2, this.canvastranslatey + 70);
+                }
             }
             if (collisiondetection1.testcollision(playercollection.array[0], platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && playercollection.array[0].money < platformcollection.array[platformcounter].price) {
                 ctx.fillText("Insufficient Funds", this.canvastranslatex + cwidth / 2 - ctx.measureText("Insufficient Funds").width/2, this.canvastranslatey + 50);
