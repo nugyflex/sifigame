@@ -1,5 +1,19 @@
 ﻿function player_loop() {
     for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
+
+        for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
+
+            if (collisiondetection1.testcollision(playercollection.array[playercounter], miscobjectcollection.array[miscobjectcounter]) && playercollection.array[playercounter].type == "player") {
+                if (miscobjectcollection.array[miscobjectcounter].interactontouch) {
+                    miscobjectcollection.array[miscobjectcounter].interact(playercollection.array[playercounter]);
+                }
+                if (miscobjectcollection.array[miscobjectcounter].deleteafterinteract && miscobjectcollection.array[miscobjectcounter].used) {
+                    miscobjectcollection.delete(miscobjectcounter);
+                }
+            }
+
+        }
+
         if (playercollection.array[playercounter].type == "enemy" && playercollection.array[playercounter].dead == 0) {
             var thing1 = 0;
             for (floorcounter = 0; floorcounter < floorcollection.count() ; floorcounter++) {
@@ -9,6 +23,9 @@
                 }
 
             }
+
+
+
             if (thing1 == floorcollection.count()) {
                 playercollection.array[playercounter].falling = 1;
             }

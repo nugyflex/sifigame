@@ -94,6 +94,8 @@
     <Content Include="images\NewFolder\box1_front.png" />
     <Content Include="images\NewFolder\box2_back.png" />
     <Content Include="images\NewFolder\box2_front.png" />
+    <Content Include="images\NewFolder\door1.png" />
+    <Content Include="images\NewFolder\doorway1.png" />
     <Content Include="images\NewFolder\enemysheet1.png" />
     <Content Include="images\NewFolder\explosion1.png" />
     <Content Include="images\NewFolder\explosion_sheet1.png" />
@@ -119,9 +121,14 @@
     <Content Include="images\player1walking.png" />
     <Content Include="images\player1walking1.png" />
     <Content Include="images\player1walking2.png" />
+    <Content Include="images\player1\ammo1.png" />
     <Content Include="images\player1\drawing_gun_left.png" />
     <Content Include="images\player1\drawing_gun_right.png" />
     <Content Include="images\player1\gun1.png" />
+    <Content Include="images\player1\gun1x2.png" />
+    <Content Include="images\player1\gun2.png" />
+    <Content Include="images\player1\gun2x2.png" />
+    <Content Include="images\player1\infinity.png" />
     <Content Include="images\player1\shooting_left.png" />
     <Content Include="images\player1\shooting_right.png" />
     <Content Include="images\player1\standing_down.png" />
@@ -131,6 +138,7 @@
     <Content Include="images\player1\walking_left.png" />
     <Content Include="images\player1\walking_right.png" />
     <Content Include="images\player1\walking_up.png" />
+    <Content Include="images\player1\zombie1.png" />
     <Content Include="images\player2.png" />
     <Content Include="images\player2climbing.png" />
     <Content Include="images\player2shootingleft.png" />
@@ -154,6 +162,8 @@
     <Content Include="images\startscreen.png" />
     <Content Include="images\storelogo.scale-100.png" />
     <Content Include="images\vine.png" />
+    <Content Include="js\ammocontainer.js" />
+    <Content Include="js\camera.js" />
     <Content Include="js\collision_detection.js" />
     <Content Include="js\constants.js" />
     <Content Include="js\default.js" />

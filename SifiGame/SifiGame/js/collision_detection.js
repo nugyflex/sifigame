@@ -47,7 +47,7 @@ function collisiondetection() {
 
     this.test6 = function (player, platform) {
         var result = false;
-        if (player.y + (player.height-10)+ 10 > platform.y) {
+        if (player.y + player.height > platform.y) {
             result = true;
         }
         return result;
@@ -147,7 +147,7 @@ function collisiondetection() {
                 //top left corner
                 //0,0,1,0,0,0,0,1
             case 33:
-                if (player.x + player.width - platform.x > player.y + player.height - platform.y) {
+                if (player.x + player.width - platform.x > player.y+(player.height-10) + player.height - platform.y) {
                     result = platformside.top;
                 }
                 else {
@@ -158,29 +158,35 @@ function collisiondetection() {
                 //top right corner
                 //0,0,1,0,1,0,1,1 = 43
             case 43:
-                if (platform.x + platform.width - player.x > player.y + player.height - platform.y) {
+                if (platform.x + platform.width - player.x > player.y+(player.height-10) + player.height - platform.y) {
                     result = platformside.top;
+
                 }
                 else {
                     result = platformside.right;
+
                 }
                 break;
 
                 //bottom left corner
                 //0,1,1,1,0,0,0,1 = 113
             case 113:
-                if (player.x + player.width - platform.x > platform.y + platform.height - player.y) {
+                if (player.x + player.width - platform.x > (platform.y + platform.height) - (player.y+(player.height-10))) {
+                    
                     result = platformside.bottom;
+                                        console.log("M8");
                 }
-                else {
+                else 
+                {
                     result = platformside.left;
+                                        console.log("B8");
                 }
                 break;
 
                 //bottom right corner
                 //0,1,1,1,1,0,1,1 = 123
             case 123: 
-                if (platform.x + platform.width - player.x > platform.y + platform.height - player.y) {
+                if (platform.x + platform.width - player.x > (platform.y + platform.height) - (player.y+(player.height-10))) {
                     result = platformside.bottom;
                 }
                 else {
@@ -309,6 +315,16 @@ function collisiondetection() {
             return 0;
         }
     }
+    this.testcollisionenemy = function (object1, object2) {
+        this.object1 = object1;
+        this.object2 = object2;
+        if (object1.x + object1.hitoffsetx + object1.hitwidth > object2.x + object2.hitoffsetx && object1.x + object1.hitoffsetx < object2.x + object2.hitoffsetx + object2.hitwidth && object1.y + object1.hitoffsety + object1.hitheight > object2.y + object2.hitoffsety && object1.y < object2.y + object2.hitoffsety + object2.hitheight) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
     this.testfeetcollision = function (player, object2) {
         this.player = player;
         this.object2 = object2;
@@ -328,9 +344,9 @@ function collisiondetection() {
                 player.xvel = 0;
             }
             player.x = platform.x - player.width + 1;
-                    
-
         }
+
+
         if (collisiondetection1.collision(player, platform) == platformside.right) {
             //console.log("Collision")
             if (player.xvel < 0) {
@@ -344,7 +360,7 @@ function collisiondetection() {
             if (player.yvel < 0) {
                 player.yvel = 0;
             }
-            player.y = platform.y + platform.height - 1-(player.height-10);
+            player.y = platform.y + platform.height-(player.height-10);
         }
         if (collisiondetection1.collision(player, platform) == platformside.top) {
             //console.log("Collision")

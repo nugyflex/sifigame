@@ -42,7 +42,7 @@
         }
         if (projectiledeleted == 0) {
             for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
-                if (collisiondetection1.testcollision(projectilecollection.array[projectilecounter], playercollection.array[playercounter]) == 1) {
+                if (collisiondetection1.testcollisionenemy(projectilecollection.array[projectilecounter], playercollection.array[playercounter]) == 1) {
                     if (playercollection.array[playercounter].type == "enemy") {
                         if (projectilecollection.array[projectilecounter].canexplode)
                         {

@@ -7,7 +7,11 @@
     this.theta = 0;
     this.vel = vel;
     this.height = 10;
-    this.width = 10;
+    this.width = 12;
+    this.hitheight = 32;
+    this.hitwidth = 12;
+    this.hitoffsetx = 0;
+    this.hitoffsety = -22;
     this.type = "enemy";
     this.falling = 0;
     this.frame = 0;
@@ -22,12 +26,13 @@
     //functions called in the main loop are below
 	this.attack = function(player)
 	{
-		console.log("lemao");
 		if (this.attackcooldown1 < 0)
 		{
 		player.health = player.health - this.damage;
 		this.attackcooldown1 = this.attackcooldown;
-		console.log("djonsfosuodfb");
+		if (player.type == "player") {
+		    game2.damagealpha = 0.8;
+		}
 		}
 	}
     this.ai = function (player) {
@@ -88,7 +93,8 @@
         //call this in the loop to draw the enemy
         if (this.dead == 0) {
             ctx.fillStyle = "orange";
-            ctx.fillRect(this.x, this.y, 10, 10);
+            //ctx.fillRect(this.x, this.y, 10, 10);
+            ctx.drawImage(zombie1, this.x, this.y - 22);
         }
         this.frame = this.frame + 1;
         if (this.frame == 4)
@@ -118,13 +124,19 @@
 
                     }
                 }
-                ctx.fillRect(this.x - 5, this.y - 5, this.health, 3);
+                ctx.fillRect(this.x+5-(this.health/2), this.y - 30, this.health, 3);
             }
         }
 
 
         
+        if (game2.debugmode == 1) {
 
+            ctx.globalAlpha = 0.5;
+            this.colour = "rgb(200,40,40)";
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.globalAlpha = 1;
+        }
     }
 
 }
