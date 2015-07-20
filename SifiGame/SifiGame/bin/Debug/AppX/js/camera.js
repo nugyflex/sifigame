@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function camera(player,game)
 {
     this.theta;
@@ -7,6 +8,12 @@ function camera(player,game)
             this.theta = Math.atan(-(playercollection.array[0].y - game.canvastranslatey) / ((playercollection.array[0].x - cwidth / 2) - game.canvastranslatex));
 
 
+=======
+﻿function camera(player,game)
+{
+    this.center = function () {
+        if (player.dead == 0 && player.falling == 0 && player.type == "player") {
+>>>>>>> origin/master
             if (game.canvastranslatex < playercollection.array[0].x - cwidth / 2) {
                 game.canvastranslatex = game.canvastranslatex + 2;
             }

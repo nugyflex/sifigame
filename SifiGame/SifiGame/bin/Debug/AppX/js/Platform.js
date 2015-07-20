@@ -39,7 +39,10 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
             this.width = 40;
             this.height = 26;
             ctx.drawImage(wall1, this.x, this.y - (100 - this.height));
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
             break;
 
         case PLATFORMTYPE_SMALL_BOX:
@@ -129,6 +132,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
                 this.width = 15;
                 this.height = 13;
                 ctx.drawImage(doorway1, this.x, this.y - 57)
+<<<<<<< HEAD
                 break;
 
 
@@ -138,6 +142,17 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
                 break;
 
 
+=======
+                break;
+
+
+            case PLATFORMTYPE_IMAGE:
+                this.width = 0;
+                this.height = 0
+                break;
+
+
+>>>>>>> origin/master
         
         }
         if (game2.debugmode==1)

@@ -111,6 +111,7 @@ function game() {
         floorcollection.add(1000, 1390, 400, 400);
         floorcollection.add(990, 1700, 410, 100);
 
+<<<<<<< HEAD
         platformcollection.add(300, -300, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(440, -300, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(480, -300, 40, 20, PLATFORMTYPE_PILLAR1);
@@ -118,6 +119,10 @@ function game() {
         platformcollection.add(100, 200, 100, 100, PLATFORMTYPE_DOOR_750);
         platformcollection.add(340, -300, 300, 30, PLATFORMTYPE_DOOR_750);
 
+=======
+        platformcollection.add(100, 200, 100, 100, PLATFORMTYPE_DOOR_750);
+        platformcollection.add(300, -300, 300, 30, PLATFORMTYPE_DOOR_750);
+>>>>>>> origin/master
 
         playercollection.add(cwidth / 2, cheight / 2, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);

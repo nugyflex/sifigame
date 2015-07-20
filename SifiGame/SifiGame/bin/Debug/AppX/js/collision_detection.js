@@ -47,7 +47,7 @@ function collisiondetection() {
 
     this.test6 = function (player, platform) {
         var result = false;
-        if (player.y + player.height > platform.y) {
+        if (player.y + (player.height-10)+ 10 > platform.y) {
             result = true;
         }
         return result;
@@ -360,7 +360,11 @@ function collisiondetection() {
             if (player.yvel < 0) {
                 player.yvel = 0;
             }
+<<<<<<< HEAD
             player.y = platform.y + platform.height-(player.height-10);
+=======
+            player.y = platform.y + platform.height - 1-(player.height-10);
+>>>>>>> origin/master
         }
         if (collisiondetection1.collision(player, platform) == platformside.top) {
             //console.log("Collision")

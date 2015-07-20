@@ -128,7 +128,11 @@ var timer = 50;
             
         }, 1000 / fps);
     }
+<<<<<<< HEAD
 
+=======
+    draw();
+>>>>>>> origin/master
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -286,6 +290,12 @@ function gameLoop() {
 
         if (playercollection.array[0].type == "player") {
             playercollection.array[1].calcNewPosition(playercollection.array[0]);
+<<<<<<< HEAD
+=======
+        }
+        if (playercollection.array[0].moved == 0) {
+            ctx.drawImage(controls, 0, 0);
+>>>>>>> origin/master
         }
 
         for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
@@ -312,7 +322,10 @@ function gameLoop() {
 
 
         projectile_collision();
+<<<<<<< HEAD
         /*
+=======
+>>>>>>> origin/master
         ctx.save();
         ctx.translate(500, 500);
         ctx.rotate(rotatething);
@@ -325,7 +338,10 @@ function gameLoop() {
         ctx.fillStyle = "rgb(200,100,50)";
         ctx.fillRect(500, 500, 1, 1);
         rotatething = rotatething + 0.01;
+<<<<<<< HEAD
         */
+=======
+>>>>>>> origin/master
 
 
 
