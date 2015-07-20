@@ -1,4 +1,4 @@
-﻿
+
 function mouseDown(event) {
 keypressed.mouse = 1;	
 }
@@ -15,6 +15,10 @@ function onKeyDown(event) {
     {
         case 68:
             keypressed.d = 1;
+            break;
+            
+        case 16:
+            keypressed.shift = 1;
             break;
 
 
@@ -43,6 +47,14 @@ function onKeyDown(event) {
             keypressed.z = 1;
             break;
 
+        case 81:
+            keypressed.q = 1;
+            break;
+
+        case 82:
+            keypressed.r = 1;
+            break;
+            
         case 27:
             if (game2.running == false && game2.pausecounter > 20) {
                 game2.running = true;
@@ -84,6 +96,10 @@ function onKeyUp(event) {
     switch (k) {
         case 68:
             keypressed.d = 0;
+            break;
+            
+         case 16:
+            keypressed.shift = 0;
             break;
 
 
@@ -127,6 +143,14 @@ function onKeyUp(event) {
             break;
         case 75:
             keypressed.k = 0;
+            break;
+            
+        case 81:
+            keypressed.q = 0;
+            break;
+
+        case 82:
+            keypressed.r = 0;
             break;
     }
 }

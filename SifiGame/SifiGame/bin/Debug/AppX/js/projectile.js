@@ -8,6 +8,10 @@
     this.pindex = pindex;
     this.armourpiercing = 0;
     this.canexplode = false;
+    this.hitoffsetx = 0;
+    this.hitoffsety = 0;
+    this.hitheight = 10;
+    this.hitwidth = 10;
 
     x11 = 0;
     y11 = 0;
@@ -59,7 +63,7 @@ function redlaser(pindex, type)
 
     this.width = 10;
     this.height = 10;
-    this.vel = 12;
+    this.vel = 8;
     this.damagemultiplier = 5;
     this.image = bulletsheet1;
     this.armourpiercing = 0;
@@ -79,7 +83,12 @@ function redlaser(pindex, type)
 
 
         }
-
+        if (game2.debugmode == 1) {
+            ctx.globalAlpha = 0.5;
+            this.colour = "rgb(200,40,40)";
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.globalAlpha = 1;
+        }
     }
 
 
@@ -91,7 +100,7 @@ function greenlaser(pindex, type) {
 
     this.width = 10;
     this.height = 10;
-    this.vel = 12;
+    this.vel = 8;
     this.damagemultiplier = 2;
     this.image = bulletsheet2
     this.armourpiercing = 1;
@@ -107,7 +116,12 @@ function greenlaser(pindex, type) {
 
 
         }
-
+        if (game2.debugmode == 1) {
+            ctx.globalAlpha = 0.5;
+            this.colour = "rgb(200,40,40)";
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.globalAlpha = 1;
+        }
     }
 
 
@@ -136,7 +150,12 @@ function bomb(pindex, type) {
 
 
         }
-
+        if (game2.debugmode == 1) {
+            ctx.globalAlpha = 0.5;
+            ctx.fillStyle = "rgb(200,40,40)";
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.globalAlpha = 1;
+        }
     }
     this.explode = function()
     {

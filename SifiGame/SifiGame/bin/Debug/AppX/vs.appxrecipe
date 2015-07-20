@@ -17,489 +17,529 @@
     <AppXManifest Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-16T11:50:56.322</Modified>
+      <Modified>2015-07-20T10:20:58.771</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-07-15T07:30:20.349</Modified>
+      <Modified>2015-07-19T23:16:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\background1.png">
       <PackagePath>images\background1.png</PackagePath>
-      <Modified>2015-01-08T09:08:48.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\barricade_front_sheet1.png">
       <PackagePath>images\barricade_front_sheet1.png</PackagePath>
-      <Modified>2015-06-18T01:56:42.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\barricade_sheet1.png">
       <PackagePath>images\barricade_sheet1.png</PackagePath>
-      <Modified>2015-06-18T02:13:08.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\boost.png">
       <PackagePath>images\boost.png</PackagePath>
-      <Modified>2015-01-08T09:08:48.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletsheet1.png">
       <PackagePath>images\bulletsheet1.png</PackagePath>
-      <Modified>2015-06-18T12:33:52.786</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletsheet2.png">
       <PackagePath>images\bulletsheet2.png</PackagePath>
-      <Modified>2015-06-20T05:21:39.844</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletsheet3.png">
       <PackagePath>images\bulletsheet3.png</PackagePath>
-      <Modified>2015-06-20T05:33:57.832</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\clouds.png">
       <PackagePath>images\clouds.png</PackagePath>
-      <Modified>2015-01-08T09:08:48.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\controls.png">
       <PackagePath>images\controls.png</PackagePath>
-      <Modified>2015-06-15T09:36:14.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\drone1.png">
       <PackagePath>images\drone1.png</PackagePath>
-      <Modified>2015-01-08T09:08:48.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\droppod1.png">
       <PackagePath>images\droppod1.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\enemy1left.png">
       <PackagePath>images\enemy1left.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\enemy1right.png">
       <PackagePath>images\enemy1right.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\enemy1shootingleft.png">
       <PackagePath>images\enemy1shootingleft.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\enemy1shootingright.png">
       <PackagePath>images\enemy1shootingright.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\enemy1walkingleft.png">
       <PackagePath>images\enemy1walkingleft.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\enemy1walkingright.png">
       <PackagePath>images\enemy1walkingright.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\escapepodsheet.png">
       <PackagePath>images\escapepodsheet.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\foliage1.png">
       <PackagePath>images\foliage1.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\grass.png">
       <PackagePath>images\grass.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\gun1.png">
       <PackagePath>images\gun1.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\ladder.png">
       <PackagePath>images\ladder.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\logo.scale-100.png">
       <PackagePath>images\logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\main_character_shotgun.png">
       <PackagePath>images\main_character_shotgun.png</PackagePath>
-      <Modified>2015-03-19T11:22:56.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\barricade.png">
       <PackagePath>images\NewFolder\barricade.png</PackagePath>
-      <Modified>2015-06-16T04:20:08.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\barricade_front.png">
       <PackagePath>images\NewFolder\barricade_front.png</PackagePath>
-      <Modified>2015-06-16T04:19:10.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\barricade_front_sheet1.png">
       <PackagePath>images\NewFolder\barricade_front_sheet1.png</PackagePath>
-      <Modified>2015-06-18T01:56:42.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\barricade_sheet1.png">
       <PackagePath>images\NewFolder\barricade_sheet1.png</PackagePath>
-      <Modified>2015-06-18T02:13:08.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\barricade_sheet2.png">
       <PackagePath>images\NewFolder\barricade_sheet2.png</PackagePath>
-      <Modified>2015-06-18T06:52:11.258</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\box.png">
       <PackagePath>images\NewFolder\box.png</PackagePath>
-      <Modified>2015-06-02T07:38:54.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\box1_back.png">
       <PackagePath>images\NewFolder\box1_back.png</PackagePath>
-      <Modified>2015-03-27T07:06:24.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\box1_front.png">
       <PackagePath>images\NewFolder\box1_front.png</PackagePath>
-      <Modified>2015-03-27T06:57:18.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\box2_back.png">
       <PackagePath>images\NewFolder\box2_back.png</PackagePath>
-      <Modified>2015-03-31T08:31:16.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\box2_front.png">
       <PackagePath>images\NewFolder\box2_front.png</PackagePath>
-      <Modified>2015-03-31T08:30:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\door1.png">
+      <PackagePath>images\NewFolder\door1.png</PackagePath>
+      <Modified>2015-07-19T23:16:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\doorway1.png">
+      <PackagePath>images\NewFolder\doorway1.png</PackagePath>
+      <Modified>2015-07-19T23:16:50.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\enemysheet1.png">
       <PackagePath>images\NewFolder\enemysheet1.png</PackagePath>
-      <Modified>2015-06-15T09:33:16.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\explosion1.png">
       <PackagePath>images\NewFolder\explosion1.png</PackagePath>
-      <Modified>2015-06-19T10:35:57.751</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\explosion_sheet1.png">
       <PackagePath>images\NewFolder\explosion_sheet1.png</PackagePath>
-      <Modified>2015-06-19T11:34:27.939</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\floor1.png">
       <PackagePath>images\NewFolder\floor1.png</PackagePath>
-      <Modified>2015-06-05T09:35:04.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\floorBase.png">
       <PackagePath>images\NewFolder\floorBase.png</PackagePath>
-      <Modified>2015-06-04T07:11:34.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\floor_bottom.png">
       <PackagePath>images\NewFolder\floor_bottom.png</PackagePath>
-      <Modified>2015-06-03T06:32:56.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\gun1.png">
       <PackagePath>images\NewFolder\gun1.png</PackagePath>
-      <Modified>2015-06-18T11:32:16.166</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\gun2.png">
       <PackagePath>images\NewFolder\gun2.png</PackagePath>
-      <Modified>2015-06-18T12:34:33.039</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\holewall1.png">
       <PackagePath>images\NewFolder\holewall1.png</PackagePath>
-      <Modified>2015-06-05T11:49:10.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\ruins1.png">
       <PackagePath>images\NewFolder\ruins1.png</PackagePath>
-      <Modified>2015-06-08T06:08:44.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\ruins2.png">
       <PackagePath>images\NewFolder\ruins2.png</PackagePath>
-      <Modified>2015-06-08T06:10:42.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\wall1.png">
       <PackagePath>images\NewFolder\wall1.png</PackagePath>
-      <Modified>2015-06-04T07:04:34.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\pausescreen.png">
       <PackagePath>images\pausescreen.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\pausescreenback.png">
       <PackagePath>images\pausescreenback.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\pausescreenfront.png">
       <PackagePath>images\pausescreenfront.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\platformright.png">
       <PackagePath>images\platformright.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\platformside1.png">
       <PackagePath>images\platformside1.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\platformside2.png">
       <PackagePath>images\platformside2.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\platformtop.png">
       <PackagePath>images\platformtop.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\platformtop1.png">
       <PackagePath>images\platformtop1.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\platformtop2.png">
       <PackagePath>images\platformtop2.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1.png">
       <PackagePath>images\player1.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1walking.png">
       <PackagePath>images\player1walking.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1walking1.png">
       <PackagePath>images\player1walking1.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1walking2.png">
       <PackagePath>images\player1walking2.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\ammo1.png">
+      <PackagePath>images\player1\ammo1.png</PackagePath>
+      <Modified>2015-07-19T23:16:50.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\drawing_gun_left.png">
       <PackagePath>images\player1\drawing_gun_left.png</PackagePath>
-      <Modified>2015-03-27T05:28:40.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\drawing_gun_right.png">
       <PackagePath>images\player1\drawing_gun_right.png</PackagePath>
-      <Modified>2015-03-27T05:29:12.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\gun1.png">
       <PackagePath>images\player1\gun1.png</PackagePath>
-      <Modified>2015-07-16T11:48:23.211</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\gun1x2.png">
+      <PackagePath>images\player1\gun1x2.png</PackagePath>
+      <Modified>2015-07-19T23:17:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\gun2.png">
+      <PackagePath>images\player1\gun2.png</PackagePath>
+      <Modified>2015-07-19T23:17:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\gun2x2.png">
+      <PackagePath>images\player1\gun2x2.png</PackagePath>
+      <Modified>2015-07-19T23:17:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\infinity.png">
+      <PackagePath>images\player1\infinity.png</PackagePath>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\shooting_left.png">
       <PackagePath>images\player1\shooting_left.png</PackagePath>
-      <Modified>2015-03-27T05:24:24.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\shooting_right.png">
       <PackagePath>images\player1\shooting_right.png</PackagePath>
-      <Modified>2015-03-27T05:25:54.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\standing_down.png">
       <PackagePath>images\player1\standing_down.png</PackagePath>
-      <Modified>2015-05-18T07:27:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\standing_left.png">
       <PackagePath>images\player1\standing_left.png</PackagePath>
-      <Modified>2015-03-31T13:23:28.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\standing_right.png">
       <PackagePath>images\player1\standing_right.png</PackagePath>
-      <Modified>2015-03-31T13:24:06.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\walking_down.png">
       <PackagePath>images\player1\walking_down.png</PackagePath>
-      <Modified>2015-05-18T07:15:42.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\walking_left.png">
       <PackagePath>images\player1\walking_left.png</PackagePath>
-      <Modified>2015-03-31T13:21:30.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\walking_right.png">
       <PackagePath>images\player1\walking_right.png</PackagePath>
-      <Modified>2015-03-31T13:24:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\walking_up.png">
       <PackagePath>images\player1\walking_up.png</PackagePath>
-      <Modified>2015-05-18T07:18:16.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player1\zombie1.png">
+      <PackagePath>images\player1\zombie1.png</PackagePath>
+      <Modified>2015-07-19T23:16:50.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2.png">
       <PackagePath>images\player2.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2climbing.png">
       <PackagePath>images\player2climbing.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2shootingleft.png">
       <PackagePath>images\player2shootingleft.png</PackagePath>
-      <Modified>2015-02-08T06:01:18.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2stillclimbing.png">
       <PackagePath>images\player2stillclimbing.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2walking1.png">
       <PackagePath>images\player2walking1.png</PackagePath>
-      <Modified>2015-01-08T09:08:50.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2walking2.png">
       <PackagePath>images\player2walking2.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2walking21.png">
       <PackagePath>images\player2walking21.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2walkingwithgun1.png">
       <PackagePath>images\player2walkingwithgun1.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2walkingwithgun11.png">
       <PackagePath>images\player2walkingwithgun11.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2walkingwithgun2.png">
       <PackagePath>images\player2walkingwithgun2.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2withgun.png">
       <PackagePath>images\player2withgun.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player2withgun2.png">
       <PackagePath>images\player2withgun2.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player3.png">
       <PackagePath>images\player3.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player3left.png">
       <PackagePath>images\player3left.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\player3right.png">
       <PackagePath>images\player3right.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\rope.png">
       <PackagePath>images\rope.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\smalllogo.scale-100.png">
       <PackagePath>images\smalllogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\snipersheetleft.png">
       <PackagePath>images\snipersheetleft.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\sniperswalkingright.png">
       <PackagePath>images\sniperswalkingright.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\splashscreen.scale-100.png">
       <PackagePath>images\splashscreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\startscreen.png">
       <PackagePath>images\startscreen.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\storelogo.scale-100.png">
       <PackagePath>images\storelogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\vine.png">
       <PackagePath>images\vine.png</PackagePath>
-      <Modified>2015-01-08T09:08:52.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\ammocontainer.js">
+      <PackagePath>js\ammocontainer.js</PackagePath>
+      <Modified>2015-07-19T23:16:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\camera.js">
+      <PackagePath>js\camera.js</PackagePath>
+      <Modified>2015-07-19T23:37:04.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\collision_detection.js">
       <PackagePath>js\collision_detection.js</PackagePath>
-      <Modified>2015-07-16T10:35:45.137</Modified>
+      <Modified>2015-07-20T10:21:08.371</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\constants.js">
       <PackagePath>js\constants.js</PackagePath>
-      <Modified>2015-07-16T08:23:40.099</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-07-16T10:28:58.715</Modified>
+      <Modified>2015-07-19T23:24:18.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\draw.js">
       <PackagePath>js\draw.js</PackagePath>
-      <Modified>2015-06-19T11:03:04.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\drone.js">
       <PackagePath>js\drone.js</PackagePath>
-      <Modified>2015-06-15T01:06:04.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\enemy.js">
       <PackagePath>js\enemy.js</PackagePath>
-      <Modified>2015-06-19T09:30:00.000</Modified>
+      <Modified>2015-07-20T10:28:01.336</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\explosion.js">
       <PackagePath>js\explosion.js</PackagePath>
-      <Modified>2015-06-20T05:29:08.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\floating_number.js">
       <PackagePath>js\floating_number.js</PackagePath>
-      <Modified>2015-07-15T08:38:44.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\Floor.js">
       <PackagePath>js\Floor.js</PackagePath>
-      <Modified>2015-06-15T07:04:32.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\game.js">
       <PackagePath>js\game.js</PackagePath>
-      <Modified>2015-07-16T12:08:59.521</Modified>
+      <Modified>2015-07-20T04:48:24.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\key_events.js">
       <PackagePath>js\key_events.js</PackagePath>
-      <Modified>2015-07-15T07:30:16.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\object_arrays.js">
       <PackagePath>js\object_arrays.js</PackagePath>
-      <Modified>2015-07-16T09:15:09.566</Modified>
+      <Modified>2015-07-20T04:45:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\Platform.js">
       <PackagePath>js\Platform.js</PackagePath>
-      <Modified>2015-07-16T08:24:20.886</Modified>
+      <Modified>2015-07-20T10:25:42.155</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\player.js">
       <PackagePath>js\player.js</PackagePath>
-      <Modified>2015-07-16T11:12:19.065</Modified>
+      <Modified>2015-07-20T10:25:57.409</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\player_loop.js">
       <PackagePath>js\player_loop.js</PackagePath>
-      <Modified>2015-06-17T07:31:48.000</Modified>
+      <Modified>2015-07-19T23:17:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\projectile.js">
       <PackagePath>js\projectile.js</PackagePath>
-      <Modified>2015-07-16T10:03:13.148</Modified>
+      <Modified>2015-07-20T10:26:55.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\projectile_collision.js">
       <PackagePath>js\projectile_collision.js</PackagePath>
-      <Modified>2015-07-16T09:30:17.378</Modified>
+      <Modified>2015-07-19T23:17:02.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\resources.js">
       <PackagePath>js\resources.js</PackagePath>
-      <Modified>2015-07-16T11:50:16.003</Modified>
+      <Modified>2015-07-19T23:17:02.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\shoot.js">
       <PackagePath>js\shoot.js</PackagePath>
-      <Modified>2015-07-16T09:26:50.609</Modified>
+      <Modified>2015-07-19T23:17:02.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\weapon.js">
       <PackagePath>js\weapon.js</PackagePath>
-      <Modified>2015-07-16T10:23:11.438</Modified>
+      <Modified>2015-07-19T23:17:02.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2013-07-21T10:19:32.000</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\visitor1.ttf">
       <PackagePath>visitor1.ttf</PackagePath>
-      <Modified>2015-06-18T03:41:58.000</Modified>
+      <Modified>2015-07-19T23:16:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\visitor2.ttf">
       <PackagePath>visitor2.ttf</PackagePath>
-      <Modified>2015-06-18T03:41:58.000</Modified>
+      <Modified>2015-07-19T23:16:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-07-16T11:50:55.535</Modified>
+      <Modified>2015-07-19T23:16:58.000</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
