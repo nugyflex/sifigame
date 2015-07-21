@@ -260,11 +260,22 @@ function game() {
     this.drawhud = function()
     {
         if (keypressed.k == 1) {
-            this.debugmode = 1;
+            if (playercollection.array[0].klatch == 1) {
+                if (this.debugmode == 1)
+                {
+                this.debugmode = 0;
+                }
+                else
+                {
+                    this.debugmode = 1;
+                }
+            }
+
+                            playercollection.array[0].klatch = 0;
         }
         else
         {
-            this.debugmode = 0;
+                                        playercollection.array[0].klatch = 1;
         }
         this.drawcrosshair();
         ctx.fillStyle = "rgb(200,75,75)";
@@ -298,8 +309,8 @@ function game() {
         if (this.debugmode == 1)
         {
                 
-            ctx.fillText("Y  " + playercollection.array[0].y, this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
-            ctx.fillText("X  " + playercollection.array[0].x, this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
+            ctx.fillText("Y  " + Math.round(playercollection.array[0].y), this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
+            ctx.fillText("X  " + Math.round(playercollection.array[0].x), this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
 
 
             ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 150);

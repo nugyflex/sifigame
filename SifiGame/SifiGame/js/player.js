@@ -34,6 +34,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
 	this.weaponswitchlatch = 1;
 	this.weaponreloadlatch = 1;
 	this.sprinting = 0;
+    this.klatch = 0;
 
     //functions called in the main loop are below
     this.controls = function () {
@@ -236,7 +237,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             this.dc = 0;
         }
         if (game2.debugmode == 1) {
-            ctx.fillStyle = "orange";
+            ctx.fillStyle = "black";
             ctx.fillRect(this.x, this.y + (this.height - 10), this.width, 10)
             ctx.globalAlpha = 0.5;
             ctx.fillStyle = "rgb(200,40,40)";

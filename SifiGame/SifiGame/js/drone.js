@@ -1,4 +1,4 @@
-﻿function drone(x, y) {
+function drone(x, y) {
     this.x = x;
     this.y = y;;
     this.xvel = 0;
@@ -32,5 +32,29 @@
         //adding the velosity to the drones position 
         this.x = this.x + this.xvel;
         this.y = this.y + this.yvel;
+    }
+    this.falling
+    {
+        
+        var currentmin;
+        var currentmini;
+        for (i = 0; i < playercollection.array.length  ; i++) {
+
+            currentmin = 1000000000;
+            currentmini = -1
+
+            for (enemycounter = 0; enemycounter < playercollection.array.length ; enemycounter++) {
+                if (collisiondetection1.finddistance(this, playercollection.array[enemycounter]) < currentmin&&playercollection.array[enemycounter].type == "enemy") {
+                    currentmin = collisiondetection1.finddistance(this, playercollection.array[enemycounter]);
+                    currentmini = enemycounter;
+
+                }
+
+
+            }
+        }
+
+        //console.log(playercollection.array[0].weapons[playercollection.array[0].weaponinuse].ammo);
+        
     }
 }
