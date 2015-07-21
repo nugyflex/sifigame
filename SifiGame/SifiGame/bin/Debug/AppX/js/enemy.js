@@ -1,4 +1,4 @@
-﻿function enemy(x, y, vel, index) {
+function enemy(x, y, vel, index) {
     this.x = x;
     this.y = y;
     this.xvel = 0;
@@ -131,11 +131,11 @@
 
         if (game2.debugmode == 1) {
             
-            ctx.fillStyle = "orange";
+            ctx.fillStyle = "black";
             ctx.fillRect(this.x, this.y, this.width, this.height)
             ctx.globalAlpha = 0.5;
             ctx.fillStyle = "rgb(200,40,40)";
-            ctx.fillRect(this.x, this.y, this.hitwidth, this.hitheight);
+            ctx.fillRect(this.x, this.y-(this.hitheight-10), this.hitwidth, this.hitheight);
             ctx.globalAlpha = 1;
         }
 

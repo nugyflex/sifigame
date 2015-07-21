@@ -325,6 +325,7 @@ function game() {
 
         if (playercollection.array[0].dead == 0 && playercollection.array[0].type == "player") {
             ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex + cwidth - 120, this.canvastranslatey + cheight - 100);
+            ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].name, this.canvastranslatex + cwidth - 150, this.canvastranslatey + cheight - 35);
 
             if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf") {
                 ctx.drawImage(infinity, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 130);

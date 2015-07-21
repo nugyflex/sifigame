@@ -106,6 +106,7 @@ function gun(parent) {
 
 function guntype1(parent) {
 
+    this.name = "pulse rifle"
     gun.call(this, parent);
     this.ammo = 20;
     this.ammores = 100;
@@ -117,6 +118,7 @@ function guntype1(parent) {
 
 function guntype2(parent) {
 
+    this.name = "laser pistol";
     gun.call(this, parent);
 	this.image = gun1pic;
     this.ammo = "inf";

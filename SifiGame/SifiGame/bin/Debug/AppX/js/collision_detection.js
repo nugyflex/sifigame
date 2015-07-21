@@ -147,7 +147,7 @@ function collisiondetection() {
                 //top left corner
                 //0,0,1,0,0,0,0,1
             case 33:
-                if (player.x + player.width - platform.x > player.y+(player.height-10) + player.height - platform.y) {
+                if ((player.x + player.width) - platform.x > (player.y + player.height) - platform.y) {
                     result = platformside.top;
                 }
                 else {
@@ -158,7 +158,7 @@ function collisiondetection() {
                 //top right corner
                 //0,0,1,0,1,0,1,1 = 43
             case 43:
-                if (platform.x + platform.width - player.x > player.y+(player.height-10) + player.height - platform.y) {
+                if (platform.x + platform.width - player.x > (player.y + player.height) - platform.y) {
                     result = platformside.top;
 
                 }
@@ -174,12 +174,10 @@ function collisiondetection() {
                 if (player.x + player.width - platform.x > platform.y + platform.height - (player.y+(player.height-10))) {
                     
                     result = platformside.bottom;
-                                        console.log("M8");
                 }
                 else 
                 {
                     result = platformside.left;
-                                        console.log("B8");
                 }
                 break;
 
@@ -511,6 +509,12 @@ function collisiondetection() {
             }
         }
         return result;
+    }
+    this.checklineintersect = function(ax,ay,bx,by,cx,cy,dx,dy)
+    {
+        
+     
+        
     }
 
 }

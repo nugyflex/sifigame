@@ -34,6 +34,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
 	this.weaponswitchlatch = 1;
 	this.weaponreloadlatch = 1;
 	this.sprinting = 0;
+    this.klatch = 0;
 
     //functions called in the main loop are below
     this.controls = function () {
@@ -236,7 +237,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             this.dc = 0;
         }
         if (game2.debugmode == 1) {
-            ctx.fillStyle = "orange";
+            ctx.fillStyle = "black";
             ctx.fillRect(this.x, this.y + (this.height - 10), this.width, 10)
             ctx.globalAlpha = 0.5;
             ctx.fillStyle = "rgb(200,40,40)";
@@ -256,6 +257,11 @@ function player(x, y, index/*so i can set where the player starts when i instant
         if (this.health > 0) {
             ctx.fillStyle = "rgb(200,75,75)";
             ctx.fillRect(game2.canvastranslatex + 20, game2.canvastranslatey + 20, 20, this.health);
+            ctx.fillStyle = "rgb(180,55,55)";
+            ctx.fillRect(game2.canvastranslatex + 16, game2.canvastranslatey + 18, 2, 104);
+            ctx.fillRect(game2.canvastranslatex + 42, game2.canvastranslatey + 18, 2, 104);
+            ctx.fillRect(game2.canvastranslatex + 16, game2.canvastranslatey + 16, 28, 2);
+            ctx.fillRect(game2.canvastranslatex + 16, game2.canvastranslatey + 122, 28, 2);
         }
         if (this.health < 0) {
 			this.falling = 1;

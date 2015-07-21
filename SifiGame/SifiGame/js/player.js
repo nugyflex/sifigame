@@ -257,6 +257,11 @@ function player(x, y, index/*so i can set where the player starts when i instant
         if (this.health > 0) {
             ctx.fillStyle = "rgb(200,75,75)";
             ctx.fillRect(game2.canvastranslatex + 20, game2.canvastranslatey + 20, 20, this.health);
+            ctx.fillStyle = "rgb(180,55,55)";
+            ctx.fillRect(game2.canvastranslatex + 16, game2.canvastranslatey + 18, 2, 104);
+            ctx.fillRect(game2.canvastranslatex + 42, game2.canvastranslatey + 18, 2, 104);
+            ctx.fillRect(game2.canvastranslatex + 16, game2.canvastranslatey + 16, 28, 2);
+            ctx.fillRect(game2.canvastranslatex + 16, game2.canvastranslatey + 122, 28, 2);
         }
         if (this.health < 0) {
 			this.falling = 1;
