@@ -109,7 +109,6 @@ function game() {
 
         floorcollection.add(1200, 1090, 200, 310);
         floorcollection.add(1000, 1390, 400, 410);
-        //floorcollection.add(990, 1700, 410, 100);
 
         platformcollection.add(300, -300, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(340, -300, 40, 20, PLATFORMTYPE_PILLAR1);
