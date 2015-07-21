@@ -36,5 +36,6 @@
         //ctx.fillRect(this.x, this.y+ this.height, this.width, 20);
 
         ctx.drawImage(floorBase, 0, 0, this.width, 20, this.x, this.y + this.height, this.width, 20);
+        ctx.fillRect(this.x, this.y + this.height + (Math.random() * 6) + 50, this.width, 5);
     }
 }

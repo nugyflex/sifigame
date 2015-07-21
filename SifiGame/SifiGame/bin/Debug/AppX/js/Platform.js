@@ -15,6 +15,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
     this.index = index;
     this.breakable = false;
     this.removable = false;
+    this.locked = 1;
     this.image = image;
     //a function called in the main loop, it draws the platform
     this.draw = function () {
@@ -129,6 +130,10 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
                 this.width = 15;
                 this.height = 13;
                 ctx.drawImage(doorway1, this.x, this.y - 57)
+                if (this.locked == 1)
+                {
+                    ctx.drawImage(doorway2, this.x, this.y - 57)
+                }
                 break;
 
 

@@ -74,15 +74,15 @@ function game() {
         floorcollection.add(-100, -100, 1000, 1000);
         floorcollection.add(300, -900, 300, 900);
 
-        floorcollection.add(590, -600, 700, 50);
-        floorcollection.add(590, -400, 700, 50);
+        floorcollection.add(570, -600, 700, 50);
+        floorcollection.add(570, -400, 700, 50);
         floorcollection.add(300, 800, 300, 700);
         floorcollection.add(300, 1600, 300, 200);
         floorcollection.add(300, 1450, 100, 200);
         floorcollection.add(500, 1450, 100, 200);
 
         floorcollection.add(800, 400, 700, 700);
-        floorcollection.add(300, 1700, 700, 100);
+        floorcollection.add(300, 1700, 780, 100);
 
 
         platformcollection.add(929, 400, 40, 20, PLATFORMTYPE_PILLAR1);
@@ -108,8 +108,7 @@ function game() {
         platformcollection.add(1429, 1050, 40, 20, PLATFORMTYPE_PILLAR1);
 
         floorcollection.add(1200, 1090, 200, 310);
-        floorcollection.add(1000, 1390, 400, 400);
-        floorcollection.add(990, 1700, 410, 100);
+        floorcollection.add(1000, 1390, 400, 410);
 
         platformcollection.add(300, -300, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(340, -300, 40, 20, PLATFORMTYPE_PILLAR1);

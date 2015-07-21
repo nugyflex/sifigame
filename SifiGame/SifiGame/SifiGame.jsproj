@@ -96,6 +96,7 @@
     <Content Include="images\NewFolder\box2_front.png" />
     <Content Include="images\NewFolder\door1.png" />
     <Content Include="images\NewFolder\doorway1.png" />
+    <Content Include="images\NewFolder\doorway2.png" />
     <Content Include="images\NewFolder\enemysheet1.png" />
     <Content Include="images\NewFolder\explosion1.png" />
     <Content Include="images\NewFolder\explosion_sheet1.png" />

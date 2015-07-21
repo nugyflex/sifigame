@@ -142,6 +142,8 @@ function player(x, y, index/*so i can set where the player starts when i instant
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
                     if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money >= platformcollection.array[platformcounter].price) {
                         game2.submoney(this.index, platformcollection.array[platformcounter].price)
+                        platformcollection.array[platformcounter + 2].locked = 0;
+
                         platformcollection.delete(platformcounter);
                     }
                 }
