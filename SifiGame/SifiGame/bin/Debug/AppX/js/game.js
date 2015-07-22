@@ -264,7 +264,7 @@ function game() {
             if (playercollection.array[0].klatch == 1) {
                 if (this.debugmode == 1)
                 {
-                this.debugmode = 0;
+                    this.debugmode = 0;
                 }
                 else
                 {
@@ -272,11 +272,11 @@ function game() {
                 }
             }
 
-                            playercollection.array[0].klatch = 0;
+            playercollection.array[0].klatch = 0;
         }
         else
         {
-                                        playercollection.array[0].klatch = 1;
+            playercollection.array[0].klatch = 1;
         }
         this.drawcrosshair();
         ctx.fillStyle = "rgb(200,75,75)";
@@ -342,12 +342,10 @@ function game() {
             this.damagealpha = this.damagealpha - 0.1;
             ctx.globalAlpha = 1;
         }
-        rotation = rotation + 0.05;
-        ctx.save();
-        ctx.translate(500, 500);
-        ctx.rotate(rotation);
-        ctx.fillRect(0, -20, 40, 40);
-        ctx.restore();
+        if (playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimer>0)
+     {
+            ctx.fillRect(this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 160, playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimer * playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimermax, 10)
+    }
 			//console.log(this.alphacounter);
 			if(this.alphacounter>0)
 			{

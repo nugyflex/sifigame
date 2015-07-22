@@ -45,7 +45,8 @@ weapon1 = new weapon(0,0,0,0);*/
 function gun(parent) {
     
     this.ammo = 10;
-    this. ammomax = 10;
+    this.ammomax = 10;
+    this.reloading = 0;
     this.latch = 0;
     this.latched = 1;
     this.ammores = 1000;
@@ -54,50 +55,60 @@ function gun(parent) {
     this.projectile = "greenlaser";
     this.shootcooldowntimer = -1;
     this.image = gun2pic;
-    this.shoot = function (x,y) {
-        if (this.latch == 0) {
-            if (this.shootcooldowntimer < 0&&this.ammo>0) {
-                shoot(parent, x, y, parent.index, this.projectile);
-                                if (this.ammo !== "inf")
-                {
-                this.ammo = this.ammo - 1;
-                }
-                this.shootcooldowntimer = this.shootcooldown;
-            }
-        }
-        else {
-            if (this.latched == 0) {
-                shoot(parent, x, y, parent.index, this.projectile);
-                if (this.ammo !== "inf")
-                {
-                this.ammo = this.ammo - 1;
+    this.reloadtimer = 0;
+    this.reloadtimermax = 30;
+    this.shoot = function (x, y, xoffset, yoffset) {
+        if (this.reloading == 0) {
+            if (this.latch == 0) {
+                if (this.shootcooldowntimer < 0 && this.ammo > 0) {
+                    shoot(parent, x, y, parent.index, this.projectile, xoffset, yoffset);
+                    if (this.ammo !== "inf") {
+                        this.ammo = this.ammo - 1;
+                    }
+                    this.shootcooldowntimer = this.shootcooldown;
                 }
             }
-            this.latched = 1;
+            else {
+                if (this.latched == 0) {
+                    shoot(parent, x, y, parent.index, this.projectile, xoffset, yoffset);
+                    if (this.ammo !== "inf") {
+                        this.ammo = this.ammo - 1;
+                    }
+                }
+                this.latched = 1;
+            }
+
         }
-
-
+    }
+    this.initreload = function()
+    {
+        if (this.ammo < this.ammomax) {
+            this.reloadtimer = this.reloadtimermax;
+            this.reloading = 1;
+        }
     }
     this.reload = function()
     {
-     
-        if (this.ammo<this.ammomax)
-        {
-            if (this.ammores > this.ammomax - this.ammo) {
-                this.ammores = this.ammores - (this.ammomax - this.ammo);
-                this.ammo = this.ammomax;
+        if (this.reloadtimer == 0) {
+            if (this.ammo < this.ammomax) {
+                if (this.ammores > this.ammomax - this.ammo) {
+                    this.ammores = this.ammores - (this.ammomax - this.ammo);
+                    this.ammo = this.ammomax;
+
+                }
+                else {
+                    this.ammo = this.ammo + this.ammores;
+                    this.ammores = 0;
+                }
 
             }
-            else {
-                this.ammo = this.ammo + this.ammores;
-                this.ammores = 0;
-            }
-            
+            this.reloading = 0;
         }
     }
     
     this.timer = function () {
         this.shootcooldowntimer = this.shootcooldowntimer - 1;
+        this.reloadtimer = this.reloadtimer - 1;
     }
 }
 

@@ -12,6 +12,7 @@
     this.hitoffsety = 0;
     this.hitheight = 10;
     this.hitwidth = 10;
+    this.drawtimer = 0;
 
     x11 = 0;
     y11 = 0;
@@ -52,6 +53,11 @@
     this.calcnewposition = function () {
         this.x = this.x + this.xvel;
         this.y = this.y + this.yvel;
+        this.drawtimer++;
+        if (this.drawtimer>3)
+        {
+            this.visible == 1;
+        }
     }
 
 }
@@ -64,6 +70,7 @@ function redlaser(pindex, type)
     this.width = 10;
     this.height = 10;
     this.vel = 8;
+    this.visible = 0;
     this.damagemultiplier = 5;
     this.image = bulletsheet1;
     this.armourpiercing = 0;

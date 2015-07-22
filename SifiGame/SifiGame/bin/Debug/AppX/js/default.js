@@ -73,7 +73,6 @@ var platformside =
     bottomleft: 7,
     bottomright: 8,
 };
-var rotation = 0;
 var mouse =
     {
         X: 0,

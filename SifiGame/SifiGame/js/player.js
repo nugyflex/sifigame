@@ -82,14 +82,16 @@ function player(x, y, index/*so i can set where the player starts when i instant
             if (keypressed.r == 1 && this.sprinting == 0) {
 
                 if (this.weaponreloadlatch == 0) {
-                    weaponcollection.array[this.weaponinuse].reload();
+                    weaponcollection.array[this.weaponinuse].initreload();
                 }
                 this.weaponreloadlatch = 1;
             }
+
             else
             {
                 this.weaponreloadlatch = 0;
             }
+            weaponcollection.array[this.weaponinuse].reload();
             if (keypressed.q == 1 && this.sprinting == 0) {
                 if (this.weaponswitchlatch==0)
                 {
@@ -125,7 +127,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
                 this.shootlatch = 0;
             }
             if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0 && this.sprinting == 0) {
-                this.weapons[this.weaponinuse].shoot(mouse.X, mouse.Y);
+                this.weapons[this.weaponinuse].shoot(mouse.X, mouse.Y, 0, 7);
             }
             else {
                 this.weapons[this.weaponinuse].latched = 0;
@@ -254,13 +256,13 @@ function player(x, y, index/*so i can set where the player starts when i instant
 
         this.rotation = this.rotation + 0.1;
         ctx.save();
-        ctx.translate(this.x, this.y);
+        ctx.translate(this.x, this.y+10);
         if (mouse.X < this.x) {
-            ctx.rotate((Math.atan((mouse.Y - this.y) / (mouse.X - this.x))));
+            ctx.rotate((Math.atan((mouse.Y - (this.y+10)) / (mouse.X - this.x))));
             ctx.scale(-1, 1);
         }
         else {
-            ctx.rotate(Math.atan((mouse.Y - this.y) / (mouse.X - this.x)));
+            ctx.rotate(Math.atan((mouse.Y - (this.y+10)) / (mouse.X - this.x)));
         }
 
 
@@ -268,7 +270,6 @@ function player(x, y, index/*so i can set where the player starts when i instant
         //ctx.fillRect(0, -4, 25, 9);
         ctx.drawImage(this.weapons[this.weaponinuse].image1, 0, -1 * this.weapons[this.weaponinuse].height/2);
         ctx.restore();
-        ctx.fillText((Math.atan((mouse.Y - this.y) / (mouse.X - this.x))), 700, 700)
 
 
     }
