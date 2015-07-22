@@ -73,7 +73,7 @@ var platformside =
     bottomleft: 7,
     bottomright: 8,
 };
-
+var rotation = 0;
 var mouse =
     {
         X: 0,
@@ -277,7 +277,7 @@ function gameLoop() {
 
 
         player_loop();
-
+        //playercollection.array[1].ai();
         game2.runround();
 
 

@@ -54,7 +54,16 @@
                         else
                         {
                             playercollection.array[playercounter].health = playercollection.array[playercounter].health - projectilecollection.array[projectilecounter].damagemultiplier;
-                            game2.addmoney(playercollection.array[projectilecollection.array[projectilecounter].pindex].index, 10);
+                            if (playercollection.array[projectilecollection.array[projectilecounter].pindex].type == "player") {
+                                game2.addmoney(playercollection.array[projectilecollection.array[projectilecounter].pindex].index, 10);
+                            }
+                            else
+                            {
+                                if (playercollection.array[projectilecollection.array[projectilecounter].pindex].type == "drone")
+                                {
+                                    game2.addmoney(playercollection.array[projectilecollection.array[projectilecounter].pindex].parentindex, 10);
+                                }
+                            }
                             if ((Math.random() * 100) + 1 > 50) {
                                 var velmultiplyertestx = -1;
                             }

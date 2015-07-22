@@ -1,4 +1,4 @@
-function drone(x, y) {
+function drone(x, y, index) {
     this.x = x;
     this.y = y;;
     this.xvel = 0;
@@ -8,7 +8,12 @@ function drone(x, y) {
     this.height = 38;
     this.dead = 0;
     this.type = "drone"
-	this.falling = 0;
+    this.falling = 0;
+    this.weapons = [];
+    this.weaponinuse = 0;
+    this.index = index;
+    this.money = 0;
+    this.parentindex = 0;
     this.draw = function () {
         ctx.drawImage(drone1img, this.frame1 * 9, 0, 9, 8, this.x, this.y, 9, 8);
         this.frame1 = this.frame1 + 1;
@@ -31,11 +36,13 @@ function drone(x, y) {
         }
         //adding the velosity to the drones position 
         this.x = this.x + this.xvel;
+
         this.y = this.y + this.yvel;
     }
-    this.falling
+    this.ai = function()
     {
-        
+        if (playercollection.array.length>2)
+        {
         var currentmin;
         var currentmini;
         for (i = 0; i < playercollection.array.length  ; i++) {
@@ -53,8 +60,17 @@ function drone(x, y) {
 
             }
         }
+        if (keypressed.mouse == 1) {
 
-        //console.log(playercollection.array[0].weapons[playercollection.array[0].weaponinuse].ammo);
+        }
+        else {
+            this.weapons[this.weaponinuse].latched = 0;
+        }
+        this.weapons[this.weaponinuse].shoot(playercollection.array[currentmini].x, playercollection.array[currentmini].y);
+    }
+
+
+
         
     }
 }

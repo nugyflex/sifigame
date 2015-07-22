@@ -125,7 +125,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
                 this.shootlatch = 0;
             }
             if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0 && this.sprinting == 0) {
-                this.weapons[this.weaponinuse].shoot();
+                this.weapons[this.weaponinuse].shoot(mouse.X, mouse.Y);
             }
             else {
                 this.weapons[this.weaponinuse].latched = 0;
@@ -137,6 +137,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
 
             weaponcollection.array[0].timer();
             weaponcollection.array[1].timer();
+            weaponcollection.array[2].timer();
             this.shootcooldown = this.shootcooldown - 1;
             if (keypressed.e == 1 && this.dead == 0 && this.falling == 0) {
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
@@ -251,7 +252,23 @@ function player(x, y, index/*so i can set where the player starts when i instant
         //weapon1.draw(this.x + 30, this.y);
         //ctx.fillRect(0, 0, 2, 2)
 
-        this.rotation = this.rotation+0.1;
+        this.rotation = this.rotation + 0.1;
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        if (mouse.X < this.x) {
+            ctx.rotate((Math.atan((mouse.Y - this.y) / (mouse.X - this.x))));
+            ctx.scale(-1, 1);
+        }
+        else {
+            ctx.rotate(Math.atan((mouse.Y - this.y) / (mouse.X - this.x)));
+        }
+
+
+
+        //ctx.fillRect(0, -4, 25, 9);
+        ctx.drawImage(this.weapons[this.weaponinuse].image1, 0, -1 * this.weapons[this.weaponinuse].height/2);
+        ctx.restore();
+        ctx.fillText((Math.atan((mouse.Y - this.y) / (mouse.X - this.x))), 700, 700)
 
 
     }

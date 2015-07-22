@@ -127,7 +127,7 @@ function players() {
             this.array[i] = new player(x, y, i);
         }
         if (type == drone) {
-            this.array[i] = new drone(x, y);
+            this.array[i] = new drone(x, y, i);
         }
         if (type == enemy) {
             this.array[i] = new enemy(x, y, vel, i);
@@ -187,7 +187,10 @@ function weapons() {
 				if (type=="guntype2")
 		{
 				    this.array[i] = new guntype2(player);
-		}
+				}
+				if (type == "guntype3") {
+				    this.array[i] = new guntype3(player);
+				}
     }
     this.delete = function (index) {
         var initialcount = this.array.length;

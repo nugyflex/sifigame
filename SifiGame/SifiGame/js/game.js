@@ -122,9 +122,11 @@ function game() {
         playercollection.add(cwidth / 2, cheight / 2, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);
         weaponcollection.add("guntype1",playercollection.array[0])
-        weaponcollection.add("guntype2",playercollection.array[0])
+        weaponcollection.add("guntype2", playercollection.array[0])
+        weaponcollection.add("guntype3", playercollection.array[1])
         playercollection.array[0].weapons[0] = weaponcollection.array[0];
         playercollection.array[0].weapons[1] = weaponcollection.array[1];
+        playercollection.array[1].weapons[0] = weaponcollection.array[2];
         miscobjectcollection.add("ammocontainer", 600, 600);
     }
 
@@ -340,8 +342,12 @@ function game() {
             this.damagealpha = this.damagealpha - 0.1;
             ctx.globalAlpha = 1;
         }
-
-		
+        rotation = rotation + 0.05;
+        ctx.save();
+        ctx.translate(500, 500);
+        ctx.rotate(rotation);
+        ctx.fillRect(0, -20, 40, 40);
+        ctx.restore();
 			//console.log(this.alphacounter);
 			if(this.alphacounter>0)
 			{

@@ -54,10 +54,10 @@ function gun(parent) {
     this.projectile = "greenlaser";
     this.shootcooldowntimer = -1;
     this.image = gun2pic;
-    this.shoot = function () {
+    this.shoot = function (x,y) {
         if (this.latch == 0) {
             if (this.shootcooldowntimer < 0&&this.ammo>0) {
-                shoot(parent, mouse.X, mouse.Y, parent.index, this.projectile);
+                shoot(parent, x, y, parent.index, this.projectile);
                                 if (this.ammo !== "inf")
                 {
                 this.ammo = this.ammo - 1;
@@ -67,7 +67,7 @@ function gun(parent) {
         }
         else {
             if (this.latched == 0) {
-                shoot(parent, mouse.X, mouse.Y, parent.index, this.projectile);
+                shoot(parent, x, y, parent.index, this.projectile);
                 if (this.ammo !== "inf")
                 {
                 this.ammo = this.ammo - 1;
@@ -94,8 +94,6 @@ function gun(parent) {
             }
             
         }
-
-        
     }
     
     this.timer = function () {
@@ -111,23 +109,45 @@ function guntype1(parent) {
     this.ammo = 20;
     this.ammores = 100;
     this.ammomax = 20;
+    this.height = 9;
 	this.image = gun2pic;
-    this.rof = 6;//(rounds a second)
-    this.projectile = "greenlaser";
+	this.rof = 6;//(rounds a second)
+	this.shootcooldown = 60 / this.rof;
+	this.projectile = "greenlaser";
+	this.image1 = gun1;
 }
 
 function guntype2(parent) {
 
     this.name = "laser pistol";
     gun.call(this, parent);
-	this.image = gun1pic;
+    this.image = gun1pic;
+    this.rof = 6;
+    this.shootcooldown = 60 / this.rof;
     this.ammo = "inf";
     this.latch = 1;
+    this.image1 = gun2;
+    this.height = 9;
     this.projectile = "redlaser";
 
+}
+
+function guntype3(parent) {
+
+    this.name = "drone minigun"
+    gun.call(this, parent);
+    this.ammo = 200000;
+    this.ammores = 100;
+    this.ammomax = 200000;
+    this.image = gun2pic;
+
+    this.rof = 10;//(rounds a second)
+    this.shootcooldown = 60 / this.rof;
+    this.projectile = "redlaser";
 }
 
 
 
 guntype1.prototype = Object.create(gun.prototype);
 guntype2.prototype = Object.create(gun.prototype);
+guntype3.prototype = Object.create(gun.prototype);
