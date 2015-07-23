@@ -276,7 +276,7 @@ function gameLoop() {
 
 
         player_loop();
-        //playercollection.array[1].ai();
+        playercollection.array[1].ai();
         game2.runround();
 
 

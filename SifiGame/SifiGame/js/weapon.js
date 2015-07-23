@@ -152,9 +152,9 @@ function guntype3(parent) {
     this.ammomax = 200000;
     this.image = gun2pic;
 
-    this.rof = 10;//(rounds a second)
+    this.rof = 1.4;//(rounds a second)
     this.shootcooldown = 60 / this.rof;
-    this.projectile = "redlaser";
+    this.projectile = "redlaserweak";
 }
 
 

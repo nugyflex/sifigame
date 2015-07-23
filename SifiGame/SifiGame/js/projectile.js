@@ -1,4 +1,4 @@
-﻿function projectile(pindex,type) {
+function projectile(pindex,type) {
     this.x = 10000;
     this.y = 10000;
     this.xvel = 0;
@@ -12,7 +12,6 @@
     this.hitoffsety = 0;
     this.hitheight = 10;
     this.hitwidth = 10;
-    this.drawtimer = 0;
 
     x11 = 0;
     y11 = 0;
@@ -70,7 +69,7 @@ function redlaser(pindex, type)
     this.width = 10;
     this.height = 10;
     this.vel = 8;
-    this.visible = 0;
+    this.visible = 1;
     this.damagemultiplier = 5;
     this.image = bulletsheet1;
     this.armourpiercing = 0;
@@ -100,6 +99,46 @@ function redlaser(pindex, type)
 
 
 }
+
+function redlaserweak(pindex, type)
+{
+    projectile.call(this, pindex, type);
+
+
+    this.width = 10;
+    this.height = 10;
+    this.vel = 10;
+    this.visible = 1;
+    this.damagemultiplier = 2.5;
+    this.image = bulletsheet1;
+    this.armourpiercing = 0;
+    this.draw = function () {
+        if (this.visible == 1) {
+
+
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(Math.atan((this.y22 - this.y11) / (this.x22 - this.x11)));
+
+            //ctx.fillStyle = "rgb(200,100,50)";
+            //ctx.fillRect(0, 0, 10, 3);
+            ctx.drawImage(this.image, 0, 0, 10, 3, 0, 0, 10, 3);
+
+            ctx.restore();
+
+
+        }
+        if (game2.debugmode == 1) {
+            ctx.globalAlpha = 0.5;
+            this.colour = "rgb(200,40,40)";
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.globalAlpha = 1;
+        }
+    }
+
+
+}
+
 
 function greenlaser(pindex, type) {
     projectile.call(this, pindex, type);
@@ -202,5 +241,6 @@ function bomb(pindex, type) {
 }
 
 redlaser.prototype = Object.create(projectile.prototype);
+redlaserweak.prototype = Object.create(projectile.prototype);
 greenlaser.prototype = Object.create(projectile.prototype);
 bomb.prototype = Object.create(projectile.prototype);

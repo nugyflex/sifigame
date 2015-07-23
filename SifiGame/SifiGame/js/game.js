@@ -344,7 +344,7 @@ function game() {
         }
         if (playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimer>0)
      {
-            ctx.fillRect(this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 160, playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimer * playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimermax, 10)
+            ctx.fillRect(this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 160, playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimer * 2.5, 10)
     }
 			//console.log(this.alphacounter);
 			if(this.alphacounter>0)

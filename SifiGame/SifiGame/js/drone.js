@@ -66,7 +66,7 @@ function drone(x, y, index) {
         else {
             this.weapons[this.weaponinuse].latched = 0;
         }
-        this.weapons[this.weaponinuse].shoot(playercollection.array[currentmini].x, playercollection.array[currentmini].y);
+        this.weapons[this.weaponinuse].shoot(playercollection.array[currentmini].x, playercollection.array[currentmini].y, 0, 0);
     }
 
 
