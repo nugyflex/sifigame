@@ -2,15 +2,15 @@
     this.type = type;
     this.x = x;
     this.y = y;
-    this.width = 4;
-    this.height = 6;
+    this.width = 24;
+    this.height = 17;
     this.interactontouch = true;
     this.deleteafterinteract = true;
-    this.ammo = 50;
+    this.ammo = 100;
     this.used = false;
     this.draw = function()
     {
-        ctx.drawImage(ammo1, this.x, this.y);
+        ctx.drawImage(ammocrate, this.x, this.y);
     }
     this.interact = function(player)
     {

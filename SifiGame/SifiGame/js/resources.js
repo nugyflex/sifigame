@@ -118,3 +118,5 @@ var ammo1 = new Image();
 ammo1.src = 'Images/player1/ammo1.png'
 var doorway2 = new Image();
 doorway2.src = 'Images/NewFolder/doorway2.png'
+var ammocrate = new Image();
+ammocrate.src = 'Images/NewFolder/ammocrate.png'

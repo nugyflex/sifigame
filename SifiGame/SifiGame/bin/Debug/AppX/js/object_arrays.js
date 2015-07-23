@@ -96,7 +96,9 @@ function projectiles() {
             case "bomb":
                 this.array[i] = new bomb(pindex, type)
                 break
-
+            case "redlaserweak":
+                this.array[i] = new redlaserweak(pindex, type)
+                break
         }
 
     }

@@ -87,8 +87,9 @@ function game() {
 
         platformcollection.add(929, 400, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(1029, 400, 40, 20, PLATFORMTYPE_PILLAR1);
-        platformcollection.add(1129, 400, 40, 20, PLATFORMTYPE_PILLAR1);
-        platformcollection.add(1229, 400, 40, 20, PLATFORMTYPE_PILLAR1);
+        //platformcollection.add(1129, 400, 40, 20, PLATFORMTYPE_PILLAR1);
+        //platformcollection.add(1229, 400, 40, 20, PLATFORMTYPE_PILLAR1);
+        platformcollection.add(1200, 370, 300, 30, PLATFORMTYPE_DOOR_750);
         platformcollection.add(1329, 400, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(1429, 400, 40, 20, PLATFORMTYPE_PILLAR1);
 
@@ -109,6 +110,7 @@ function game() {
 
         floorcollection.add(1200, 1090, 200, 310);
         floorcollection.add(1000, 1390, 400, 410);
+        floorcollection.add(1200, 0, 100, 450);
 
         platformcollection.add(300, -300, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(340, -300, 40, 20, PLATFORMTYPE_PILLAR1);
@@ -128,6 +130,12 @@ function game() {
         playercollection.array[0].weapons[1] = weaponcollection.array[1];
         playercollection.array[1].weapons[0] = weaponcollection.array[2];
         miscobjectcollection.add("ammocontainer", 600, 600);
+        miscobjectcollection.add("ammocontainer", 304, -460);
+        miscobjectcollection.add("ammocontainer", 304, -490);
+        miscobjectcollection.add("ammocontainer", 304, -520);
+        miscobjectcollection.add("ammocontainer", 1210, 50);
+        miscobjectcollection.add("ammocontainer", 1210, 80);
+        miscobjectcollection.add("ammocontainer", 1210, 110);
     }
 
     this.getplayercap = function(round)

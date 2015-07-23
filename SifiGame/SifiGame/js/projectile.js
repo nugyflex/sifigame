@@ -74,11 +74,13 @@ function redlaser(pindex, type)
     this.image = bulletsheet1;
     this.armourpiercing = 0;
     this.draw = function () {
+
         if (this.visible == 1) {
-
-
             ctx.save();
+
+
             ctx.translate(this.x, this.y);
+
             ctx.rotate(Math.atan((this.y22 - this.y11) / (this.x22 - this.x11)));
 
             //ctx.fillStyle = "rgb(200,100,50)";

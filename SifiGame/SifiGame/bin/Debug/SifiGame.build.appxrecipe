@@ -90,6 +90,9 @@
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\main_character_shotgun.png">
       <PackagePath>images\main_character_shotgun.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\ammocrate.png">
+      <PackagePath>images\NewFolder\ammocrate.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\barricade.png">
       <PackagePath>images\NewFolder\barricade.png</PackagePath>
     </AppxPackagedFile>
