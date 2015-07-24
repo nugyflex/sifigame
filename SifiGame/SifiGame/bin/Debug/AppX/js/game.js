@@ -59,11 +59,11 @@ function game() {
         platformcollection.add(500, 1300, 40, 20, 8);
         platformcollection.add(100, 100, 40, 20, 7);
         platformcollection.add(500, 1400, 40, 20, PLATFORMTYPE_PILLAR1);
-        platformcollection.add(520, 1600, 40, 20, PLATFORMTYPE_SMALL_BOX);
+        platformcollection.add(520, 1600, 40, 20, PLATFORMTYPE_SMALL_BOX);/*
         platformcollection.add(-700, -2000, 60, 10000, PLATFORMTYPE_GREYBOX);
         platformcollection.add(-700, -2000, 10000, 60, PLATFORMTYPE_GREYBOX);
         platformcollection.add(3000, -2000, 600, 10000, PLATFORMTYPE_GREYBOX);
-        platformcollection.add(-700, 5000, 10000, 60, PLATFORMTYPE_GREYBOX);
+        platformcollection.add(-700, 5000, 10000, 60, PLATFORMTYPE_GREYBOX);*/
         platformcollection.add(200, 200, 50, 50, 9, 100, 200, 500, 200);
         platformcollection.add(400, 200, 50, 50, 9, 100, 225, 500, 225);
         platformcollection.add(700, 1700, 50, 50, 9, 600, 1700, 600, 1780);
@@ -319,6 +319,10 @@ function game() {
             }
         }
         
+        ctx.fillText("x,y of intersect =  " + collisiondetection1.checklineintersectrect(platformcollection.array[0], playercollection.array[0].x, playercollection.array[0].y, mouse.X, mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2));
+        ctx.fillText("mouse x,y =  " + Math.floor(mouse.X) + " , " + Math.floor(mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2)+30);
+
+
         if (this.debugmode == 1)
         {
                 

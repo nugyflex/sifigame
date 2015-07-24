@@ -11,12 +11,28 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
     this.bx1 = bx;
     this.by1 = by;
     this.colour = "rgb(65,65,75)";
-    this.health = 150;
+    this.health = 50;
     this.index = index;
     this.breakable = false;
     this.removable = false;
     this.locked = 1;
     this.image = image;
+    this.theta = 1;
+    this.v1_m = function()
+    {
+        return Math.tan(this.theta);
+    }
+    this.v1_b = function () {
+        return this.y - (this.v1_m() * this.x);
+    }
+    this.v2_m = function () {
+        return Math.tan(this.theta+(Math.PI/4));
+    }
+    this.v2_b = function () {
+        return this.y - (this.v2_m() * this.x);
+    }
+    
+
     //a function called in the main loop, it draws the platform
     this.draw = function () {
         /*if (this.width < playercollection.array[0].width) {
@@ -31,9 +47,14 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
         switch (this.type)
         {
                 
-        case PLATFORMTYPE_GREYBOX:
-            ctx.fillStyle = this.colour;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
+            case PLATFORMTYPE_GREYBOX:
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.theta);
+                ctx.fillStyle = this.colour;
+                ctx.fillRect(0, 0, this.width, this.height);
+                ctx.restore();
+
             break;
 
         case PLATFORMTYPE_PILLAR1:
@@ -79,13 +100,13 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
 			this.width = 20;
 			this.breakable = true;
 			ctx.drawImage(barricade1, this.x, this.y - 14);
-			if (this.health<130)
+			if (this.health<50)
 			{
             ctx.drawImage(barricade4, 0, 0, 20, 64, this.x, this.y-14, 20, 64);
-			if (this.health<90)
+			if (this.health<30)
 			{
 			     ctx.drawImage(barricade4, 0, 64, 20, 64, this.x, this.y-14, 20, 64);
-				 if (this.health<40)
+			     if (this.health < 10)
 			{
 				 ctx.drawImage(barricade4, 0, 128, 20, 64, this.x, this.y-14, 20, 64);	
 			}
@@ -100,12 +121,12 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
 			this.width = 51;
 			this.breakable = true;
 
-			if (this.health < 130) {
+			if (this.health < 50) {
 			    ctx.drawImage(barricade3, 0, 0, 51, 31, this.x, this.y - 13, 51, 31);
 			    if
-			(this.health < 90) {
+			(this.health < 30) {
 			        ctx.drawImage(barricade3, 0, 31, 51, 31, this.x, this.y - 13, 51, 31);
-			        if (this.health < 40)
+			        if (this.health < 10)
 			        {
 			            ctx.drawImage(barricade3, 0, 62, 51, 31, this.x, this.y - 13, 51, 31);
 			        }

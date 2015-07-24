@@ -83,7 +83,7 @@ function drone(x, y, index) {
         else {
             this.weapons[this.weaponinuse].latched = 0;
         }
-        if (collisiondetection1.finddistance(this, playercollection.array[currentmini]) < 300&&keypressed.space == 1) {
+        if (collisiondetection1.finddistance(this, playercollection.array[currentmini]) < 300) {
             this.weapons[this.weaponinuse].shoot(playercollection.array[currentmini].x, playercollection.array[currentmini].y, 4, 16);
         }
             //console.log(playercollection.array[currentmini].x + " , " + playercollection.array[currentmini].y);
