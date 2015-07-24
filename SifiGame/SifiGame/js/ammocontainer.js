@@ -55,6 +55,8 @@ function acid(type, x, y, xvel, yvel) {
     this.interact = function (player) {
         if (player.type == "enemy") {
             player.health = player.health - this.damage;
+            player.xvel = player.xvel / 2;
+            player.yvel = player.yvel / 2;
 
         }
     }

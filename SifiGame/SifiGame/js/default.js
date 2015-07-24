@@ -124,7 +124,7 @@ var timer = 50;
                 thingstodraw1.execute();
                 game2.drawhud();
                 ctx.translate(game2.canvastranslatex, game2.canvastranslatey);
-            
+                ctx.drawImage(acidgun1, 500, 500);
         }, 1000 / fps);
     }
 

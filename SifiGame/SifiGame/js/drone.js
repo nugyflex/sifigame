@@ -83,11 +83,14 @@ function drone(x, y, index) {
         else {
             this.weapons[this.weaponinuse].latched = 0;
         }
-        this.weapons[this.weaponinuse].shoot(playercollection.array[currentmini].x, playercollection.array[currentmini].y, 4, 16);
+        if (collisiondetection1.finddistance(this, playercollection.array[currentmini]) < 300) {
+            this.weapons[this.weaponinuse].shoot(playercollection.array[currentmini].x, playercollection.array[currentmini].y, 4, 16);
+        }
             //console.log(playercollection.array[currentmini].x + " , " + playercollection.array[currentmini].y);
             this.weapons[this.weaponinuse].timer();
                 this.closestenemyx = playercollection.array[currentmini].x;
                 this.closestenemyy = playercollection.array[currentmini].y;
+
     }
 
 

@@ -84,6 +84,9 @@
     <Content Include="images\ladder.png" />
     <Content Include="images\logo.scale-100.png" />
     <Content Include="images\main_character_shotgun.png" />
+    <Content Include="images\NewFolder\acidgun.png" />
+    <Content Include="images\NewFolder\acidgun2x2.png" />
+    <Content Include="images\NewFolder\acidgun2x2.psd" />
     <Content Include="images\NewFolder\ammocrate.png" />
     <Content Include="images\NewFolder\barricade.png" />
     <Content Include="images\NewFolder\barricade_front.png" />

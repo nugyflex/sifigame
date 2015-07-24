@@ -172,11 +172,11 @@ function acidgun(parent) {
     this.ammores = 100;
     this.ammomax = 20;
     this.height = 9;
-    this.image = gun2pic;
+    this.image = acidgun1pic;
     this.rof = 6;//(rounds a second)
     this.shootcooldown = 60 / this.rof;
     this.projectile = "acid";
-    this.image1 = gun1;
+    this.image1 = acidgun1;
     this.reloadtimermax = 100;
 }
 
