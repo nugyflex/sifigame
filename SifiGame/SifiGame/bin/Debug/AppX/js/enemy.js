@@ -5,7 +5,8 @@ function enemy(x, y, vel, index) {
     this.yvel = 0;
     this.dead = 0;
     this.theta = 0;
-    this.vel = vel;
+    this.defaultvel = vel
+    this.vel = this.defaultvel;
     this.height = 10;
     this.width = 12;
     this.hitheight = 32;
@@ -20,7 +21,10 @@ function enemy(x, y, vel, index) {
 	this.damage = 10;
 	this.attackcooldown1 = 0;
 	this.index = index;
-
+	this.poisoned = 0;
+	this.poisonedtimer = 0;
+	this.slowed = 0;
+	this.slowedtimer = 0;
 
 
     //functions called in the main loop are below
@@ -63,6 +67,34 @@ function enemy(x, y, vel, index) {
             playercollection.delete(this.index);
 
 		}
+		if (this.poisonedtimer > 0)
+		{
+		    this.poisoned = 1;
+		}
+		else
+		{
+		    this.poisoned = 0;
+		}
+		if (this.poisoned == 1)
+		{
+		    this.health = this.health - 0.05;
+		}
+		this.poisonedtimer--;
+
+		if (this.slowedtimer > 0) {
+		    this.slowed = 1;
+		}
+		else {
+		    this.slowed = 0;
+		}
+		if (this.slowed == 1) {
+		    this.vel = this.defaultvel*0.65;
+		}
+		else
+		{
+		    this.vel = this.defaultvel;
+		}
+		this.slowedtimer--;
 
 	
         

@@ -325,7 +325,7 @@ function game() {
             ctx.fillText("Y  " + Math.round(playercollection.array[0].y), this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
             ctx.fillText("X  " + Math.round(playercollection.array[0].x), this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
 
-
+            ctx.fillText("misc objects: " + miscobjectcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 170);
             ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 150);
             ctx.fillText("platforms: " + platformcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 130);
             ctx.fillText("projectiles: " + projectilecollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 110);
