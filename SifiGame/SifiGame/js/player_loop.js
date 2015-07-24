@@ -3,7 +3,7 @@
 
         for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
 
-            if (collisiondetection1.testcollision(playercollection.array[playercounter], miscobjectcollection.array[miscobjectcounter]) && playercollection.array[playercounter].type == "player") {
+            if (collisiondetection1.testcollision(playercollection.array[playercounter], miscobjectcollection.array[miscobjectcounter])/* && playercollection.array[playercounter].type == "player"*/) {
                 if (miscobjectcollection.array[miscobjectcounter].interactontouch) {
                     miscobjectcollection.array[miscobjectcounter].interact(playercollection.array[playercounter]);
                 }
@@ -54,6 +54,18 @@
             }
         }
 
+
+    }
+    for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
+
+        if (miscobjectcollection.array[miscobjectcounter].static == false) {
+            miscobjectcollection.array[miscobjectcounter].move();
+
+        }
+        if (miscobjectcollection.array[miscobjectcounter].deleteaftertime == true && miscobjectcollection.array[miscobjectcounter].timer > miscobjectcollection.array[miscobjectcounter].timermax)
+        {
+            miscobjectcollection.delete(miscobjectcounter);
+        }
 
     }
 }

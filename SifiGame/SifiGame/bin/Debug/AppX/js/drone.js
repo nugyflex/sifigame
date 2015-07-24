@@ -14,12 +14,29 @@ function drone(x, y, index) {
     this.index = index;
     this.money = 0;
     this.parentindex = 0;
+    this.closestenemyx;
+        this.closestenemyy;
     this.draw = function () {
         ctx.drawImage(drone1img, this.frame1 * 9, 0, 9, 8, this.x, this.y, 9, 8);
         this.frame1 = this.frame1 + 1;
         if (this.frame1 == 4) {
             this.frame1 = 0;
         }
+                ctx.save();
+        ctx.translate(this.x + 8, this.y+16);
+        if (this.closestenemyx < this.x) {
+            ctx.rotate((Math.atan((this.closestenemyy - (this.y+16)) / (this.closestenemyx - this.x))));
+            ctx.scale(-1, 1);
+        }
+        else {
+            ctx.rotate(Math.atan((this.closestenemyy - (this.y+16)) / (this.closestenemyx - this.x)));
+        }
+
+
+
+        //ctx.fillRect(0, -4, 25, 9);
+        ctx.drawImage(this.weapons[this.weaponinuse].image1, 0, -1 * this.weapons[this.weaponinuse].height/2);
+        ctx.restore();
     }
     this.calcNewPosition = function (player) {
         if (this.x < player.x) {
@@ -66,7 +83,11 @@ function drone(x, y, index) {
         else {
             this.weapons[this.weaponinuse].latched = 0;
         }
-        this.weapons[this.weaponinuse].shoot(playercollection.array[currentmini].x, playercollection.array[currentmini].y, 0, 0);
+        this.weapons[this.weaponinuse].shoot(playercollection.array[currentmini].x, playercollection.array[currentmini].y, 4, 16);
+            //console.log(playercollection.array[currentmini].x + " , " + playercollection.array[currentmini].y);
+            this.weapons[this.weaponinuse].timer();
+                this.closestenemyx = playercollection.array[currentmini].x;
+                this.closestenemyy = playercollection.array[currentmini].y;
     }
 
 

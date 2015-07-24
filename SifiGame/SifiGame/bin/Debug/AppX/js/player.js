@@ -82,7 +82,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             if (keypressed.r == 1 && this.sprinting == 0) {
 
                 if (this.weaponreloadlatch == 0) {
-                    weaponcollection.array[this.weaponinuse].initreload();
+                    this.weapons[this.weaponinuse].initreload();
                 }
                 this.weaponreloadlatch = 1;
             }
@@ -91,7 +91,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             {
                 this.weaponreloadlatch = 0;
             }
-            weaponcollection.array[this.weaponinuse].reload();
+            this.weapons[this.weaponinuse].reload();
             if (keypressed.q == 1 && this.sprinting == 0) {
                 if (this.weaponswitchlatch==0)
                 {
@@ -136,10 +136,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             if (keypressed.space == 1 && this.dead == 0 && this.falling == 0) {
                 //gun2.shoot();
             }
-
-            weaponcollection.array[0].timer();
-            weaponcollection.array[1].timer();
-            weaponcollection.array[2].timer();
+            this.weapons[this.weaponinuse].timer();
             this.shootcooldown = this.shootcooldown - 1;
             if (keypressed.e == 1 && this.dead == 0 && this.falling == 0) {
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
@@ -204,7 +201,15 @@ function player(x, y, index/*so i can set where the player starts when i instant
 
 
         if (this.xvel > 0) {
-            ctx.drawImage(walking_right, 0, this.frame1 * 31, 16, 31, this.x - 8, this.y, 16, 31);
+
+                        if (mouse.X>this.x)
+            {
+                            ctx.drawImage(walking_right, 0, this.frame1 * 31, 16, 31, this.x - 8, this.y, 16, 31);
+            }
+            else
+            {
+            ctx.drawImage(walking_left, 0, this.frame1 * 31, 16, 31, this.x, this.y, 16, 31);
+            }
             this.lastdir = 1;
         }
         if (this.xvel == 0 && this.yvel > 0) {
@@ -217,9 +222,27 @@ function player(x, y, index/*so i can set where the player starts when i instant
         }
 
         if (this.xvel < 0) {
+                        if (mouse.X>this.x)
+            {
+                            ctx.drawImage(walking_right, 0, this.frame1 * 31, 16, 31, this.x - 8, this.y, 16, 31);
+            }
+            else
+            {
             ctx.drawImage(walking_left, 0, this.frame1 * 31, 16, 31, this.x, this.y, 16, 31);
+            }
             this.lastdir = 2;
         }
+             if (mouse.X>this.x)
+            {
+                            ctx.drawImage(walking_right, 0, this.frame1 * 31, 16, 31, this.x - 8, this.y, 16, 31);
+                            this.lastdir = 1;
+            }
+            else
+            {
+            ctx.drawImage(walking_left, 0, this.frame1 * 31, 16, 31, this.x, this.y, 16, 31);
+                            this.lastdir = 2;
+            }
+        
 
 
         if (this.dc == 1) {
@@ -238,7 +261,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             this.frame2 = 3;
         }
         this.dc = this.dc + 1;
-        if (this.dc == 4) {
+        if (this.dc == 6) {
             this.dc = 0;
         }
         if (game2.debugmode == 1) {
@@ -256,7 +279,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
 
         this.rotation = this.rotation + 0.1;
         ctx.save();
-        ctx.translate(this.x, this.y+10);
+        ctx.translate(this.x+4, this.y+10);
         if (mouse.X < this.x) {
             ctx.rotate((Math.atan((mouse.Y - (this.y+10)) / (mouse.X - this.x))));
             ctx.scale(-1, 1);

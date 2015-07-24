@@ -182,18 +182,24 @@ function weapons() {
     this.array = [];
     this.add = function (type, player) {
         var i = this.count();
-		if (type=="guntype1")
-		{
-		    this.array[i] = new guntype1(player);
-		}
-				if (type=="guntype2")
-		{
-				    this.array[i] = new guntype2(player);
-				}
-				if (type == "guntype3") {
-				    this.array[i] = new guntype3(player);
-				}
+        if (type=="guntype1")
+        {
+            this.array[i] = new guntype1(player);
+        }
+        if (type=="guntype2")
+        {
+            this.array[i] = new guntype2(player);
+        }
+        if (type == "guntype3") 
+        {
+            this.array[i] = new guntype3(player);
+        }
+        if (type == "acidgun")
+        {
+            this.array[i] = new acidgun(player);
+        }
     }
+    
     this.delete = function (index) {
         var initialcount = this.array.length;
         for (weapon = index; weaponcounter < initialcount; weaponcounter++) {
@@ -215,10 +221,13 @@ function miscobjects() {
         return this.array.length;
     }
     this.array = [];
-    this.add = function (type, x, y) {
+    this.add = function (type, x, y, xvel, yvel) {
         var i = this.count();
         if (type == "ammocontainer") {
             this.array[i] = new ammocontainer(type,x,y);
+        }
+        if (type == "acid") {
+            this.array[i] = new acid(type, x, y, xvel, yvel);
         }
 
     }
