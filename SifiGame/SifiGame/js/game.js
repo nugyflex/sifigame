@@ -123,12 +123,15 @@ function game() {
 
         playercollection.add(cwidth / 2, cheight / 2, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);
-        weaponcollection.add("guntype1",playercollection.array[0])
-        weaponcollection.add("guntype2", playercollection.array[0])
-        weaponcollection.add("guntype3", playercollection.array[1])
+        weaponcollection.add("guntype1", playercollection.array[0]);
+        weaponcollection.add("guntype2", playercollection.array[0]);
+        weaponcollection.add("guntype3", playercollection.array[1]);
+        weaponcollection.add("acidgun", playercollection.array[0]);
         playercollection.array[0].weapons[0] = weaponcollection.array[0];
         playercollection.array[0].weapons[1] = weaponcollection.array[1];
+        playercollection.array[0].weapons[2] = weaponcollection.array[3];
         playercollection.array[1].weapons[0] = weaponcollection.array[2];
+
         miscobjectcollection.add("ammocontainer", 600, 600);
         miscobjectcollection.add("ammocontainer", 304, -460);
         miscobjectcollection.add("ammocontainer", 304, -490);
@@ -136,6 +139,7 @@ function game() {
         miscobjectcollection.add("ammocontainer", 1210, 50);
         miscobjectcollection.add("ammocontainer", 1210, 80);
         miscobjectcollection.add("ammocontainer", 1210, 110);
+        miscobjectcollection.add("acid", 1230, 110, 0, 4);
     }
 
     this.getplayercap = function(round)
@@ -333,14 +337,14 @@ function game() {
         ctx.fillText("$" + playercollection.array[0].money, this.canvastranslatex + 20, this.canvastranslatey + 140);
 
         if (playercollection.array[0].dead == 0 && playercollection.array[0].type == "player") {
-            ctx.drawImage(weaponcollection.array[playercollection.array[0].weaponinuse].image, this.canvastranslatex + cwidth - 120, this.canvastranslatey + cheight - 100);
-            ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].name, this.canvastranslatex + cwidth - 150, this.canvastranslatey + cheight - 35);
+            ctx.drawImage(playercollection.array[0].weapons[playercollection.array[0].weaponinuse].image, this.canvastranslatex + cwidth - 120, this.canvastranslatey + cheight - 100);
+            ctx.fillText(playercollection.array[0].weapons[playercollection.array[0].weaponinuse].name, this.canvastranslatex + cwidth - 150, this.canvastranslatey + cheight - 35);
 
-            if (weaponcollection.array[playercollection.array[0].weaponinuse].ammo == "inf") {
+            if (playercollection.array[0].weapons[playercollection.array[0].weaponinuse].ammo == "inf") {
                 ctx.drawImage(infinity, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 130);
             }
             else {
-                ctx.fillText(weaponcollection.array[playercollection.array[0].weaponinuse].ammo + " / " + weaponcollection.array[playercollection.array[0].weaponinuse].ammores, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 120);
+                ctx.fillText(playercollection.array[0].weapons[playercollection.array[0].weaponinuse].ammo + " / " + playercollection.array[0].weapons[playercollection.array[0].weaponinuse].ammores, this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 120);
             }
         }
         if (this.damagealpha > 0) {
@@ -352,8 +356,13 @@ function game() {
         }
         if (playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimer>0)
      {
-            ctx.fillRect(this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 160, playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimer * 2.5, 10)
+            ctx.fillRect(this.canvastranslatex + cwidth - 100, this.canvastranslatey + cheight - 160,(              playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimer / playercollection.array[0].weapons[playercollection.array[0].weaponinuse].reloadtimermax)*82, 10)
+            ctx.fillRect(this.canvastranslatex+cwidth-104, this.canvastranslatey + cheight - 164,88,2);
+                    ctx.fillRect(this.canvastranslatex+cwidth-104, this.canvastranslatey + cheight - 164,2,18);
+                            ctx.fillRect(this.canvastranslatex+cwidth-16, this.canvastranslatey + cheight - 164,2,18);
+                            ctx.fillRect(this.canvastranslatex+cwidth-104, this.canvastranslatey + cheight - 148,88,2);
     }
+
 			//console.log(this.alphacounter);
 			if(this.alphacounter>0)
 			{
