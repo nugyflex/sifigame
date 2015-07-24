@@ -88,7 +88,7 @@ function enemy(x, y, vel, index) {
 		    this.slowed = 0;
 		}
 		if (this.slowed == 1) {
-		    this.vel = this.defaultvel*0.65;
+		    this.vel = this.defaultvel*0.5;
 		}
 		else
 		{

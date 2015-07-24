@@ -56,7 +56,9 @@ function acid(type, x, y, xvel, yvel) {
         if (player.type == "enemy") {
             player.poisonedtimer = 100;
             player.slowedtimer = 100;
-            player.health = player.health - 0.075;
+            if (this.vel > 0) {
+                player.health = player.health - 0.1;
+            }
         }
     }
     this.move = function()
@@ -89,7 +91,7 @@ function acid(type, x, y, xvel, yvel) {
 
 
     this.launch = function (x1, y1, x2, y2) {
-        this.vel = (Math.random() * 4) + 1;
+        this.vel = (Math.random() * 5) + 1;
         this.x = x1;
         this.y = y1;
 

@@ -459,7 +459,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\ammocontainer.js">
       <PackagePath>js\ammocontainer.js</PackagePath>
-      <Modified>2015-07-24T12:39:40.018</Modified>
+      <Modified>2015-07-24T12:47:05.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\camera.js">
       <PackagePath>js\camera.js</PackagePath>
@@ -483,11 +483,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\drone.js">
       <PackagePath>js\drone.js</PackagePath>
-      <Modified>2015-07-24T08:25:24.457</Modified>
+      <Modified>2015-07-24T12:40:51.270</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\enemy.js">
       <PackagePath>js\enemy.js</PackagePath>
-      <Modified>2015-07-24T11:41:14.926</Modified>
+      <Modified>2015-07-24T12:43:12.682</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\explosion.js">
       <PackagePath>js\explosion.js</PackagePath>
@@ -543,7 +543,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\weapon.js">
       <PackagePath>js\weapon.js</PackagePath>
-      <Modified>2015-07-24T08:22:45.146</Modified>
+      <Modified>2015-07-24T12:44:19.696</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\css\default.css">
       <PackagePath>css\default.css</PackagePath>
