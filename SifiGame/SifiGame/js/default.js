@@ -119,7 +119,8 @@ var timer = 50;
                 ctx.fillStyle = "rgb(30,30,50)";
                 ctx.fillRect(-8000, -8000, 16000, 16000);
 
-                //to draw a background
+            //to draw a background
+                thingstodraw1.executefalling();
                 thingstodraw1.executefloors();
                 thingstodraw1.execute();
                 game2.drawhud();
@@ -153,8 +154,7 @@ function gameLoop() {
             if (playercollection.array[playercounter].dead==0) {
 				if (playercollection.array[playercounter].falling == 1)
 				{
-					playercollection.array[playercounter].y = playercollection.array[playercounter].y + 20;
-					playercollection.array[playercounter].draw();
+
 					if (playercollection.array[playercounter].y > 9000) {
 					    playercollection.delete(playercounter);
 					}

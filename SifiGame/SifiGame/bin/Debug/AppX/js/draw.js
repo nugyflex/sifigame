@@ -5,8 +5,12 @@ function thingstodraw() {
     this.countfloors = function () {
         return this.drawarrayfloor.length;
     }
+    this.countfalling = function () {
+        return this.drawarrayfalling.length;
+    }
     this.drawarray = [];
     this.drawarrayfloor = [];
+    this.drawarrayfalling = [];
     this.add = function (index, type, y, height) {
         var i = this.count();
         this.drawarray[i] = new thing(index, type, y, height);
@@ -14,6 +18,10 @@ function thingstodraw() {
     this.addfloor = function (index, type, y, height) {
         var j = this.countfloors();
         this.drawarrayfloor[j] = new thing(index, type, y, height);
+    }
+    this.addfalling = function (index, type, y, height) {
+        var k = this.countfalling();
+        this.drawarrayfalling[k] = new thing(index, type, y, height);
     }
 
     this.draw = function () {
@@ -92,6 +100,37 @@ function thingstodraw() {
         }
 
     }
+    this.drawfalling = function () {
+        var currentmin;
+        var currentmini;
+        for (i = 0; i < this.countfalling() ; i++) {
+
+            currentmin = 1000000000;
+            currentmini = -1
+
+            for (drawcounter = 0; drawcounter < this.countfalling() ; drawcounter++) {
+                if (this.drawarrayfalling[drawcounter].y + this.drawarrayfalling[drawcounter].height < currentmin && this.drawarrayfalling[drawcounter].drawn == false) {
+                    currentmin = this.drawarrayfalling[drawcounter].y + this.drawarrayfalling[drawcounter].height;
+                    currentmini = drawcounter;
+
+                }
+
+
+            }
+            switch (this.drawarrayfalling[currentmini].type) {
+
+                case "miscobject":
+                    miscobjectcollection.array[this.drawarrayfalling[currentmini].index].draw();
+                    break;
+
+                case "player":
+                    playercollection.array[this.drawarrayfalling[currentmini].index].draw();
+                    break;
+            }
+            this.drawarrayfalling[currentmini].drawn = true;
+        }
+
+    }
     this.finish = function () {
         //remove everything from the array, called at end of draw thing
         this.drawarray.length = 0;
@@ -99,6 +138,10 @@ function thingstodraw() {
     this.finishfloors = function () {
         //remove everything from the array, called at end of draw thing
         this.drawarrayfloor.length = 0;
+    }
+    this.finishfalling = function () {
+        //remove everything from the array, called at end of draw thing
+        this.drawarrayfalling.length = 0;
     }
     this.load = function () {
         for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
@@ -108,7 +151,7 @@ function thingstodraw() {
             this.add(projectilecounter, "projectile", projectilecollection.array[projectilecounter].y, projectilecollection.array[projectilecounter].height);
         }
         for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
-            if (playercollection.array[playercounter].dead == 0) {
+            if (playercollection.array[playercounter].dead == 0 && playercollection.array[playercounter].falling == 0) {
                 this.add(playercounter, "player", playercollection.array[playercounter].y, playercollection.array[playercounter].height);
             }
         }
@@ -116,7 +159,9 @@ function thingstodraw() {
             this.add(explosioncounter, "explosion", explosioncollection.array[explosioncounter].y, explosioncollection.array[explosioncounter].height);
         }
         for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
-            this.add(miscobjectcounter, "miscobject", miscobjectcollection.array[miscobjectcounter].y, miscobjectcollection.array[miscobjectcounter].height);
+            if (miscobjectcollection.array[miscobjectcounter].falling == 0) {
+                this.add(miscobjectcounter, "miscobject", miscobjectcollection.array[miscobjectcounter].y, miscobjectcollection.array[miscobjectcounter].height);
+            }
         }
 
     }
@@ -125,6 +170,19 @@ function thingstodraw() {
         for (floorcounter = 0; floorcounter < floorcollection.count() ; floorcounter++) {
             this.addfloor(floorcounter, "floor", floorcollection.array[floorcounter].y, floorcollection.array[floorcounter].height);
         }
+    }
+    this.loadfalling = function () {
+        for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
+            if (miscobjectcollection.array[miscobjectcounter].falling == 1) {
+                this.addfalling(miscobjectcounter, "miscobject", miscobjectcollection.array[miscobjectcounter].y, miscobjectcollection.array[miscobjectcounter].height);
+            }
+        }
+        for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
+            if (playercollection.array[playercounter].falling == 1) {
+                this.addfalling(playercounter, "player", playercollection.array[playercounter].y, playercollection.array[playercounter].height);
+            }
+        }
+
     }
     this.execute = function () {
 
@@ -138,5 +196,10 @@ function thingstodraw() {
         this.loadfloors();
         this.drawfloors();
         this.finishfloors();
+    }
+    this.executefalling = function () {
+        this.loadfalling();
+        this.drawfalling();
+        this.finishfalling();
     }
 }

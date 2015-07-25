@@ -66,6 +66,22 @@
         {
             miscobjectcollection.delete(miscobjectcounter);
         }
+        thing1 = 0;
+        if (miscobjectcounter < miscobjectcollection.count()) {
+            for (floorcounter = 0; floorcounter < floorcollection.count() ; floorcounter++) {
+
+                if (collisiondetection1.testcollision(miscobjectcollection.array[miscobjectcounter], floorcollection.array[floorcounter]) == 0) {
+                    thing1 = thing1 + 1;
+                }
+
+            }
+        }
+
+
+
+        if (thing1 == floorcollection.count()) {
+            miscobjectcollection.array[miscobjectcounter].falling = 1;
+        }
 
     }
 }

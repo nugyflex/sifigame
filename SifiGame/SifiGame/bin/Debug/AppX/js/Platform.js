@@ -26,7 +26,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
         return this.y - (this.v1_m() * this.x);
     }
     this.v2_m = function () {
-        return Math.tan(this.theta+(Math.PI/4));
+        return (-1/this.v1_m());
     }
     this.v2_b = function () {
         return this.y - (this.v2_m() * this.x);

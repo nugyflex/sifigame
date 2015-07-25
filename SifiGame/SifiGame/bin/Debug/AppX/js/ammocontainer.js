@@ -9,6 +9,7 @@
     this.ammo = 100;
     this.deleteaftertime = false;
     this.static = true;
+    this.falling = 0;
     this.used = false;
     this.draw = function()
     {
@@ -44,6 +45,7 @@ function acid(type, x, y, xvel, yvel) {
     this.velmodify = 0.05;
     this.timer = 0;
     this.timermax = 600;
+    this.falling = 0;
     this.draw = function () {
         ctx.fillStyle = "rgb(10, 110, 10)";
         ctx.fillRect(this.x, this.y, this.width, this.height + 3)
@@ -57,7 +59,7 @@ function acid(type, x, y, xvel, yvel) {
             player.poisonedtimer = 100;
             player.slowedtimer = 100;
             if (this.vel > 0) {
-                player.health = player.health - 0.1;
+                player.health = player.health - 0.13;
             }
         }
     }
@@ -86,6 +88,10 @@ function acid(type, x, y, xvel, yvel) {
             this.yvel = 0;
         }
         this.timer++;
+        if (this.falling == 1)
+        {
+            this.yvel = 6;
+        }
         
     }
 

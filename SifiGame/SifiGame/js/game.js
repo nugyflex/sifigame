@@ -319,8 +319,8 @@ function game() {
             }
         }
         
-        ctx.fillText("x,y of intersect =  " + collisiondetection1.checklineintersectrect(platformcollection.array[0], playercollection.array[0].x, playercollection.array[0].y, mouse.X, mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2));
-        ctx.fillText("mouse x,y =  " + Math.floor(mouse.X) + " , " + Math.floor(mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2)+30);
+        //ctx.fillText("x,y of intersect =  " + collisiondetection1.checklineintersectrect(platformcollection.array[0], playercollection.array[0].x, playercollection.array[0].y, mouse.X, mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2));
+        //ctx.fillText("mouse x,y =  " + Math.floor(mouse.X) + " , " + Math.floor(mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2)+30);
 
 
         if (this.debugmode == 1)
