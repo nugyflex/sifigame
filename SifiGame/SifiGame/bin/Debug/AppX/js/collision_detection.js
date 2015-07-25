@@ -528,7 +528,7 @@ function collisiondetection() {
             ctx.fillStyle = "rgb(200,75,75)";
         }
 
-        return Math.floor(intersectx) + " , " + Math.floor(intersecty) + " platform_m: " + Math.floor(OB1.v1_m() * 100) / 100 + " platform_b: " + Math.floor(OB1.v1_b() * 100) / 100 + " line_m: " + Math.floor(line_m * 100) / 100 + " line_b: " + Math.floor(line_b * 100) / 100;
+        //return Math.floor(intersectx) + " , " + Math.floor(intersecty) + " platform_m: " + Math.floor(OB1.v1_m() * 100) / 100 + " platform_b: " + Math.floor(OB1.v1_b() * 100) / 100 + " line_m: " + Math.floor(line_m * 100) / 100 + " line_b: " + Math.floor(line_b * 100) / 100;
         
     }
     this.getlineintersectx = function (m1, b1, m2, b2) {

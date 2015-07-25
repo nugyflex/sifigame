@@ -320,12 +320,19 @@ function game() {
         }
         
         //ctx.fillText("x,y of intersect =  " + collisiondetection1.checklineintersectrect(platformcollection.array[0], playercollection.array[0].x, playercollection.array[0].y, mouse.X, mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2));
-        //ctx.fillText("mouse x,y =  " + Math.floor(mouse.X) + " , " + Math.floor(mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2)+30);
+
 
 
         if (this.debugmode == 1)
         {
-                
+            
+
+            ctx.fillText("v1_m: " + Math.floor(platformcollection.array[0].v1_m() * 100) / 100 + " v1_b: " + Math.floor(platformcollection.array[0].v1_b() * 100) / 100, this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2) - 20);
+            ctx.fillText("v2_m: " + Math.floor(platformcollection.array[0].v2_m() * 100) / 100 + " v2_b: " + Math.floor(platformcollection.array[0].v2_b() * 100) / 100, this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2));
+            ctx.fillText("v3_m: " + Math.floor(platformcollection.array[0].v3_m() * 100) / 100 + " v3_b: " + Math.floor(platformcollection.array[0].v3_b() * 100) / 100, this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2) + 20);
+            ctx.fillText("v4_m: " + Math.floor(platformcollection.array[0].v4_m() * 100) / 100 + " v4_b: " + Math.floor(platformcollection.array[0].v4_b() * 100) / 100, this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2) + 40);
+            ctx.fillText("mouse x,y =  " + Math.floor(mouse.X) + " , " + Math.floor(mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2) + 80);
+
             ctx.fillText("Y  " + Math.round(playercollection.array[0].y), this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
             ctx.fillText("X  " + Math.round(playercollection.array[0].x), this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
 

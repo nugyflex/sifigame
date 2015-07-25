@@ -207,7 +207,14 @@ function gameLoop() {
         }
 		
 		
-		
+        for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
+            for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
+
+                collisiondetection1.stopplayer(miscobjectcollection.array[miscobjectcounter], platformcollection.array[platformcounter]);
+
+
+            }
+        }
 		for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
             for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
 					

@@ -196,11 +196,11 @@ function player(x, y, index/*so i can set where the player starts when i instant
         if (this.xvel == 0 && this.lastdir == 2 && this.yvel == 0) {
             ctx.drawImage(standing_left, 0, this.frame1 * 31, 16, 31, this.x, this.y, 16, 31);
 
-        }
+        }/*
         if (this.xvel == 0 && this.lastdir == 3 && this.yvel == 0) {
             ctx.drawImage(standing_down, 0, this.frame1 * 31, 16, 31, this.x - 4, this.y, 16, 31);
 
-        }
+        }*/
 
 
         if (this.xvel > 0) {
@@ -214,7 +214,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             ctx.drawImage(walking_left, 0, this.frame1 * 31, 16, 31, this.x, this.y, 16, 31);
             }
             this.lastdir = 1;
-        }
+        }/*
         if (this.xvel == 0 && this.yvel > 0) {
             ctx.drawImage(walking_down, 0, this.frame1 * 31, 16, 31, this.x - 4, this.y, 16, 31);
             this.lastdir = 3;
@@ -222,7 +222,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
         if (this.xvel == 0 && this.yvel < 0) {
             ctx.drawImage(walking_up, 0, this.frame1 * 31, 16, 31, this.x - 4, this.y, 16, 31);
             this.lastdir = 3;
-        }
+        }*/
 
         if (this.xvel < 0) {
                         if (mouse.X>this.x)

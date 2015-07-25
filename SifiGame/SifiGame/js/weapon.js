@@ -168,8 +168,8 @@ function acidgun(parent) {
 
     this.name = "acid gun"
     gun.call(this, parent);
-    this.ammo = 40;
-    this.ammores = 200;
+    this.ammo = 50;
+    this.ammores = 300;
     this.ammomax = 50;
     this.height = 9;
     this.image = acidgun1pic;
