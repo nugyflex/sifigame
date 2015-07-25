@@ -18,19 +18,49 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
     this.locked = 1;
     this.image = image;
     this.theta = 1;
+    this.v1_mv;
+    this.v1_bv;
+    this.v2_mv;
+    this.v2_bv;
+    this.v3_mv;
+    this.v3_bv;
+    this.v4_mv;
+    this.v4_bv;
     this.v1_m = function()
     {
-        return Math.tan(this.theta);
+        this.v1_mv = Math.tan(this.theta)
+        return this.v1_mv;
     }
     this.v1_b = function () {
-        return this.y - (this.v1_m() * this.x);
+        this.v1_bv = this.y - (this.v1_m() * this.x)
+        return this.v1_bv;
     }
-    this.v2_m = function () {
-        return (-1/this.v1_m());
+    this.v2_m = function()
+    {
+        this.v2_mv = -1 / this.v1_m();
+        return this.v2_mv;
     }
     this.v2_b = function () {
-        return this.y - (this.v2_m() * this.x);
+        this.v2_bv = (this.y + (Math.cos(this.theta) * this.width)) - (this.v4_m() * (this.x + (Math.sin(this.theta) * this.width)));
+        return this.v2_bv;
     }
+    this.v3_m = function () {
+        this.v3_mv = this.v1_m();
+        return this.v3_mv;
+    }
+    this.v3_b = function () {
+        this.v3_bv = (this.y + (Math.cos(this.theta) * this.height)) - (this.v1_m() * (this.x + (Math.sin(this.theta) * this.height)));
+        return this.v3_bv;
+    }
+    this.v4_m = function () {
+        this.v4_mv = (-1 / this.v1_m());
+        return this.v4_mv;
+    }
+    this.v4_b = function () {
+        this.v4_bv = this.y - (this.v2_m() * this.x);
+        return this.v4_bv;
+    }
+    
     
 
     //a function called in the main loop, it draws the platform
