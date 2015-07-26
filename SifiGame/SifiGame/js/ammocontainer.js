@@ -138,7 +138,7 @@ function buystation(guntype, x, y, price) {
     this.height = weaponcollection.array[this.weaponindex].height;
     this.poketointeract = true;
     this.buyable = true;
-    this.messagetext = "'E' to buy this " + weaponcollection.array[this.weaponindex].name;
+    this.messagetext = "'E' to buy " + weaponcollection.array[this.weaponindex].name;
     this.interact = function(player)
     {
         if (player.type == "player") {
