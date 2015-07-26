@@ -119,3 +119,52 @@ function acid(type, x, y, xvel, yvel) {
     }
 
 }
+function buystation(guntype, x, y) {
+    this.x = x;
+    this.y = y;
+    this.interactontouch = true;
+    this.guntype = guntype;
+    this.deleteafterinteract = true;
+    this.deleteaftertime = false;
+    this.used = false;
+    this.static = true;
+    this.buyable = true;
+    this.falling = 0;
+    weaponcollection.add(this.guntype, player);
+    this.weaponindex = weaponcollection.array.length - 1;
+    this.width = weaponcollection.array[this.weaponindex].width;
+    this.height = weaponcollection.array[this.weaponindex].height;
+    this.interact = function(player)
+    {
+        if (player.type == "player") {
+            player.weapons[player.weapons.length] = weaponcollection.array[this.weaponindex];
+            weaponcollection.array[this.weaponindex].parent = player;
+            this.used = true;
+        }
+    }
+    this.draw = function () {
+        ctx.fillStyle = "rgb(100, 100, 100)";
+        ctx.fillRect(this.x, this.y, weaponcollection.array[this.weaponindex].width, weaponcollection.array[this.weaponindex].height)
+        ctx.drawImage(weaponcollection.array[this.weaponindex].image1, this.x, this.y);
+        /*
+        var imageData = ctx.getImageData(this.x, this.y, weaponcollection.array[this.weaponindex].image1.width, weaponcollection.array[this.weaponindex].image1.height);
+        var data = imageData.data;
+
+        for(var i = 0; i < data.length; i += 4) {
+            var brightness = 0.34 * data[i] + 0.5 * data[i + 1] + 0.16 * data[i + 2];
+            // red
+            data[i] = brightness;
+            // green
+            data[i + 1] = brightness;
+            // blue
+            data[i + 2] = brightness;
+        }
+
+        // overwrite original image
+        ctx.putImageData(imageData, this.x, this.y);*/
+    }
+        //ctx.drawImage(weaponcollection.array[this.weaponindex].image1, this.x, this.y);
+
+
+    
+}

@@ -3,7 +3,7 @@
 
         for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
 
-            if (collisiondetection1.testcollision(playercollection.array[playercounter], miscobjectcollection.array[miscobjectcounter])/* && playercollection.array[playercounter].type == "player"*/) {
+            if (collisiondetection1.testcollision(playercollection.array[playercounter], miscobjectcollection.array[miscobjectcounter]) && miscobjectcollection.array[miscobjectcounter].falling == 0/* && playercollection.array[playercounter].type == "player"*/) {
                 if (miscobjectcollection.array[miscobjectcounter].interactontouch) {
                     miscobjectcollection.array[miscobjectcounter].interact(playercollection.array[playercounter]);
                 }

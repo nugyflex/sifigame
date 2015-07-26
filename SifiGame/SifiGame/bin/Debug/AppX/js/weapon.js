@@ -56,12 +56,13 @@ function gun(parent) {
     this.shootcooldowntimer = -1;
     this.image = gun2pic;
     this.reloadtimer = 0;
+    this.parent = parent;
     this.reloadtimermax = 30;
     this.shoot = function (x, y, xoffset, yoffset) {
         if (this.reloading == 0) {
             if (this.latch == 0) {
                 if (this.shootcooldowntimer < 0 && this.ammo > 0) {
-                    shoot(parent, x, y, parent.index, this.projectile, xoffset, yoffset);
+                    shoot(this.parent, x, y, this.parent.index, this.projectile, xoffset, yoffset);
                     if (this.ammo !== "inf") {
                         this.ammo = this.ammo - 1;
                     }
@@ -71,7 +72,7 @@ function gun(parent) {
             else {
                 if (this.latched == 0) {
                     if (this.ammo > 0) {
-                        shoot(parent, x, y, parent.index, this.projectile, xoffset, yoffset);
+                        shoot(this.parent, x, y, this.parent.index, this.projectile, xoffset, yoffset);
                         if (this.ammo !== "inf") {
                         this.ammo = this.ammo - 1;
                         }
@@ -123,6 +124,7 @@ function guntype1(parent) {
     this.ammores = 100;
     this.ammomax = 20;
     this.height = 9;
+    this.width = 25;
 	this.image = gun2pic;
 	this.rof = 6;//(rounds a second)
 	this.shootcooldown = 60 / this.rof;
@@ -140,6 +142,7 @@ function guntype2(parent) {
     this.ammo = 8;
     this.ammomax = 8;
     this.ammores = 200;
+    this.width = 18;
     this.reloadtimermax = 10;
     this.shootcooldown = 60 / this.rof;
     //this.ammo = "inf";
@@ -159,6 +162,7 @@ function guntype3(parent) {
     this.ammomax = 200000;
     this.image1 = gun2;
     this.height = 9;
+    this.width = 25;
     this.rof = 1.4;//(rounds a second)
     this.shootcooldown = 60 / this.rof;
     this.projectile = "redlaserweak";
@@ -172,6 +176,7 @@ function acidgun(parent) {
     this.ammores = 300;
     this.ammomax = 50;
     this.height = 9;
+    this.width = 25;
     this.image = acidgun1pic;
     this.rof = 20;//(rounds a second)
     this.shootcooldown = 60 / this.rof;
@@ -188,3 +193,4 @@ guntype1.prototype = Object.create(gun.prototype);
 guntype2.prototype = Object.create(gun.prototype);
 guntype3.prototype = Object.create(gun.prototype);
 acidgun.prototype = Object.create(gun.prototype);
+

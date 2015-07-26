@@ -103,31 +103,35 @@ function thingstodraw() {
     this.drawfalling = function () {
         var currentmin;
         var currentmini;
-        for (i = 0; i < this.countfalling() ; i++) {
+        if (this.countfalling() > 0) {
+            for (i = 0; i < this.countfalling() ; i++) {
 
-            currentmin = 1000000000;
-            currentmini = -1
+                currentmin = 1000000000;
+                currentmini = -1
+                
+                for (drawcounter = 0; drawcounter < this.countfalling() ; drawcounter++) {
+                    if (this.drawarrayfalling[drawcounter].y + this.drawarrayfalling[drawcounter].height < currentmin && this.drawarrayfalling[drawcounter].drawn == false) {
+                        currentmin = this.drawarrayfalling[drawcounter].y + this.drawarrayfalling[drawcounter].height;
+                        currentmini = drawcounter;
 
-            for (drawcounter = 0; drawcounter < this.countfalling() ; drawcounter++) {
-                if (this.drawarrayfalling[drawcounter].y + this.drawarrayfalling[drawcounter].height < currentmin && this.drawarrayfalling[drawcounter].drawn == false) {
-                    currentmin = this.drawarrayfalling[drawcounter].y + this.drawarrayfalling[drawcounter].height;
-                    currentmini = drawcounter;
+                    }
+
 
                 }
+                if (currentmini > -1) {
+                    switch (this.drawarrayfalling[currentmini].type) {
 
+                        case "miscobject":
+                            miscobjectcollection.array[this.drawarrayfalling[currentmini].index].draw();
+                            break;
 
+                        case "player":
+                            playercollection.array[this.drawarrayfalling[currentmini].index].draw();
+                            break;
+                    }
+                    this.drawarrayfalling[currentmini].drawn = true;
+                }
             }
-            switch (this.drawarrayfalling[currentmini].type) {
-
-                case "miscobject":
-                    miscobjectcollection.array[this.drawarrayfalling[currentmini].index].draw();
-                    break;
-
-                case "player":
-                    playercollection.array[this.drawarrayfalling[currentmini].index].draw();
-                    break;
-            }
-            this.drawarrayfalling[currentmini].drawn = true;
         }
 
     }

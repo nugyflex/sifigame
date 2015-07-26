@@ -123,14 +123,10 @@ function game() {
 
         playercollection.add(cwidth / 2, cheight / 2, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);
-        weaponcollection.add("guntype1", playercollection.array[0]);
         weaponcollection.add("guntype2", playercollection.array[0]);
         weaponcollection.add("guntype3", playercollection.array[1]);
-        weaponcollection.add("acidgun", playercollection.array[0]);
         playercollection.array[0].weapons[0] = weaponcollection.array[0];
-        playercollection.array[0].weapons[1] = weaponcollection.array[1];
-        playercollection.array[0].weapons[2] = weaponcollection.array[3];
-        playercollection.array[1].weapons[0] = weaponcollection.array[2];
+        playercollection.array[1].weapons[0] = weaponcollection.array[1];
 
         miscobjectcollection.add("ammocontainer", 600, 600);
         miscobjectcollection.add("ammocontainer", 304, -460);
@@ -140,6 +136,8 @@ function game() {
         miscobjectcollection.add("ammocontainer", 1210, 80);
         miscobjectcollection.add("ammocontainer", 1210, 110);
         miscobjectcollection.add("acid", 1230, 110, 0, 4);
+        miscobjectcollection.add("buystation", 300, 300, "acidgun");
+        miscobjectcollection.add("buystation", 340, 300, "guntype1");
     }
 
     this.getplayercap = function(round)

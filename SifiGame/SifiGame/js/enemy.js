@@ -104,13 +104,16 @@ function enemy(x, y, vel, index) {
     
 
     this.calcNewPosition = function () {
-        if (this.dead == 0 && this.falling == 0) {
+        if (this.falling == 1)
+        {
+            this.yvel = 12;
+        }
 			
             this.x = this.x + this.xvel;
             this.y = this.y + this.yvel;
 
 
-        }
+        
     }
 
     this.changeVelocity = function (xChange, yChange) {

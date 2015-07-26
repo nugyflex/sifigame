@@ -158,7 +158,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
 
         if (this.falling == 1)
         {
-            this.yvel = 10;
+            this.yvel = 12;
         }
         //adding the velosity to the players position 
         this.x = this.x + this.xvel;
