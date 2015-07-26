@@ -49,9 +49,9 @@ function acid(type, x, y, xvel, yvel) {
     this.timermax = 600;
     this.falling = 0;
     this.draw = function () {
-        ctx.fillStyle = "rgb(10, 110, 10)";
-        ctx.fillRect(this.x, this.y, this.width, this.height + 3)
-        ctx.fillStyle = "rgb(20, 200, 20)";
+        ctx.fillStyle = "rgb(70, 150, 60)";
+        ctx.fillRect(this.x, this.y, this.width, this.height + 2)
+        ctx.fillStyle = "rgb(130, 220, 115)";
         ctx.fillRect(this.x, this.y, this.width, this.height)
 
     }
