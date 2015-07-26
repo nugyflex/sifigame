@@ -124,3 +124,5 @@ var doorway2 = new Image();
 doorway2.src = 'Images/NewFolder/doorway2.png'
 var ammocrate = new Image();
 ammocrate.src = 'Images/NewFolder/ammocrate.png'
+var medkitpic = new Image();
+medkitpic.src = 'Images/NewFolder/medkit.png'

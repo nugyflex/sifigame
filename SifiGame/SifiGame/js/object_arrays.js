@@ -232,6 +232,9 @@ function miscobjects() {
         if (type == "buystation") {
             this.array[i] = new buystation(xvel, x, y, yvel);
         }
+        if (type == "medkit") {
+            this.array[i] = new medkit(x, y);
+        }
 
     }
     this.delete = function (index) {

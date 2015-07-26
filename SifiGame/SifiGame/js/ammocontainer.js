@@ -173,3 +173,37 @@ function buystation(guntype, x, y, price) {
 
     
 }
+function medkit(x, y) {
+    this.x = x;
+    this.y = y;
+    this.interactontouch = true;
+    this.deleteafterinteract = true;
+    this.deleteaftertime = false;
+    this.used = false;
+    this.poketointeract = false;
+    this.static = true;
+    this.falling = 0;
+    this.width = 7;
+    this.height = 9;
+    this.health = 30;
+    this.interact = function (player) {
+        if (player.type == "player") {
+            if (player.health < player.healthmax) {
+                player.health = player.health + this.health;
+                if (player.health > player.healthmax)
+                {
+                    player.health = player.healthmax;
+                }
+                this.used = true;
+            }
+        }
+    }
+    this.draw = function () {
+
+        ctx.drawImage(medkitpic, this.x, this.y);
+
+    }
+
+
+
+}

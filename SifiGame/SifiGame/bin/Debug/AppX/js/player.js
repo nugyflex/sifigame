@@ -17,6 +17,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
     this.colwithplatform = 0;
     this.moved = 0;
     this.health = 100;
+    this.healthmax = 100;
     this.dead = 0;
     this.shoot = 0;
     this.zcooldown = 0;

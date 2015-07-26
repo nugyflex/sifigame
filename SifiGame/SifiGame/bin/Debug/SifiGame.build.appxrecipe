@@ -165,6 +165,9 @@
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\holewall1.png">
       <PackagePath>images\NewFolder\holewall1.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\medkit.png">
+      <PackagePath>images\NewFolder\medkit.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\ruins1.png">
       <PackagePath>images\NewFolder\ruins1.png</PackagePath>
     </AppxPackagedFile>

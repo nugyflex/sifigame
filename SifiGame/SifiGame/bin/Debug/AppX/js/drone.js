@@ -39,6 +39,7 @@ function drone(x, y, index) {
         ctx.restore();
     }
     this.calcNewPosition = function (player) {
+        player.y = player.y - 10;
         if (this.x < player.x) {
             this.xvel = (player.x - this.x) / 25;
         }
@@ -55,6 +56,7 @@ function drone(x, y, index) {
         this.x = this.x + this.xvel;
 
         this.y = this.y + this.yvel;
+        player.y = player.y + 10;
     }
     this.ai = function()
     {
