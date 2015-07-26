@@ -151,7 +151,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
                         }
                         else
                         {
-                            if (this.money>miscobjectcollection.array[miscobjectcounter].price)
+                            if (this.money>=miscobjectcollection.array[miscobjectcounter].price)
                             {
                                 game2.submoney(this.index, miscobjectcollection.array[miscobjectcounter].price);
 

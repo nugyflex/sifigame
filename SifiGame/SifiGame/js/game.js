@@ -316,6 +316,18 @@ function game() {
                 ctx.fillText("Insufficient Funds", this.canvastranslatex + cwidth / 2 - ctx.measureText("Insufficient Funds").width/2, this.canvastranslatey + 90);
             }
         }
+
+        for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
+            if (collisiondetection1.testcollision(playercollection.array[0], miscobjectcollection.array[miscobjectcounter]) && miscobjectcollection.array[miscobjectcounter].buyable) {
+                ctx.fillText(miscobjectcollection.array[miscobjectcounter].messagetext, this.canvastranslatex + cwidth / 2 - ctx.measureText(miscobjectcollection.array[miscobjectcounter].messagetext).width / 2, this.canvastranslatey + 50);
+                if (miscobjectcollection.array[miscobjectcounter].price > 0) {
+                    ctx.fillText("$" + miscobjectcollection.array[miscobjectcounter].price, this.canvastranslatex + cwidth / 2 - ctx.measureText("$" + miscobjectcollection.array[miscobjectcounter].price).width / 2, this.canvastranslatey + 70);
+                }
+            }
+            if (collisiondetection1.testcollision(playercollection.array[0], miscobjectcollection.array[miscobjectcounter]) && miscobjectcollection.array[miscobjectcounter].removable && playercollection.array[0].money < miscobjectcollection.array[miscobjectcounter].price) {
+                ctx.fillText("Insufficient Funds", this.canvastranslatex + cwidth / 2 - ctx.measureText("Insufficient Funds").width / 2, this.canvastranslatey + 90);
+            }
+        }
         
         //ctx.fillText("x,y of intersect =  " + collisiondetection1.checklineintersectrect(platformcollection.array[0], playercollection.array[0].x, playercollection.array[0].y, mouse.X, mouse.Y), this.canvastranslatex + (cwidth / 2), this.canvastranslatey + (cheight / 2));
 
