@@ -89,7 +89,7 @@ function game() {
         platformcollection.add(1029, 400, 40, 20, PLATFORMTYPE_PILLAR1);
         //platformcollection.add(1129, 400, 40, 20, PLATFORMTYPE_PILLAR1);
         //platformcollection.add(1229, 400, 40, 20, PLATFORMTYPE_PILLAR1);
-        platformcollection.add(1200, 370, 300, 30, PLATFORMTYPE_DOOR_750);
+        platformcollection.add(1200, 370, 300, 30, PLATFORMTYPE_DOOR, 1000);
         platformcollection.add(1329, 400, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(1429, 400, 40, 20, PLATFORMTYPE_PILLAR1);
 
@@ -114,8 +114,8 @@ function game() {
 
         platformcollection.add(300, -300, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(340, -300, 40, 20, PLATFORMTYPE_PILLAR1);
-        platformcollection.add(100, 200, 100, 100, PLATFORMTYPE_DOOR_750);
-        platformcollection.add(380, -300, 300, 30, PLATFORMTYPE_DOOR_750);
+        platformcollection.add(100, 200, 100, 100, PLATFORMTYPE_DOOR, 1000);
+        platformcollection.add(380, -300, 300, 30, PLATFORMTYPE_DOOR, 1000);
         platformcollection.add(480, -300, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(520, -300, 40, 20, PLATFORMTYPE_PILLAR1);
         platformcollection.add(560, -300, 40, 20, PLATFORMTYPE_PILLAR1);
@@ -136,8 +136,8 @@ function game() {
         miscobjectcollection.add("ammocontainer", 1210, 80);
         miscobjectcollection.add("ammocontainer", 1210, 110);
         miscobjectcollection.add("acid", 1230, 110, 0, 4);
-        miscobjectcollection.add("buystation", 300, 300, "acidgun", 750);
-        miscobjectcollection.add("buystation", 340, 300, "guntype1", 500);
+        miscobjectcollection.add("buystation", 300, 300, "acidgun", 1500);
+        miscobjectcollection.add("buystation", 340, 300, "guntype1", 1000);
         miscobjectcollection.add("medkit", 320, 340);
     }
 

@@ -1,4 +1,4 @@
-function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
+function platform(index, x, y, width, height, type, ax, ay, bx, by, image, price) {
     this.x = x;
     this.y = y;
     this.width = width;
@@ -166,9 +166,9 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image) {
 			    ctx.drawImage(barricade2, this.x, this.y - 9);
 			}
 			break;
-            case PLATFORMTYPE_DOOR_750:
+            case PLATFORMTYPE_DOOR:
                 this.removable = true;
-                this.price = 750;
+                this.price = price;
                 this.width = 100;
                 this.height = 13;
                 this.messagetext = "'E' to open this door";

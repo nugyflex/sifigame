@@ -8,8 +8,8 @@ function platforms() {
         var i = this.count();
 
 
-        if (type == PLATFORMTYPE_DOOR_750) {
-            this.array[i] = new platform(i, x, y, width, height, type, ax, ay, bx, by, image)
+        if (type == PLATFORMTYPE_DOOR) {
+            this.array[i] = new platform(i, x, y, width, height, type, ax, ay, bx, by, image, ax)
             this.array[i + 1] = new platform(i + 1, x + 85, y+13, 15, 13, PLATFORMTYPE_GREYBOX)
             this.array[i + 2] = new platform(i + 1, x, y + 13, 15, 13, PLATFORMTYPE_DOORWAY)
             //this.array[i + 3] = new platform(i + 1, x, y + 13, 15, 13, PLATFORMTYPE_IMAGE, 0,0,0,0,doorway1)

@@ -282,7 +282,9 @@ function gameLoop() {
 
 
         player_loop();
-        playercollection.array[1].ai();
+        if (playercollection.array[1].type == "drone") {
+            playercollection.array[1].ai();
+        }
         game2.runround();
 
 
@@ -303,7 +305,9 @@ function gameLoop() {
         for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
             if (playercollection.array[playercounter].type == "enemy") {
                 playercollection.array[playercounter].calcNewPosition();
-                playercollection.array[playercounter].ai(playercollection.array[0]);
+                if (playercollection.array[0].type == "player") {
+                    playercollection.array[playercounter].ai(playercollection.array[0]);
+                }
             }
             if (playercollection.array[playercounter].type == "player") {
                 playercollection.array[playercounter].calcNewPosition();
