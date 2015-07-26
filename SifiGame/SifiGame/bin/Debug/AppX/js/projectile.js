@@ -12,12 +12,29 @@ function projectile(pindex,type) {
     this.hitoffsety = 0;
     this.hitheight = 10;
     this.hitwidth = 10;
+    this.hitarray = [];
 
     x11 = 0;
     y11 = 0;
     x22 = 0;
     y22 = 0;
-    
+    this.addhitarray = function(index)
+    {
+        
+        this.hitarray[this.hitarray.length] = index;
+
+    }
+    this.checkifinarray = function (index) {
+        for (arraycounter = 0; arraycounter < this.hitarray.length ; arraycounter++) {
+
+            if (this.hitarray[arraycounter] == index) {
+                return 1;
+            }
+
+        }
+        return 0;
+    }
+
     this.launch = function(x1, y1, x2, y2) {
 
         this.x = x1;
@@ -70,7 +87,7 @@ function redlaser(pindex, type)
     this.height = 10;
     this.vel = 8;
     this.visible = 1;
-    this.damagemultiplier = 5;
+    this.damagemultiplier = 3.5;
     this.image = bulletsheet1;
     this.armourpiercing = 0;
     this.draw = function () {
@@ -149,7 +166,7 @@ function greenlaser(pindex, type) {
     this.width = 10;
     this.height = 10;
     this.vel = 8;
-    this.damagemultiplier = 2;
+    this.damagemultiplier = 3.5;
     this.image = bulletsheet2
     this.armourpiercing = 1;
     this.draw = function () {
