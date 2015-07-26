@@ -136,8 +136,8 @@ function game() {
         miscobjectcollection.add("ammocontainer", 1210, 80);
         miscobjectcollection.add("ammocontainer", 1210, 110);
         miscobjectcollection.add("acid", 1230, 110, 0, 4);
-        miscobjectcollection.add("buystation", 300, 300, "acidgun");
-        miscobjectcollection.add("buystation", 340, 300, "guntype1");
+        miscobjectcollection.add("buystation", 300, 300, "acidgun", 750);
+        miscobjectcollection.add("buystation", 340, 300, "guntype1", 500);
     }
 
     this.getplayercap = function(round)

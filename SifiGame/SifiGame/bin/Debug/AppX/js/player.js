@@ -139,6 +139,33 @@ function player(x, y, index/*so i can set where the player starts when i instant
             this.weapons[this.weaponinuse].timer();
             this.shootcooldown = this.shootcooldown - 1;
             if (keypressed.e == 1 && this.dead == 0 && this.falling == 0) {
+                for (miscobjectcounter = 0; miscobjectcounter < miscobjectcollection.count() ; miscobjectcounter++) {
+
+                    if (collisiondetection1.testcollision(this, miscobjectcollection.array[miscobjectcounter]) && miscobjectcollection.array[miscobjectcounter].falling == 0 && miscobjectcollection.array[miscobjectcounter].poketointeract == 1/* && playercollection.array[playercounter].type == "player"*/) {
+                        if (miscobjectcollection.array[miscobjectcounter].buyable == false) {
+                            miscobjectcollection.array[miscobjectcounter].interact(this);
+
+                            if (miscobjectcollection.array[miscobjectcounter].deleteafterinteract && miscobjectcollection.array[miscobjectcounter].used) {
+                                miscobjectcollection.delete(miscobjectcounter);
+                            }
+                        }
+                        else
+                        {
+                            if (this.money>miscobjectcollection.array[miscobjectcounter].price)
+                            {
+                                game2.submoney(this.index, miscobjectcollection.array[miscobjectcounter].price);
+
+                                miscobjectcollection.array[miscobjectcounter].interact(this);
+
+                                if (miscobjectcollection.array[miscobjectcounter].deleteafterinteract && miscobjectcollection.array[miscobjectcounter].used) {
+                                    miscobjectcollection.delete(miscobjectcounter);
+                                }
+                            }
+                        }
+                    }
+                    }
+
+                
                 for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
                     if (collisiondetection1.testcollision(this, platformcollection.array[platformcounter]) && platformcollection.array[platformcounter].removable && this.money >= platformcollection.array[platformcounter].price) {
                         game2.submoney(this.index, platformcollection.array[platformcounter].price)

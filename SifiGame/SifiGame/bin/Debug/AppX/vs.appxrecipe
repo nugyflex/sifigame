@@ -459,7 +459,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\ammocontainer.js">
       <PackagePath>js\ammocontainer.js</PackagePath>
-      <Modified>2015-07-26T03:17:04.364</Modified>
+      <Modified>2015-07-26T03:32:22.923</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\camera.js">
       <PackagePath>js\camera.js</PackagePath>
@@ -503,7 +503,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\game.js">
       <PackagePath>js\game.js</PackagePath>
-      <Modified>2015-07-26T03:07:38.130</Modified>
+      <Modified>2015-07-26T03:33:06.318</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\key_events.js">
       <PackagePath>js\key_events.js</PackagePath>
@@ -511,7 +511,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\object_arrays.js">
       <PackagePath>js\object_arrays.js</PackagePath>
-      <Modified>2015-07-26T02:40:47.297</Modified>
+      <Modified>2015-07-26T03:32:45.391</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\Platform.js">
       <PackagePath>js\Platform.js</PackagePath>
@@ -519,11 +519,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\player.js">
       <PackagePath>js\player.js</PackagePath>
-      <Modified>2015-07-25T23:36:27.387</Modified>
+      <Modified>2015-07-26T03:35:37.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\player_loop.js">
       <PackagePath>js\player_loop.js</PackagePath>
-      <Modified>2015-07-26T02:59:31.602</Modified>
+      <Modified>2015-07-26T03:27:51.878</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\js\projectile.js">
       <PackagePath>js\projectile.js</PackagePath>

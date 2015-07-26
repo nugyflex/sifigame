@@ -10,6 +10,7 @@
     this.deleteaftertime = false;
     this.static = true;
     this.falling = 0;
+    this.poketointeract = false;
     this.used = false;
     this.draw = function()
     {
@@ -38,6 +39,7 @@ function acid(type, x, y, xvel, yvel) {
     this.ammo = 100;
     this.damage = 0.5;
     this.vel = 4;
+    this.poketointeract = false;
     this.deleteaftertime = true;
     this.used = false;
     this.static = false;
@@ -119,7 +121,7 @@ function acid(type, x, y, xvel, yvel) {
     }
 
 }
-function buystation(guntype, x, y) {
+function buystation(guntype, x, y, price) {
     this.x = x;
     this.y = y;
     this.interactontouch = true;
@@ -128,12 +130,14 @@ function buystation(guntype, x, y) {
     this.deleteaftertime = false;
     this.used = false;
     this.static = true;
-    this.buyable = true;
+    this.price = price;
     this.falling = 0;
     weaponcollection.add(this.guntype, player);
     this.weaponindex = weaponcollection.array.length - 1;
     this.width = weaponcollection.array[this.weaponindex].width;
     this.height = weaponcollection.array[this.weaponindex].height;
+    this.poketointeract = true;
+    this.buyable = true;
     this.interact = function(player)
     {
         if (player.type == "player") {
