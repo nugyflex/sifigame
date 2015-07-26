@@ -196,8 +196,9 @@ function game() {
     }
 
     this.getnumberofenemies = function () {
+        this.numberofenemies = 0;
         for (playercounter = 0; playercounter < playercollection.count() ; playercounter++) {
-
+            
             if (playercollection.array[playercounter].type == "enemy")
             {
                 this.numberofenemies++;
@@ -214,6 +215,7 @@ function game() {
 
         this.round = this.round + 1;
         this.playercap = this.getplayercap(this.round);
+        this.TNOE = 0;
 
 
 
@@ -301,7 +303,7 @@ function game() {
             this.addmoney(0,100);
         }
         if (this.getnumberofenemies() > 0) {
-            ctx.fillText("Number of enemies remaining:  " + this.getnumberofenemies()/2, this.canvastranslatex + cwidth - 400, this.canvastranslatey + 80);
+            ctx.fillText("Number of enemies remaining:  " + this.getnumberofenemies(), this.canvastranslatex + cwidth - 400, this.canvastranslatey + 80);
         }
         
         // Adds UI for buying doors/other misc.

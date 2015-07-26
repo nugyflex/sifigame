@@ -32,7 +32,7 @@ function acid(type, x, y, xvel, yvel) {
     this.y = y;
     this.xvel = xvel;
     this.yvel = yvel;
-    this.width = Math.floor((Math.random() * 5) + 2);;
+    this.width = Math.floor((Math.random() * 6) + 2);;
     this.height = this.width;
     this.interactontouch = true;
     this.deleteafterinteract = false;
@@ -148,6 +148,8 @@ function buystation(guntype, x, y, price) {
         }
     }
     this.draw = function () {
+        ctx.fillStyle = "rgb(40, 40, 40)";
+        ctx.fillRect(this.x - 2, this.y - 2, weaponcollection.array[this.weaponindex].width + 4, weaponcollection.array[this.weaponindex].height + 4)
         ctx.fillStyle = "rgb(100, 100, 100)";
         ctx.fillRect(this.x, this.y, weaponcollection.array[this.weaponindex].width, weaponcollection.array[this.weaponindex].height)
         ctx.drawImage(weaponcollection.array[this.weaponindex].image1, this.x, this.y);

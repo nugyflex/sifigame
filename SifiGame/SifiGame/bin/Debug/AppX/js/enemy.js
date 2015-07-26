@@ -60,11 +60,13 @@ function enemy(x, y, vel, index) {
 		{
 			this.falling = 1;
 			this.y = 10000;
+			game2.addmoney(player.index, 20);
 		}
 		if (this.dead == 1)
 		{
 			
-            playercollection.delete(this.index);
+		    playercollection.delete(this.index);
+		    game2.addmoney(player.index, 20);
 
 		}
 		if (this.poisonedtimer > 0)

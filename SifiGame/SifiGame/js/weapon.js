@@ -130,7 +130,7 @@ function guntype1(parent) {
 	this.shootcooldown = 60 / this.rof;
 	this.projectile = "greenlaser";
 	this.image1 = gun1;
-    this.reloadtimermax = 100;
+    this.reloadtimermax = 120;
 }
 
 function guntype2(parent) {
@@ -139,11 +139,11 @@ function guntype2(parent) {
     gun.call(this, parent);
     this.image = gun1pic;
     this.rof = 6;
-    this.ammo = 8;
-    this.ammomax = 8;
-    this.ammores = 200;
+    this.ammo = 12;
+    this.ammomax = 12;
+    this.ammores = 60;
     this.width = 18;
-    this.reloadtimermax = 10;
+    this.reloadtimermax = 60;
     this.shootcooldown = 60 / this.rof;
     //this.ammo = "inf";
     this.latch = 1;
