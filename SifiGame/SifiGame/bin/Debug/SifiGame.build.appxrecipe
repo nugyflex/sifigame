@@ -180,6 +180,18 @@
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\wall1.png">
       <PackagePath>images\NewFolder\wall1.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\wallbaseleft.png">
+      <PackagePath>images\NewFolder\wallbaseleft.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\wallbaseright.png">
+      <PackagePath>images\NewFolder\wallbaseright.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\walltopmain.png">
+      <PackagePath>images\NewFolder\walltopmain.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\walltopright.png">
+      <PackagePath>images\NewFolder\walltopright.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\pausescreen.png">
       <PackagePath>images\pausescreen.png</PackagePath>
     </AppxPackagedFile>

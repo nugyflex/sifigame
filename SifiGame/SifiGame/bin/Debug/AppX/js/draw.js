@@ -73,7 +73,7 @@ function thingstodraw() {
         }
 
     }
-    this.drawfloors = function () {
+    this.drawfloors = function (withbase) {
         var currentmin;
         var currentmini;
         for (i = 0; i < this.countfloors() ; i++) {
@@ -93,7 +93,7 @@ function thingstodraw() {
             switch (this.drawarrayfloor[currentmini].type) {
 
                 case "floor":
-                    floorcollection.array[this.drawarrayfloor[currentmini].index].draw();
+                    floorcollection.array[this.drawarrayfloor[currentmini].index].draw(withbase);
                     break;
             }
             this.drawarrayfloor[currentmini].drawn = true;
@@ -196,9 +196,9 @@ function thingstodraw() {
         this.finish();
 
     }
-    this.executefloors = function () {
+    this.executefloors = function (withbase) {
         this.loadfloors();
-        this.drawfloors();
+        this.drawfloors(withbase);
         this.finishfloors();
     }
     this.executefalling = function () {

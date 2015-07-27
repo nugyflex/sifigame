@@ -85,7 +85,17 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image, price
                 ctx.fillRect(0, 0, this.width, this.height);
                 ctx.restore();
 
-            break;
+                break
+                
+            case 16:
+                ctx.drawImage(wallbaseleft, 0, 0, this.width, 24, this.x, this.y + this.height - 24, this.width, 24);
+                ctx.drawImage(wallbaseright, this.x + this.width - 2, this.y + this.height - 24);
+                ctx.drawImage(walltopmain, 0, 0, this.width, this.height, this.x, this.y - 24, this.width, this.height);
+                ctx.drawImage(walltopright, 0, 0, 2, this.height, this.x+this.width-2, this.y - 24, 2, this.height);
+
+                //ctx.drawImage(floor1, 0, 0, this.width, 1000, this.x, this.y, this.width, 1000);
+
+                break;
 
         case PLATFORMTYPE_PILLAR1:
             this.width = 40;

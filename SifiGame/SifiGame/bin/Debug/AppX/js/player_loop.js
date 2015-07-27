@@ -43,7 +43,7 @@
             for (playercounter1 = 0; playercounter1 < playercollection.count() ; playercounter1++) {
                 if (playercollection.array[playercounter1].type == "enemy" && playercollection.array[playercounter1].dead == 0 && playercollection.array[playercounter1].dead == 0) {
                     if (playercounter !== playercounter1) {
-                        collisiondetection1.stopplayer(playercollection.array[playercounter1], playercollection.array[playercounter]);
+                        collisiondetection1.stopplayer(playercollection.array[playercounter], playercollection.array[playercounter1]);
 						
                 if (collisiondetection1.testcollision(playercollection.array[playercounter], playercollection.array[playercounter1]) == 1) {
                     playercollection.array[playercounter1].attack(playercollection.array[playercounter]);

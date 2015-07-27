@@ -109,6 +109,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
             {
                 this.weaponswitchlatch = 0;
             }
+            /*
             if (keypressed.z == 1 && this.placecooldown < 0 && this.money > 19.9) {
 
 				this.placecooldown = 10;
@@ -122,7 +123,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
                 platformcollection.add(mouse.X, mouse.Y, 50, 50, 11);
 				game2.submoney(this.index,20);
             }
-
+            */
             if (keypressed.mouse == 0)
             {
                 this.shootlatch = 0;

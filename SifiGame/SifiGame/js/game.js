@@ -123,7 +123,8 @@ function game() {
         platformcollection.add(560, -300, 40, 20, PLATFORMTYPE_PILLAR1);
 
 
-        playercollection.add(cwidth / 2, cheight / 2, player);
+
+        playercollection.add(2020, 420, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);
         weaponcollection.add("guntype2", playercollection.array[0]);
         weaponcollection.add("guntype3", playercollection.array[1]);
@@ -134,15 +135,23 @@ function game() {
         miscobjectcollection.add("ammocontainer", 304, -460);
         miscobjectcollection.add("ammocontainer", 304, -490);
         miscobjectcollection.add("ammocontainer", 304, -520);
+
         miscobjectcollection.add("ammocontainer", 1210, 50);
         miscobjectcollection.add("ammocontainer", 1210, 80);
         miscobjectcollection.add("ammocontainer", 1210, 110);
         miscobjectcollection.add("acid", 1230, 110, 0, 4);
-        miscobjectcollection.add("buystation", 840, -280, "acidgun", 1500);
+        miscobjectcollection.add("buystation", 320, -580, "acidgun", 1500);
         miscobjectcollection.add("buystation", 840, -250, "guntype1", 1000);
         miscobjectcollection.add("medkit", 840, -265);
         miscobjectcollection.add("buystation", 300, 300, "lm14", 550);
         miscobjectcollection.add("medkit", 320, 340);
+
+
+        floorcollection.add(2000, 400, 300, 500);
+        floorcollection.add(2200, 420, 300, 100);
+        platformcollection.add(2075, 525, 150, 250, 16);
+
+
     }
 
     this.getplayercap = function(round)
@@ -354,6 +363,8 @@ function game() {
             ctx.fillText("Y  " + Math.round(playercollection.array[0].y), this.canvastranslatex + 20, this.canvastranslatey + cheight - 30);
             ctx.fillText("X  " + Math.round(playercollection.array[0].x), this.canvastranslatex + 20, this.canvastranslatey + cheight - 50);
 
+            playercollection.array[0].health = 100;
+
             ctx.fillText("misc objects: " + miscobjectcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 170);
             ctx.fillText("players: " + playercollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 150);
             ctx.fillText("platforms: " + platformcollection.count(), this.canvastranslatex + cwidth - 350, this.canvastranslatey + cheight - 130);
@@ -424,7 +435,7 @@ function game() {
     }
     this.drawcrosshair = function()
     {
-        ctx.fillStyle = "rgb(200,50,50)"
+        ctx.fillStyle = "rgb(200,75,75)"
         ctx.fillRect(mouse.X-2,mouse.Y-2,4,4)
     }
 	    this.submoney = function(playerindex, amount)

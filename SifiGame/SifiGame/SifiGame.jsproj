@@ -115,6 +115,10 @@
     <Content Include="images\NewFolder\ruins1.png" />
     <Content Include="images\NewFolder\ruins2.png" />
     <Content Include="images\NewFolder\wall1.png" />
+    <Content Include="images\NewFolder\wallbaseleft.png" />
+    <Content Include="images\NewFolder\wallbaseright.png" />
+    <Content Include="images\NewFolder\walltopmain.png" />
+    <Content Include="images\NewFolder\walltopright.png" />
     <Content Include="images\pausescreen.png" />
     <Content Include="images\pausescreenback.png" />
     <Content Include="images\pausescreenfront.png" />

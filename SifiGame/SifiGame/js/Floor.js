@@ -3,14 +3,15 @@
     this.y = y;
     this.width = width;
     this.height = height;
-
-    this.createpattern = function()
+    this.colourvar = Math.floor((Math.random() * 30) + 30);
+    this.colour = "rgb(" + this.colourvar + "," + this.colourvar + "," + this.colourvar + ")"
+    this.createpattern = function(withbase)
     {
 
 
     }
     //a function called in the main loop, it draws the platform
-    this.draw = function () {
+    this.draw = function (withbase) {
         ctx.fillStyle = "rgb(65,65,75)"
         //ctx.fillRect(this.x + (this.width / 2), this.y + this.height - 10, 10, 10000);
         if (this.width < 1000 && this.height < 1000) {
@@ -34,7 +35,14 @@
  
         //ctx.fillStyle = "rgb(45,45,55)";
         //ctx.fillRect(this.x, this.y+ this.height, this.width, 20);
+        if (withbase == true) {
 
-        ctx.drawImage(floorBase, 0, 0, this.width, 20, this.x, this.y + this.height, this.width, 20);
+
+            ctx.drawImage(floorBase, 0, 0, this.width, 20, this.x, this.y + this.height, this.width, 20);
+            /*
+            ctx.fillStyle = this.colour;
+            ctx.fillRect(this.x, this.y + this.height, this.width, 3000);
+            */
+        }
     }
 }

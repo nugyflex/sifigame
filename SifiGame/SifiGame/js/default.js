@@ -120,8 +120,9 @@ var timer = 50;
                 ctx.fillRect(-8000, -8000, 16000, 16000);
 
             //to draw a background
+                thingstodraw1.executefloors(true);
                 thingstodraw1.executefalling();
-                thingstodraw1.executefloors();
+                thingstodraw1.executefloors(false);
                 thingstodraw1.execute();
                 game2.drawhud();
                 ctx.translate(game2.canvastranslatex, game2.canvastranslatey);
