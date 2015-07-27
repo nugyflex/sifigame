@@ -126,3 +126,5 @@ var ammocrate = new Image();
 ammocrate.src = 'Images/NewFolder/ammocrate.png'
 var medkitpic = new Image();
 medkitpic.src = 'Images/NewFolder/medkit.png'
+var lm14pic = new Image();
+lm14pic.src = 'Images/NewFolder/lm14.png'

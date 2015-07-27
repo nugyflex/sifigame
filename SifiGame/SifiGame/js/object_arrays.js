@@ -99,6 +99,9 @@ function projectiles() {
             case "redlaserweak":
                 this.array[i] = new redlaserweak(pindex, type)
                 break
+            case "redlaserpiercing":
+                this.array[i] = new redlaserpiercing(pindex, type)
+                break
         }
 
     }
@@ -197,6 +200,10 @@ function weapons() {
         if (type == "acidgun")
         {
             this.array[i] = new acidgun(player);
+        }
+        if (type == "lm14")
+        {
+            this.array[i] = new lm14(player);
         }
     }
     

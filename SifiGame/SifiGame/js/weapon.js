@@ -153,6 +153,26 @@ function guntype2(parent) {
 
 }
 
+function lm14(parent) {
+
+    this.name = "LM - 14";
+    gun.call(this, parent);
+    this.image = gun1pic;
+    this.rof = 6;
+    this.ammo = 16;
+    this.ammomax = 16;
+    this.ammores = 80;
+    this.width = 25;
+    this.reloadtimermax = 60;
+    this.shootcooldown = 60 / this.rof;
+    //this.ammo = "inf";
+    this.latch = 1;
+    this.image1 = lm14pic;
+    this.height = 5;
+    this.projectile = "redlaserpiercing";
+
+}
+
 function guntype3(parent) {
 
     this.name = "drone minigun"
@@ -193,4 +213,5 @@ guntype1.prototype = Object.create(gun.prototype);
 guntype2.prototype = Object.create(gun.prototype);
 guntype3.prototype = Object.create(gun.prototype);
 acidgun.prototype = Object.create(gun.prototype);
+lm14.prototype = Object.create(gun.prototype);
 

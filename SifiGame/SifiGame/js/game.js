@@ -59,11 +59,11 @@ function game() {
         platformcollection.add(500, 1300, 40, 20, 8);
         platformcollection.add(100, 100, 40, 20, 7);
         platformcollection.add(500, 1400, 40, 20, PLATFORMTYPE_PILLAR1);
-        platformcollection.add(520, 1600, 40, 20, PLATFORMTYPE_SMALL_BOX);/*
+        platformcollection.add(520, 1600, 40, 20, PLATFORMTYPE_SMALL_BOX);
         platformcollection.add(-700, -2000, 60, 10000, PLATFORMTYPE_GREYBOX);
         platformcollection.add(-700, -2000, 10000, 60, PLATFORMTYPE_GREYBOX);
         platformcollection.add(3000, -2000, 600, 10000, PLATFORMTYPE_GREYBOX);
-        platformcollection.add(-700, 5000, 10000, 60, PLATFORMTYPE_GREYBOX);*/
+        platformcollection.add(-700, 5000, 10000, 60, PLATFORMTYPE_GREYBOX);
         platformcollection.add(200, 200, 50, 50, 9, 100, 200, 500, 200);
         platformcollection.add(400, 200, 50, 50, 9, 100, 225, 500, 225);
         platformcollection.add(700, 1700, 50, 50, 9, 600, 1700, 600, 1780);
@@ -72,7 +72,9 @@ function game() {
         platformcollection.add(700, 700, 50, 50, 12);
 
         floorcollection.add(-100, -100, 1000, 1000);
+        floorcollection.add(800, -300, 100, 300);
         floorcollection.add(300, -900, 300, 900);
+        platformcollection.add(800, -150, 100, 100, PLATFORMTYPE_DOOR, 1000);
 
         floorcollection.add(570, -600, 700, 50);
         floorcollection.add(570, -400, 700, 50);
@@ -136,8 +138,10 @@ function game() {
         miscobjectcollection.add("ammocontainer", 1210, 80);
         miscobjectcollection.add("ammocontainer", 1210, 110);
         miscobjectcollection.add("acid", 1230, 110, 0, 4);
-        miscobjectcollection.add("buystation", 300, 300, "acidgun", 1500);
-        miscobjectcollection.add("buystation", 340, 300, "guntype1", 1000);
+        miscobjectcollection.add("buystation", 840, -280, "acidgun", 1500);
+        miscobjectcollection.add("buystation", 840, -250, "guntype1", 1000);
+        miscobjectcollection.add("medkit", 840, -265);
+        miscobjectcollection.add("buystation", 300, 300, "lm14", 550);
         miscobjectcollection.add("medkit", 320, 340);
     }
 
@@ -243,7 +247,8 @@ function game() {
                     playercollection.add(440, 830, enemy, 2.2);
                     break;
                 case 2:
-                    playercollection.add(960, 1750, enemy, 2.2);
+                    //playercollection.add(960, 1750, enemy, 2.2);
+                    playercollection.add(1000, 600, enemy, 2.2);
                 case 3:
                     playercollection.add(500, 0, enemy, 2.2);
                     break;

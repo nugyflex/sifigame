@@ -1,4 +1,4 @@
-﻿function ammocontainer(type, x, y) {
+function ammocontainer(type, x, y) {
     this.type = type;
     this.x = x;
     this.y = y;
@@ -20,7 +20,7 @@
     {
         if (player.type == "player" && weaponcollection.array[player.weaponinuse].ammo !== "inf")
         {
-            weaponcollection.array[player.weaponinuse].ammores = weaponcollection.array[player.weaponinuse].ammores + this.ammo;
+            player.weapons[player.weaponinuse].ammores = player.weapons[player.weaponinuse].ammores + this.ammo;
             this.used = true;
         }
     }
@@ -121,6 +121,9 @@ function acid(type, x, y, xvel, yvel) {
     }
 
 }
+
+
+
 function buystation(guntype, x, y, price) {
     this.x = x;
     this.y = y;
@@ -138,7 +141,7 @@ function buystation(guntype, x, y, price) {
     this.height = weaponcollection.array[this.weaponindex].height;
     this.poketointeract = true;
     this.buyable = true;
-    this.messagetext = "'E' to buy this " + weaponcollection.array[this.weaponindex].name;
+    this.messagetext = "'E' to buy " + weaponcollection.array[this.weaponindex].name;
     this.interact = function(player)
     {
         if (player.type == "player") {
@@ -175,6 +178,60 @@ function buystation(guntype, x, y, price) {
 
     
 }
+
+
+
+//TESTING, NOT A REAL CAR
+/*
+function Car(model, weight, lenth) {
+    this.wheels = 4;
+    thia.model = model;
+
+    this.drive = function () {
+        //this contins thew driving physics
+
+
+    }
+
+}
+
+var Car_Mun = new Car("Hilux", 1900, 4.1)
+var Car_Dad = new Car("BMW", 2100, 4.0)
+
+Car_Mum.drive()
+
+
+
+var Car_Mum = {
+    wheels : 4,
+    weight=1900,
+    length=4.1.
+    model : model;
+
+Drive(){
+    //drive physics
+
+}
+}
+
+
+var Car_Dad = {
+    wheels : 4,
+    weight=1900,
+    length=4.1.
+        model : model;
+
+Drive(){
+    //drive physics
+
+}
+}*/
+
+
+
+
+
+
 function medkit(x, y) {
     this.x = x;
     this.y = y;
@@ -187,7 +244,7 @@ function medkit(x, y) {
     this.falling = 0;
     this.width = 7;
     this.height = 9;
-    this.health = 30;
+    this.health = 15;
     this.interact = function (player) {
         if (player.type == "player") {
             if (player.health < player.healthmax) {

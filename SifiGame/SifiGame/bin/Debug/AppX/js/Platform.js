@@ -80,7 +80,7 @@ function platform(index, x, y, width, height, type, ax, ay, bx, by, image, price
             case PLATFORMTYPE_GREYBOX:
                 ctx.save();
                 ctx.translate(this.x, this.y);
-                ctx.rotate(this.theta);
+                //ctx.rotate(this.theta);
                 ctx.fillStyle = this.colour;
                 ctx.fillRect(0, 0, this.width, this.height);
                 ctx.restore();

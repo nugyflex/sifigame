@@ -307,16 +307,30 @@ function player(x, y, index/*so i can set where the player starts when i instant
 
         //weapon1.draw(this.x + 30, this.y);
         //ctx.fillRect(0, 0, 2, 2)
-
+        
         this.rotation = this.rotation + 0.1;
         ctx.save();
         ctx.translate(this.x+4, this.y+10);
+        if (this.weapons[this.weaponinuse].reloading == false)
+        {
         if (mouse.X < this.x) {
             ctx.rotate((Math.atan((mouse.Y - (this.y+10)) / (mouse.X - this.x))));
             ctx.scale(-1, 1);
         }
         else {
             ctx.rotate(Math.atan((mouse.Y - (this.y+10)) / (mouse.X - this.x)));
+        }
+        }
+        else
+        {
+
+              if (mouse.X<this.x)
+              {
+
+              ctx.scale(-1, 1);
+              }
+                                          ctx.rotate(1); 
+
         }
 
 

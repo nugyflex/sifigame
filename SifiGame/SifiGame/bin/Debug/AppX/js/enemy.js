@@ -7,6 +7,15 @@ function enemy(x, y, vel, index) {
     this.theta = 0;
     this.defaultvel = vel
     this.vel = this.defaultvel;
+    if (game2.round<5)
+    {
+        this.defaultvel = 1.5;
+    }
+    else
+    {
+    this.defaultvel = 2.5;
+    }
+            
     this.height = 10;
     this.width = 12;
     this.hitheight = 32;
@@ -16,7 +25,7 @@ function enemy(x, y, vel, index) {
     this.type = "enemy";
     this.falling = 0;
     this.frame = 0;
-	this.health = 20;
+	this.health = 20+((game2.round-1)*5);
 	this.attackcooldown = Math.floor((Math.random() * 60) + 30);
 	this.damage = 10;
 	this.attackcooldown1 = 0;
@@ -58,6 +67,14 @@ function enemy(x, y, vel, index) {
         }
 		if (this.health < 1)
 		{
+            if ((Math.random()*100)+1>92)
+            {
+            miscobjectcollection.add("medkit", this.x, this.y);
+            }
+            if ((Math.random()*100)+1>95)
+            {
+                    miscobjectcollection.add("ammocontainer", this.x, this.y);
+            }
 			this.falling = 1;
 			this.y = 10000;
 			game2.addmoney(player.index, 20);
