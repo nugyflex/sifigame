@@ -95,13 +95,19 @@ function projectiles() {
                 break;
             case "bomb":
                 this.array[i] = new bomb(pindex, type)
-                break
+                break;
             case "redlaserweak":
                 this.array[i] = new redlaserweak(pindex, type)
-                break
+                break;
             case "redlaserpiercing":
                 this.array[i] = new redlaserpiercing(pindex, type)
-                break
+                break;
+            case "purplelaser":
+                this.array[i] = new purplelaser(pindex, type)
+                break;
+            case "purplelaserpiercing":
+                this.array[i] = new purplelaserpiercing(pindex, type)
+                break;
         }
 
     }
@@ -241,6 +247,9 @@ function miscobjects() {
         }
         if (type == "medkit") {
             this.array[i] = new medkit(x, y);
+        }
+        if (type == "upgradestation") {
+            this.array[i] = new upgradestation(x, y, xvel);
         }
 
     }

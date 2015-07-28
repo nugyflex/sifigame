@@ -179,6 +179,36 @@ function buystation(guntype, x, y, price) {
     
 }
 
+function upgradestation(x, y, price) {
+    this.x = x;
+    this.y = y;
+    this.interactontouch = true;
+    this.deleteafterinteract = false;
+    this.deleteaftertime = false;
+    this.used = false;
+    this.static = true;
+    this.price = price;
+    this.falling = 0;
+    this.width = 25;
+    this.height = 9
+    this.poketointeract = true;
+    this.buyable = true;
+    this.messagetext = "'E' to buy upgrade weapon";
+    this.interact = function (player) {
+        if (player.type == "player") {
+            player.weapons[player.weaponinuse].upgraded = true;
+            this.used = true;
+        }
+    }
+    this.draw = function () {
+        ctx.fillStyle = "rgb(40, 40, 40)";
+        ctx.fillRect(this.x, this.y, this.width, this.height)
+    }
+
+
+
+}
+
 
 
 //TESTING, NOT A REAL CAR

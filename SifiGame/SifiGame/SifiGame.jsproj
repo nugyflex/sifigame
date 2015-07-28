@@ -64,9 +64,9 @@
     <Content Include="images\barricade_front_sheet1.png" />
     <Content Include="images\barricade_sheet1.png" />
     <Content Include="images\boost.png" />
-    <Content Include="images\bulletsheet1.png" />
-    <Content Include="images\bulletsheet2.png" />
-    <Content Include="images\bulletsheet3.png" />
+    <Content Include="images\bulletgreen.png" />
+    <Content Include="images\bulletpurple.png" />
+    <Content Include="images\bulletred.png" />
     <Content Include="images\clouds.png" />
     <Content Include="images\controls.png" />
     <Content Include="images\drone1.png" />

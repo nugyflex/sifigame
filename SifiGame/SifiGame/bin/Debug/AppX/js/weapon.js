@@ -58,6 +58,7 @@ function gun(parent) {
     this.reloadtimer = 0;
     this.parent = parent;
     this.reloadtimermax = 30;
+    this.upgraded = false;
     this.shoot = function (x, y, xoffset, yoffset) {
         if (this.reloading == 0) {
             if (this.latch == 0) {
@@ -112,6 +113,10 @@ function gun(parent) {
     this.timer = function () {
         this.shootcooldowntimer = this.shootcooldowntimer - 1;
         this.reloadtimer = this.reloadtimer - 1;
+        if (this.upgraded)
+        {
+            this.projectile = this.projectile2;
+        }
     }
 }
 
@@ -130,7 +135,8 @@ function guntype1(parent) {
 	this.shootcooldown = 60 / this.rof;
 	this.projectile = "greenlaser";
 	this.image1 = gun1;
-    this.reloadtimermax = 120;
+	this.reloadtimermax = 120;
+	this.projectile2 = "purplelaserpiercing";
 }
 
 function guntype2(parent) {
@@ -150,7 +156,7 @@ function guntype2(parent) {
     this.image1 = gun2;
     this.height = 9;
     this.projectile = "redlaser";
-
+    this.projectile2 = "purplelaser";
 }
 
 function lm14(parent) {
@@ -170,6 +176,7 @@ function lm14(parent) {
     this.image1 = lm14pic;
     this.height = 5;
     this.projectile = "redlaserpiercing";
+    this.projectile2 = "purplelaserpiercing";
 
 }
 
@@ -203,6 +210,7 @@ function acidgun(parent) {
     this.projectile = "acid";
     this.image1 = acidgun1;
     this.reloadtimermax = 150;
+    this.projectile2 = "acid";
 }
 
 

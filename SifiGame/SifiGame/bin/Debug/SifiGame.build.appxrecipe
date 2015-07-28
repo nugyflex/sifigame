@@ -29,14 +29,14 @@
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\boost.png">
       <PackagePath>images\boost.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletsheet1.png">
-      <PackagePath>images\bulletsheet1.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletgreen.png">
+      <PackagePath>images\bulletgreen.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletsheet2.png">
-      <PackagePath>images\bulletsheet2.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletpurple.png">
+      <PackagePath>images\bulletpurple.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletsheet3.png">
-      <PackagePath>images\bulletsheet3.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\bulletred.png">
+      <PackagePath>images\bulletred.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\clouds.png">
       <PackagePath>images\clouds.png</PackagePath>

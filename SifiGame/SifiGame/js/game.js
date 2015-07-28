@@ -145,6 +145,7 @@ function game() {
         miscobjectcollection.add("medkit", 840, -265);
         miscobjectcollection.add("buystation", 300, 300, "lm14", 550);
         miscobjectcollection.add("medkit", 320, 340);
+        miscobjectcollection.add("upgradestation", 350, 350, 3000);
 
 
         /*floorcollection.add(2000, 400, 300, 500);
