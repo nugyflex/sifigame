@@ -7,7 +7,7 @@ function game() {
     this.round = 0;
     this.numberofenemies = 0;
     this.playercap = 60;
-    this.fixedplayercap = 30;
+    this.fixedplayercap = 50;
     this.roundbreakmax = 530;
     this.roundbreak = 530;
     this.lastamount = 0;
@@ -124,7 +124,7 @@ function game() {
 
 
 
-        playercollection.add(2020, 420, player);
+        playercollection.add(350, 350, player);
         playercollection.add(cwidth / 2, cheight / 2, drone);
         weaponcollection.add("guntype2", playercollection.array[0]);
         weaponcollection.add("guntype3", playercollection.array[1]);
@@ -147,11 +147,45 @@ function game() {
         miscobjectcollection.add("medkit", 320, 340);
 
 
-        floorcollection.add(2000, 400, 300, 500);
+        /*floorcollection.add(2000, 400, 300, 500);
         floorcollection.add(2200, 420, 300, 100);
         platformcollection.add(2075, 525, 150, 250, 16);
+        platformcollection.add(2112.5, 400, 75, 250, 16);
+        platformcollection.add(1980, 400, 20, 500, 16);
+        platformcollection.add(1980, 380, 340, 20, 16);
+        platformcollection.add(2000, 880, 320, 20, 16);
+        platformcollection.add(2300, 400, 320, 20, 16);*/
 
 
+    }
+    
+        this.loadmap2 = function()
+    {
+        playercollection.add(2020, 420, player);
+        playercollection.add(2020, 420, drone);
+        weaponcollection.add("guntype2", playercollection.array[0]);
+        weaponcollection.add("guntype3", playercollection.array[1]);
+        playercollection.array[0].weapons[0] = weaponcollection.array[0];
+        playercollection.array[1].weapons[0] = weaponcollection.array[1];
+        floorcollection.add(1850, -100, 600, 1000);
+        miscobjectcollection.add("buystation", 1950, -50, "guntype1", 1000);
+        miscobjectcollection.add("buystation", 2350, -50, "acidgun", 1000);
+        platformcollection.add(2075, 525, 150, 250, 16);
+        platformcollection.add(2112.5, 400, 75, 250, 16);
+        platformcollection.add(1850, -100, 20, 400, 16);
+        platformcollection.add(1850, 300, 20, 400, 16);
+        platformcollection.add(1850, 700, 20, 200, 16);
+        platformcollection.add(1850+580, -100, 20, 400, 16);
+        platformcollection.add(1850+580, 300, 20, 400, 16);
+        platformcollection.add(1850+580, 700, 20, 200, 16);
+        platformcollection.add(1980, 380, 340, 20, 16);
+        platformcollection.add(1850, -100, 400, 20, 16);
+        platformcollection.add(2250, -100, 200, 20, 16);
+        platformcollection.add(1850, 880, 400, 20, 16);
+        platformcollection.add(2150, 880, 300, 20, 16);
+        miscobjectcollection.add("buystation", 2200, 820, "lm14", 550);
+        //platformcollection.add(2300, 400, 320, 20, 16);
+            
     }
 
     this.getplayercap = function(round)
@@ -267,6 +301,23 @@ function game() {
 
             }
             //playercollection.add(440, 830, enemy, 3.5);
+            /*
+                        switch (spawnpoint) {
+
+                case 1:
+                    playercollection.add(2030, 400, enemy, 2.2);
+                    break;
+                case 2:
+                    playercollection.add(2030, 400, enemy, 2.2);
+                    break;
+                case 3:
+                    playercollection.add(2220, 400, enemy, 2.2);
+                    break;
+                case 4:
+                    playercollection.add(2220, 400, enemy, 2.2);
+                    break;
+
+            }*/
 
 
         }

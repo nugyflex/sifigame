@@ -115,7 +115,7 @@ var timer = 50;
         setTimeout(function () {
             requestAnimationFrame(draw);
 
-                camera1.center();
+                camera1.center(playercollection.array[0]);
                 ctx.fillStyle = "rgb(30,30,50)";
                 ctx.fillRect(-8000, -8000, 16000, 16000);
 

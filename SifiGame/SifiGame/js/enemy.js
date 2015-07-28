@@ -27,7 +27,7 @@ function enemy(x, y, vel, index) {
     this.frame = 0;
 	this.health = 20+((game2.round-1)*5);
 	this.attackcooldown = Math.floor((Math.random() * 60) + 30);
-	this.damage = 10;
+	this.damage = 20;
 	this.attackcooldown1 = 0;
 	this.index = index;
 	this.poisoned = 0;
