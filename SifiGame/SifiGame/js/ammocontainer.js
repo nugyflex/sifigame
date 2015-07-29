@@ -26,6 +26,105 @@ function ammocontainer(type, x, y) {
     }
     
 }
+
+
+function acid2(type, x, y, xvel, yvel) {
+    this.type = type;
+    this.x = x;
+    this.y = y;
+    this.xvel = xvel;
+    this.yvel = yvel;
+    this.width = Math.floor((Math.random() * 10) + 2);;
+    this.height = this.width;
+    this.interactontouch = true;
+    this.deleteafterinteract = false;
+    this.ammo = 100;
+    this.damage = 0.5;
+    this.vel = 4;
+    this.poketointeract = false;
+    this.deleteaftertime = true;
+    this.used = false;
+    this.static = false;
+    this.theta;
+    this.velmodify = 0.05;
+    this.timer = 0;
+    this.timermax = 600;
+    this.falling = 0;
+    this.draw = function () {
+        ctx.fillStyle = "rgb(130, 80, 150)";
+        ctx.fillRect(this.x, this.y, this.width, this.height + 2)
+        ctx.fillStyle = "rgb(220, 110, 230)";
+        ctx.fillRect(this.x, this.y, this.width, this.height)
+
+    }
+
+    this.interact = function (player) {
+        if (player.type == "enemy") {
+            player.poisonedtimer = 100;
+            player.slowedtimer = 100;
+            if (this.vel > 0) {
+                player.health = player.health - 0.13;
+            }
+        }
+    }
+    this.move = function()
+    {
+
+        this.x = this.x + this.xvel;
+        this.y = this.y + this.yvel;
+        if (this.xvel>0)
+        {
+            this.xvel = this.xvel - this.velmodify;
+        }
+        if (this.xvel < 0) {
+            this.xvel = this.xvel + this.velmodify;
+        }
+        if (this.yvel > 0) {
+            this.yvel = this.yvel - this.velmodify;
+        }
+        if (this.yvel < 0) {
+            this.yvel = this.yvel + this.velmodify;
+        }
+        if (this.xvel > -0.5 && this.xvel < 0.5) {
+            this.xvel = 0;
+        }
+        if (this.yvel > -0.5 && this.yvel < 0.5) {
+            this.yvel = 0;
+        }
+        this.timer++;
+        if (this.falling == 1)
+        {
+            this.yvel = 6;
+        }
+        
+    }
+
+
+    this.launch = function (x1, y1, x2, y2) {
+        this.vel = (Math.random() * 5) + 1;
+        this.x = x1;
+        this.y = y1;
+
+        this.theta = Math.atan(-(y2 - y1) / (x2 - x1));
+
+
+
+        if (x2 > x1) {
+            this.yvel = Math.sin(this.theta) * -this.vel;
+            this.xvel = Math.cos(this.theta) * this.vel;
+        }
+        else {
+            this.yvel = Math.sin(this.theta) * this.vel;
+            this.xvel = Math.cos(this.theta) * -this.vel;
+        }
+
+
+
+    }
+
+}
+
+
 function acid(type, x, y, xvel, yvel) {
     this.type = type;
     this.x = x;
@@ -189,8 +288,8 @@ function upgradestation(x, y, price) {
     this.static = true;
     this.price = price;
     this.falling = 0;
-    this.width = 25;
-    this.height = 9
+    this.width = 50;
+    this.height = 17;
     this.poketointeract = true;
     this.buyable = true;
     this.messagetext = "'E' to buy upgrade weapon";
@@ -201,8 +300,10 @@ function upgradestation(x, y, price) {
         }
     }
     this.draw = function () {
-        ctx.fillStyle = "rgb(40, 40, 40)";
-        ctx.fillRect(this.x, this.y, this.width, this.height)
+        //ctx.fillStyle = "rgb(40, 40, 40)";
+        //ctx.fillRect(this.x, this.y, this.width, this.height)
+        ctx.drawImage( weaponupgradeback, this.x, this.y);
+        ctx.drawImage( weaponupgradefront, this.x, this.y);
     }
 
 

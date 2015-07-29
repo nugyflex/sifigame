@@ -138,3 +138,7 @@ var walltopmain = new Image();
 walltopmain.src = 'Images/NewFolder/walltopmain.png'
 var walltopright = new Image();
 walltopright.src = 'Images/NewFolder/walltopright.png'
+var weaponupgradefront = new Image();
+weaponupgradefront.src = 'Images/NewFolder/weaponupgradefront.png'
+var weaponupgradeback = new Image();
+weaponupgradeback.src = 'Images/NewFolder/weaponupgradeback.png'

@@ -242,6 +242,9 @@ function miscobjects() {
         if (type == "acid") {
             this.array[i] = new acid(type, x, y, xvel, yvel);
         }
+        if (type == "acid2") {
+            this.array[i] = new acid2(type, x, y, xvel, yvel);
+        }
         if (type == "buystation") {
             this.array[i] = new buystation(xvel, x, y, yvel);
         }

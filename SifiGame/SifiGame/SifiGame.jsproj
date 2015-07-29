@@ -119,6 +119,8 @@
     <Content Include="images\NewFolder\wallbaseright.png" />
     <Content Include="images\NewFolder\walltopmain.png" />
     <Content Include="images\NewFolder\walltopright.png" />
+    <Content Include="images\NewFolder\weaponupgradeback.png" />
+    <Content Include="images\NewFolder\weaponupgradefront.png" />
     <Content Include="images\pausescreen.png" />
     <Content Include="images\pausescreenback.png" />
     <Content Include="images\pausescreenfront.png" />

@@ -165,9 +165,9 @@ function purplelaserpiercing(pindex, type) {
 
     this.width = 10;
     this.height = 10;
-    this.vel = 8;
+    this.vel = 12;
     this.visible = 1;
-    this.damagemultiplier = 7;
+    this.damagemultiplier = 6;
     this.image = bulletsheet4;
     this.armourpiercing = 1;
     this.draw = function () {
@@ -199,17 +199,85 @@ function purplelaserpiercing(pindex, type) {
 
 }
 
+function purplelaserexplosive(pindex, type) {
+    projectile.call(this, pindex, type);
+
+
+    this.width = 20;
+    this.height = 20;
+    this.vel = 12;
+    this.damagemultiplier = 1;
+    this.image = bulletsheet3;
+    this.canexplode = true;
+    this.radius = 100;
+    this.draw = function () {
+        if (this.visible == 1) {
+
+
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(Math.atan((this.y22 - this.y11) / (this.x22 - this.x11)));
+            ctx.drawImage(this.image, 0, 0, 10, 4, 0, 0, 10, 4);
+            ctx.restore();
+
+
+        }
+        if (game2.debugmode == 1) {
+            ctx.globalAlpha = 0.5;
+            ctx.fillStyle = "rgb(200,40,40)";
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.globalAlpha = 1;
+        }
+    }
+    this.explode = function()
+    {
+        explosioncollection.add(this.x, this.y, this.radius);
+        for (playercounter = 0; playercounter < playercollection.count(); playercounter++)
+        {
+            if (collisiondetection1.collisiondetectionradius(this, playercollection.array[playercounter]) && playercollection.array[playercounter].type == "enemy")
+            {
+                playercollection.array[playercounter].health = playercollection.array[playercounter].health - ((1 / collisiondetection1.finddistance(this, playercollection.array[playercounter])) * this.radius * 2.5);
+                game2.addmoney(playercollection.array[projectilecollection.array[projectilecounter].pindex].index, 0.5);
+                if ((Math.random() * 100) + 1 > 50)
+                {
+                    var velmultiplyertestx = -1;
+                }
+                else
+                {
+                    var velmultiplyertestx = 1;
+                }
+                if ((Math.random() * 100) + 1 > 50) {
+                    var velmultiplyertesty = -1;
+                }
+                else {
+                    var velmultiplyertesty = 1;
+                }
+                
+                floating_numbercollection.add(playercollection.array[playercounter].x, playercollection.array[playercounter].y, ((Math.random() * 2) + 0.1) * velmultiplyertestx, ((Math.random() * 2) + 0.1) * velmultiplyertesty, Math.floor((1 / collisiondetection1.finddistance(this, playercollection.array[playercounter])) * this.radius * 2.5), 12, "orange random")
+            }
+        }
+        for (platformcounter = 0; platformcounter < platformcollection.count() ; platformcounter++) {
+            if (collisiondetection1.collisiondetectionradius(this, platformcollection.array[platformcounter])&&platformcollection.array[platformcounter].breakable) {
+                platformcollection.array[platformcounter].health = platformcollection.array[platformcounter].health - ((1 / collisiondetection1.finddistance(this, platformcollection.array[platformcounter])) * this.radius * 2.5*4);
+            }
+        }
+    }
+
+
+}
+
 function purplelaser(pindex, type) {
     projectile.call(this, pindex, type);
 
 
     this.width = 10;
     this.height = 10;
-    this.vel = 8;
+    this.vel = 10;
     this.visible = 1;
-    this.damagemultiplier = 9;
+    this.damagemultiplier = 12;
     this.image = bulletsheet4;
     this.armourpiercing = 0;
+
     this.draw = function () {
 
         if (this.visible == 1) {
@@ -379,6 +447,7 @@ function bomb(pindex, type) {
 
 }
 
+purplelaserexplosive.prototype = Object.create(projectile.prototype);
 purplelaserpiercing.prototype = Object.create(projectile.prototype);
 purplelaser.prototype = Object.create(projectile.prototype);
 redlaser.prototype = Object.create(projectile.prototype);

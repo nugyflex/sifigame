@@ -131,6 +131,10 @@ function player(x, y, index/*so i can set where the player starts when i instant
             }
             if (keypressed.mouse == 1 && this.dead == 0 && this.falling == 0 && this.sprinting == 0) {
                 this.weapons[this.weaponinuse].shoot(mouse.X, mouse.Y, 0, 7);
+                if (this.weapons[this.weaponinuse].ammo==0)
+                {
+                    this.weapons[this.weaponinuse].initreload();
+                }
             }
             else {
                 this.weapons[this.weaponinuse].latched = 0;

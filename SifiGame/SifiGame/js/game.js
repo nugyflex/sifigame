@@ -140,12 +140,12 @@ function game() {
         miscobjectcollection.add("ammocontainer", 1210, 80);
         miscobjectcollection.add("ammocontainer", 1210, 110);
         miscobjectcollection.add("acid", 1230, 110, 0, 4);
-        miscobjectcollection.add("buystation", 320, -580, "acidgun", 1500);
+        miscobjectcollection.add("buystation", 320, -580, "acidgun", 150);
         miscobjectcollection.add("buystation", 840, -250, "guntype1", 1000);
         miscobjectcollection.add("medkit", 840, -265);
         miscobjectcollection.add("buystation", 300, 300, "lm14", 550);
         miscobjectcollection.add("medkit", 320, 340);
-        miscobjectcollection.add("upgradestation", 350, 350, 3000);
+        miscobjectcollection.add("upgradestation", 350, 350, 300);
 
 
         /*floorcollection.add(2000, 400, 300, 500);
@@ -288,16 +288,16 @@ function game() {
             switch (spawnpoint) {
 
                 case 1:
-                    playercollection.add(440, 830, enemy, 2.2);
+                    playercollection.add(440, 830, enemy, (Math.random()*1.8)+1);
                     break;
                 case 2:
                     //playercollection.add(960, 1750, enemy, 2.2);
-                    playercollection.add(1000, 600, enemy, 2.2);
+                    playercollection.add(1000, 600, enemy, (Math.random()*1.8)+1);
                 case 3:
-                    playercollection.add(500, 0, enemy, 2.2);
+                    playercollection.add(500, 0, enemy, (Math.random()*1.8)+1);
                     break;
                 case 4:
-                    playercollection.add(1000, 600, enemy, 2.2);
+                    playercollection.add(1000, 600, enemy, (Math.random()*1.8)+1);
                     break;
 
             }
@@ -489,6 +489,8 @@ function game() {
     {
         ctx.fillStyle = "rgb(200,75,75)"
         ctx.fillRect(mouse.X-2,mouse.Y-2,4,4)
+                ctx.fillStyle = "rgb(255,200,200)"
+        ctx.fillRect(mouse.X-1,mouse.Y-1,2,2)
     }
 	    this.submoney = function(playerindex, amount)
     {

@@ -1,8 +1,9 @@
-﻿function explosion(x, y, radius, index) {
+function explosion(x, y, radius, index) {
     this.x = x;
     this.y = y;
     this.radius = radius;
     this.index = index;
+    this.height = this.radius;
     this.frame = 0;
     this.dc = 0;
 

@@ -192,6 +192,12 @@
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\walltopright.png">
       <PackagePath>images\NewFolder\walltopright.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\weaponupgradeback.png">
+      <PackagePath>images\NewFolder\weaponupgradeback.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\weaponupgradefront.png">
+      <PackagePath>images\NewFolder\weaponupgradefront.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\pausescreen.png">
       <PackagePath>images\pausescreen.png</PackagePath>
     </AppxPackagedFile>

@@ -116,6 +116,7 @@ function gun(parent) {
         if (this.upgraded)
         {
             this.projectile = this.projectile2;
+            this.shootcooldown = this.shootcooldown2;
         }
     }
 }
@@ -137,6 +138,8 @@ function guntype1(parent) {
 	this.image1 = gun1;
 	this.reloadtimermax = 120;
 	this.projectile2 = "purplelaserpiercing";
+    this.rof2 = 8;
+    this.shootcooldown2 = 60 / this.rof2;
 }
 
 function guntype2(parent) {
@@ -210,7 +213,9 @@ function acidgun(parent) {
     this.projectile = "acid";
     this.image1 = acidgun1;
     this.reloadtimermax = 150;
-    this.projectile2 = "acid";
+    this.projectile2 = "acid2";
+    this.rof2 = 25;
+    this.shootcooldown2 = 60 / this.rof2;
 }
 
 
