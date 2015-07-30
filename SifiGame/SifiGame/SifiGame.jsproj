@@ -109,6 +109,7 @@
     <Content Include="images\NewFolder\floor_bottom.png" />
     <Content Include="images\NewFolder\gun1.png" />
     <Content Include="images\NewFolder\gun2.png" />
+    <Content Include="images\NewFolder\gun3.png" />
     <Content Include="images\NewFolder\holewall1.png" />
     <Content Include="images\NewFolder\lm14.png" />
     <Content Include="images\NewFolder\medkit.png" />

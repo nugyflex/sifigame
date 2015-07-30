@@ -3,9 +3,13 @@
   <PropertyGroup>
     <Machine>JACK_GAMING_PC</Machine>
     <WindowsUser>jackr_000</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>2ad3eb1e-4a03-4cbf-9e18-e3d591489e48</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bld\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\bin\Debug\AppxManifest.xml">
@@ -161,6 +165,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\gun2.png">
       <PackagePath>images\NewFolder\gun2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\gun3.png">
+      <PackagePath>images\NewFolder\gun3.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jackr_000\Documents\GitHub\sifigame\SifiGame\SifiGame\images\NewFolder\holewall1.png">
       <PackagePath>images\NewFolder\holewall1.png</PackagePath>

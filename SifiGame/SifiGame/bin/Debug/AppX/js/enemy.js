@@ -48,6 +48,29 @@ function enemy(x, y, vel, index) {
 		}
 		}
 	}
+    this.dropitem = function()
+    {
+                    /*if ((Math.random()*100)+1>92)
+            {
+            miscobjectcollection.add("medkit", this.x, this.y);
+            }
+                    if ((Math.random()*100)+1>95)
+            {
+                    miscobjectcollection.add("ammocontainer", this.x, this.y);
+            }*/
+        var randomnumba = Math.floor(Math.random()*15)+1;
+        switch(randomnumba)
+        {
+         
+                case 2:
+                    miscobjectcollection.add("ammocontainer", this.x, this.y);
+                    break;
+
+                    
+                
+        }
+        
+    }
     this.ai = function (player) {
 
 
@@ -67,14 +90,9 @@ function enemy(x, y, vel, index) {
         }
 		if (this.health < 1)
 		{
-            if ((Math.random()*100)+1>92)
-            {
-            miscobjectcollection.add("medkit", this.x, this.y);
-            }
-            if ((Math.random()*100)+1>95)
-            {
-                    miscobjectcollection.add("ammocontainer", this.x, this.y);
-            }
+
+            this.dropitem();
+
 			this.falling = 1;
 			this.y = 10000;
 			game2.addmoney(player.index, 20);

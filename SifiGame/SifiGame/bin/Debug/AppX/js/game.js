@@ -6,7 +6,7 @@ function game() {
     this.canvastranslatey = 0;
     this.round = 0;
     this.numberofenemies = 0;
-    this.playercap = 60;
+    this.playercap = 30;
     this.fixedplayercap = 50;
     this.roundbreakmax = 530;
     this.roundbreak = 530;
@@ -140,12 +140,12 @@ function game() {
         miscobjectcollection.add("ammocontainer", 1210, 80);
         miscobjectcollection.add("ammocontainer", 1210, 110);
         miscobjectcollection.add("acid", 1230, 110, 0, 4);
-        miscobjectcollection.add("buystation", 320, -580, "acidgun", 150);
+        miscobjectcollection.add("buystation", 320, -580, "acidgun", 1500);
         miscobjectcollection.add("buystation", 840, -250, "guntype1", 1000);
         miscobjectcollection.add("medkit", 840, -265);
         miscobjectcollection.add("buystation", 300, 300, "lm14", 550);
         miscobjectcollection.add("medkit", 320, 340);
-        miscobjectcollection.add("upgradestation", 350, 350, 300);
+        miscobjectcollection.add("upgradestation", 350, 350, 3000);
 
 
         /*floorcollection.add(2000, 400, 300, 500);

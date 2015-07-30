@@ -45,7 +45,7 @@
                     if (playercounter !== playercounter1) {
                         collisiondetection1.stopplayer(playercollection.array[playercounter], playercollection.array[playercounter1]);
 						
-                if (collisiondetection1.testcollision(playercollection.array[playercounter], playercollection.array[playercounter1]) == 1) {
+                        if (collisiondetection1.testcollision(playercollection.array[playercounter], playercollection.array[playercounter1]) == 1 && playercollection.array[playercounter1].falling == 0) {
                     playercollection.array[playercounter1].attack(playercollection.array[playercounter]);
                 }
                     }
