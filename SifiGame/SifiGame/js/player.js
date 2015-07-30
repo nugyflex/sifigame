@@ -38,6 +38,14 @@ function player(x, y, index/*so i can set where the player starts when i instant
 	this.klatch = 0;
 	this.elatch = 0;
 
+    this.regeneration = function()
+    {
+        if (this.health<this.healthmax)
+        {
+            this.health = this.health+0.25;
+        }
+    }
+    
     //functions called in the main loop are below
     this.controls = function () {
         if (this.dead == 0 && this.falling == 0) {
@@ -193,7 +201,7 @@ function player(x, y, index/*so i can set where the player starts when i instant
     this.calcNewPosition = function () {
 
 
-
+        this.regeneration();
 
         if (this.falling == 1)
         {

@@ -86,7 +86,7 @@ function gun(parent) {
     }
     this.initreload = function()
     {
-        if (this.ammo < this.ammomax&&this.reloading == 0) {
+        if (this.ammo < this.ammomax&&this.reloading == 0&&this.ammores>0) {
             this.reloadtimer = this.reloadtimermax;
             this.reloading = 1;
         }
