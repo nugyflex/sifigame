@@ -132,7 +132,7 @@ function players() {
         return this.array.length;
     }
     this.array = [];
-    this.add = function (x, y, type, vel) {
+    this.add = function (x, y, type, vel, etype) {
         var i = this.count();
         if (type == player) {
             this.array[i] = new player(x, y, i);
@@ -141,7 +141,8 @@ function players() {
             this.array[i] = new drone(x, y, i);
         }
         if (type == enemy) {
-            this.array[i] = new enemy(x, y, vel, i);
+            
+            this.array[i] = new enemy(x, y, vel, i, etype);
         }
     }
     this.delete = function (index) {

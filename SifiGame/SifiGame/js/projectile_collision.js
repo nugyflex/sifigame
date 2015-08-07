@@ -1,4 +1,4 @@
-﻿function projectile_collision() {
+function projectile_collision() {
     var projectiledeleted = 0;
     for (projectilecounter = 0; projectilecounter < projectilecollection.count() ; projectilecounter++) {
 
@@ -37,6 +37,7 @@
             
 
 
+                
         }
             
         }
@@ -54,6 +55,8 @@
                                 projectilecollection.delete(projectilecounter);
                             }
                             else {
+                                if (!playercollection.array[playercounter].protected)
+                                {
                                 playercollection.array[playercounter].health = playercollection.array[playercounter].health - projectilecollection.array[projectilecounter].damagemultiplier;
                                 if (playercollection.array[projectilecollection.array[projectilecounter].pindex].type == "player") {
                                     game2.addmoney(playercollection.array[projectilecollection.array[projectilecounter].pindex].index, 10);
@@ -63,6 +66,7 @@
                                         game2.addmoney(playercollection.array[projectilecollection.array[projectilecounter].pindex].parentindex, 10);
                                     }
                                 }
+                            
                                 if ((Math.random() * 100) + 1 > 50) {
                                     var velmultiplyertestx = -1;
                                 }
@@ -77,9 +81,15 @@
                                 }
                                 floating_numbercollection.add(playercollection.array[playercounter].x, playercollection.array[playercounter].y, ((Math.random() * 2) + 0.1) * velmultiplyertestx, ((Math.random() * 2) + 0.1) * velmultiplyertesty, projectilecollection.array[projectilecounter].damagemultiplier, 15, "rgb(200,75,75)")
                             }
-
+                        }
+                            if (playercollection.array[playercounter].protected) {
+                                projectilecollection.delete(projectilecounter);
+                            }
+                            else
+                            {
                             if (projectilecollection.array[projectilecounter].armourpiercing == 0) {
                                 projectilecollection.delete(projectilecounter);
+                            }
                             }
                             break;
 

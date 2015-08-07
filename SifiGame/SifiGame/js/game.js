@@ -283,22 +283,29 @@ function game() {
         }
         this.numberofenemies = 0;
         if (this.TNOE < this.getplayercap(this.round) && this.getnumberofenemies() < this.fixedplayercap-1) {
-            var spawnpoint = Math.floor((Math.random() * 4) + 1);
+            var spawnpoint = Math.floor((Math.random() * 3) + 1);
             this.TNOE++;
+            var random111 = Math.random()*100;
+            if (random111 > 80)
+            {
+                var enemytypetemp = 1;
+            }
+            else
+            {
+                var enemytypetemp = 0;
+            }
             switch (spawnpoint) {
 
                 case 1:
-                    playercollection.add(440, 830, enemy, (Math.random()*1.8)+1);
+                    playercollection.add(440, 830, enemy, (Math.random()*1.8)+1, enemytypetemp);
                     break;
                 case 2:
                     //playercollection.add(960, 1750, enemy, 2.2);
-                    playercollection.add(1000, 600, enemy, (Math.random()*1.8)+1);
+                    playercollection.add(1000, 600, enemy, (Math.random()*1.8)+1, enemytypetemp);
                 case 3:
-                    playercollection.add(500, 0, enemy, (Math.random()*1.8)+1);
+                    playercollection.add(500, 0, enemy, (Math.random()*1.8)+1, enemytypetemp);
                     break;
-                case 4:
-                    playercollection.add(1000, 600, enemy, (Math.random()*1.8)+1);
-                    break;
+
 
             }
             //playercollection.add(440, 830, enemy, 3.5);

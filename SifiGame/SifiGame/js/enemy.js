@@ -1,10 +1,12 @@
-function enemy(x, y, vel, index) {
+function enemy(x, y, vel, index, etype) {
     this.x = x;
     this.y = y;
     this.xvel = 0;
     this.yvel = 0;
     this.dead = 0;
     this.theta = 0;
+    this.etype = etype;
+    
     this.defaultvel = vel
     this.vel = this.defaultvel;
     if (game2.round<5)
@@ -15,26 +17,40 @@ function enemy(x, y, vel, index) {
     {
     this.defaultvel = 2.5;
     }
-            
+    if (this.etype == 0)
+    {
     this.height = 10;
     this.width = 12;
     this.hitheight = 32;
     this.hitwidth = 12;
+    this.damage = 15;
+    this.health = 20+((game2.round-1)*5);
+    this.maxhealth = 20+((game2.round-1)*5);
+    }
+        if (this.etype == 1)
+    {
+    this.height = 10;
+    this.width = 30;
+    this.hitheight = 28;
+    this.hitwidth = 30;
+    this.damage = 30;
+    this.health = 40+((game2.round-1)*7.5);
+    this.maxhealth = 40+((game2.round-1)*7.5);
+    }
     this.hitoffsetx = 0;
     this.hitoffsety = -22;
     this.type = "enemy";
     this.falling = 0;
     this.frame = 0;
-	this.health = 20+((game2.round-1)*5);
+
 	this.attackcooldown = Math.floor((Math.random() * 60) + 30);
-	this.damage = 20;
 	this.attackcooldown1 = 0;
 	this.index = index;
 	this.poisoned = 0;
 	this.poisonedtimer = 0;
 	this.slowed = 0;
 	this.slowedtimer = 0;
-
+    this.protected = false;
 
     //functions called in the main loop are below
 	this.attack = function(player)
@@ -73,6 +89,18 @@ function enemy(x, y, vel, index) {
     }
     this.ai = function (player) {
 
+        
+        if (this.etype == 1)
+        {
+            if (collisiondetection1.finddistance(this, player)>100)
+            {
+             this.protected = true;   
+            }
+            else
+            {
+                this.protected = false;
+            }
+        }
 
 		this.attackcooldown1 = this.attackcooldown1 - 1;
         if (this.dead == 0 && this.falling == 0 && player.falling==0 && keypressed.e == 0) {
@@ -166,7 +194,44 @@ function enemy(x, y, vel, index) {
         if (this.dead == 0) {
             ctx.fillStyle = "orange";
             //ctx.fillRect(this.x, this.y, 10, 10);
-            ctx.drawImage(zombie1, this.x, this.y - 22);
+            if (this.etype == 1)
+            {
+            if (this.yvel > 0)
+            {
+            if (this.protected == true)
+                {
+            ctx.drawImage(robot2_closed, this.x, this.y - 22);
+                }
+                else
+                {
+            ctx.drawImage(robot2, this.x, this.y - 22);
+                }
+
+            }
+            else
+            {
+            if (this.protected == true)
+                {
+                    ctx.drawImage(robot2_back_closed, this.x, this.y - 22);
+                }
+                    else
+                {
+                    ctx.drawImage(robot2_back, this.x, this.y - 22);
+                }
+            }
+            }
+            if (this.etype == 0)
+            {
+                            if (this.yvel > 0)
+            {
+            ctx.drawImage(robot1, this.x, this.y - 22);
+            }
+            else
+            {
+                            ctx.drawImage(robot1_back, this.x, this.y - 22);
+            }
+            }
+                
         }
         this.frame = this.frame + 1;
         if (this.frame == 4)
@@ -181,23 +246,11 @@ function enemy(x, y, vel, index) {
         {
             //ctx.drawImage(enemysheet1, 0, this.frame * 12, 12, 12, this.x, this.y, 12, 12);
         }
-        if (this.health > 0) {
-            if (this.health < 20) {
-                if (this.health > 15) {
-                    ctx.fillStyle = "lime";
-                }
-                else {
-                    if (this.health > 5) {
-                        ctx.fillStyle = "yellow";
-                    }
-                    else {
-
-                        ctx.fillStyle = "red";
-
-                    }
-                }
+                ctx.fillStyle = "rgb(250,75,75)";
+        if (this.health < this.maxhealth && this.health > 0) {
+ 
                 ctx.fillRect(this.x+5-(this.health/2), this.y - 30, this.health, 3);
-            }
+            
         }
 
 
