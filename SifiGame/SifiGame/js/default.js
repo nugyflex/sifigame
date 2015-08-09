@@ -4,10 +4,10 @@ var ctx = c.getContext("2d");
 c.tabIndex = 1;
 c.focus();
 //loading in all the images
-window.addEventListener("keydown", onKeyDown, true);
-window.addEventListener("keyup", onKeyUp, true);
-window.addEventListener("mousedown", mouseDown, true);
-window.addEventListener("mouseup", mouseUp, true);
+c.addEventListener("keydown", onKeyDown, true);
+c.addEventListener("keyup", onKeyUp, true);
+c.addEventListener("mousedown", mouseDown, true);
+c.addEventListener("mouseup", mouseUp, true);
 
 window.onmousemove = function (e) {
     var bbox = c.getBoundingClientRect();
